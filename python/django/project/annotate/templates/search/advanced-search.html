@@ -1,0 +1,69 @@
+{% extends "site_base.html" %}
+{% load works %}
+{% load search %}
+{% block pagetitle %}
+ - Advanced Search{% if query %}: {{query}}{% endif %}
+{% endblock %}
+{% block headers %}
+ <script type="text/javascript">
+ </script>
+ {% endblock %}
+ {% block sidebar %}
+   <div id="sidebar">
+   {% genre_browse %}
+ </div>
+{% endblock %}
+{% block body %}
+ <div id="main">
+  <div class="nowrap">
+  {% if query %}
+    <h1>Results for : {{ query }}</h1>
+  {% else %}
+  <h1>Advanced Search</h1>
+  {% endif %}
+    <form action="{% url advanced-search %}" method="GET">
+     {{ form.as_p }}
+     <p>
+      <input type="submit" name="action" value="search" />
+     </p>
+   </form>
+   {% if page %}
+    <ul class="search-results">
+    {% for result in page.object_list %}
+     {% ifchanged result.work %}
+       {% ifequal forloop.counter 1 %}
+         <li class="work"><a href="{{ result.object.get_absolute_url }}">{{ result.title }}</a> -- {{ result.object.author_display }}
+          <ul>
+       {% else %}
+        </ul>
+        </li>
+         <li class="work"><a href="{{ result.get_absolute_url }}">{{ result.title }}</a> -- {{ result.author_display }}
+           <ul>
+      {% endifequal %}
+     {% else %}
+         <li class="section{% if result.object.access_controlled %} locked{% endif %}">
+            <a href="{{ result.object.get_absolute_url }}">{{ result.title }}</a>
+        </li>
+     {% endifchanged %}
+    {% endfor %}
+    </ul>
+    <div class="pagination">
+        <span class="step-links">
+        {% if page.has_previous %}
+        <a href="{{ request.get_full_path }}&amp;page={{page.previous_page_number}}"
+           title="page {{ page.previous_page_number}} of results">«</a>
+        {% endif %}
+        <span class="current">
+        Page {{ page.number }} of {{ page.paginator.num_pages }}
+        </span>
+        {% if page.has_next %}
+        <span class="next">
+            <a href="{{ request.get_full_path }}&amp;page={{page.next_page_number}}" title="page {{ page.next_page_number}} of results">»</a>
+        </span>
+        {% endif %}
+        </span>
+    </div><!-- pagination -->
+    {% endif %} {# query #}
+   </div><!-- .nowrap -->
+ </div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "site_base.html" %}
+
+{% block headers %}
+	<script type="text/javascript" charset="utf-8">
+		$('document').ready(function(){
+			$('#id_username').focus();
+		})
+	</script>
+{% endblock %}
+
+{% block pagetitle %}
+ - Log In
+{% endblock %}
+{% block body %}
+ <div id="content">
+  <p>Registered users who are logged in can post new comments.</p>
+{% if form.errors %}
+<p>Your username and password don't match any records we have. Please try again.</p>
+{% endif %}
+<div class="form">
+<form method="post" action="{% url auth_login %}">{% csrf_token %}
+ <fieldset>
+   <legend>Log In</legend>
+   <div class="form-row">
+        {{ form.username.label_tag }}
+        {{ form.username }}
+    </div>
+    <div class="form-row">
+        {{ form.password.label_tag }}
+        {{ form.password }}
+    </div>
+<button type="submit" value="login" class="submit">
+        <span>Log In</span>
+</button>
+<input type="hidden" name="next" value="{{ next }}" />
+   </fieldset>
+</form>
+</div>
+   <p>Don't have an account?  <a href="{% url registration_register %}" class="sc italic">Register</a>
+   </p>
+   <p>Forgot your password? <a href="{% url auth_password_reset %}" class="sc italic">Reset Your Password</a></p>
+   </div>
+{% endblock %}
+

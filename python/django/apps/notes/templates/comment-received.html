@@ -1,0 +1,22 @@
+{% extends "site_base.html" %}
+
+{% block body %}
+ <div id="main">
+  <div class="nowrap">
+ <h1>Comment Received</h1>
+  <p>Thank you for your comment.</p>
+  {% if not comment.is_public %}
+   <p>Your comment is awaiting moderation.  Once a site administrator approves your comment, it will appear on the site.</p>
+  {% endif %}
+  <p>
+    {% if target.title %}
+     Return to <a href="{{ target.get_absolute_url }}">{{ target.title }}</a>
+   {% else %}
+    {%if next %}
+     <a href="{{ next }}" title="Navigate back to previous page">Return</a>
+   {% endif %}
+   {% endif %}
+  </p>
+ </div>
+ </div>
+ {% endblock %}

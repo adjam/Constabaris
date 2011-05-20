@@ -1,0 +1,2025 @@
+/* beans for lunch */
+
+@import url("forms.css");
+
+/*-----------------
+ HTML SELECTORS
+------------------*/
+
+/** resets and baselines */
+/* Removes Browser Styles */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td 
+{	
+		margin:0px;
+		padding:  0px; 
+		border: 0;
+		outline: 0;
+		font-size: 100%;
+		font-weight: inherit;
+		font-style: inherit;
+		vertical-align: baseline;
+		background: transparent;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html, body {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+}
+
+em, i {
+	font-style: italic;
+}
+
+strong, b {
+	font-weight: bold;
+}
+
+#content.work-content strong, em, b, i {
+	font-family: "Palatino Linotype","Book Antiqua",Palatino,FreeSerif,serif;
+}
+
+/*
+strong, em, b, i {
+    	font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+}
+*/
+
+body {
+	font-size:12px;
+	color: inherit;
+    background: #fff url(../images/siteBack.jpg) repeat-x;
+    min-height: 695px;
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #000;
+    line-height: 120%;
+	background-color: transparent;
+}
+
+h1 { font-size:2.4em; }
+
+#content h1 { 
+    padding-bottom:6px; 
+    font-weight:normal; 
+    background:transparent
+    url("../images/h1-line.gif") left bottom no-repeat; 
+    margin-bottom:10px;
+    margin-top: 25px; 
+}
+
+h2 { font-size:2em; padding-bottom:0.4em;}
+h3 { font-size:1.5em; padding-bottom:0.4em;}
+h4 { font-size:1.3em; padding-bottom:0.4em;}
+h5 { font-size:1.2em; padding-bottom:0.4em; font-weight:bold;}
+h6 { font-size:1.2em; padding-bottom:0.4em; font-style:italic;}
+p { font-size:1.1em; line-height:2em; padding-bottom:1.5em;} /* ******* Changed 4/3/2010 ******** */
+
+a { color: #003366; text-decoration: underline;}
+a:hover { color:#003366; text-decoration: none; } 
+
+li {
+	list-style-type: none;
+}
+
+/* end resets and baselines */
+
+/* drop shadow images for layout containers */
+
+.successed {
+	color:#222222;
+	margin-top:1.5em;
+}
+
+.button {
+	background: transparent url(../images/green-button.png) no-repeat scroll left top;
+	display: block;
+	height: 31px;
+	line-height: 2.1em;
+	padding-bottom:20px;
+	text-align:center;
+	width: 142px;
+}
+a.button {
+	background-color:transparent;
+	color:#FFFFFF;
+	font-family:"Palatino Linotype","Book Antiqua",Palatino,FreeSerif,serif;
+	font-size:1.3em;
+	text-decoration:none;
+}
+
+a.button:hover {
+	opacity:0.8;
+}
+/*fieldset#login {
+border:1px solid #999999;
+margin-bottom:20px;
+padding:35px;
+text-align:center;
+}
+*/
+#content .login-header {
+	background-color:#EDECEB;
+	border:1px solid #999999;
+	color:#666666;
+	font-family:"Palatino Linotype","Book Antiqua",Palatino,FreeSerif,serif;
+	left:55px;
+	padding:5px 10px;
+	position:absolute;
+	text-align:center;
+	text-transform:uppercase;
+	top:200px;
+}
+
+#content.work-content, #noteDisplay {
+	font-family:"Palatino Linotype","Book Antiqua",Palatino,FreeSerif,serif;
+}
+
+#login label {
+	font-family:Georgia,"Times New Roman",Times,serif;
+	font-size:1.3em;
+		padding-right:10px;
+}
+.checkbox {
+height:11px;
+margin:0;
+padding:0;
+width:11px;
+}
+span.sub {
+background-color:transparent;
+color:#666666;
+display:inline;
+font-size:0.8em;
+}
+#site-shadow-top {
+height:14px;
+left:0;
+position:absolute;
+top:-14px;
+width:960px;
+}
+#site-shadow-navtop {
+    height:11px;
+    left:245px;
+    position:absolute;
+    top:-26px;
+    width:469px;
+}
+#site-shadow-footertop {
+    display:block;
+    height:11px;
+    left:0;
+    position:absolute;
+    top:-11px;
+    width:100%;
+}
+#site-shadow-right, #site-shadow-left {
+height:637px;
+position:absolute;
+width:16px;
+}
+#site-shadow-right {
+right:-16px;
+}
+#site-shadow-left {
+left:-16px;
+}
+
+/** see http://www.w3.org/TR/CSS2/sample.html 
+h1              { font-size: 2em; margin: .67em 0 }
+h2              { font-size: 1.5em; margin: .75em 0 }
+h3              { font-size: 1.17em; margin: .83em 0 }
+h4              { font-size: 1em; margin: 1em; }
+h5              { font-size: .83em; margin: 1.5em 0 }
+h6              { font-size: .75em; margin: 1.67em 0 }
+h1, h2, h3, h4,
+h5, h6          { font-weight: bolder }
+*/
+
+
+#logo {
+    display: block;
+    background: url(../images/site-logo.png) center center no-repeat;
+    color: #fff;
+    padding: 10px 0;
+    height: 85px;
+    width: 125px;
+    text-indent: -999px;
+    border: none;
+}
+
+#logo img {
+    display: block;
+    z-index: 10000;
+}
+
+#logo:hover {
+    cursor: pointer;
+}
+
+#controls {
+    background-color: transparent;
+    color: #fff;
+    padding-bottom: .7em;
+    position: absolute;
+    right: 195px;
+    top: 50px;
+    z-index: 10;
+    display: inline;
+}
+
+#controls li {
+    display: inline;
+    border-bottom: 2px solid #fff;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino,FreeSerif,serif;
+    font-size: 1em;
+    font-weight: bold;
+    margin-right: 1em;
+    padding-bottom: 0.4em;
+    text-transform: uppercase;
+}
+
+#controls a {
+    text-decoration: none;
+    margin-left: 1em;
+    margin-right: 1em;
+    color: #fff;
+    
+}
+
+#header-searchform {
+    background-color: transparent;
+    color: #fff;
+    width 160px;
+    position: absolute;
+    right: 0;
+    top: 47px;
+    z-index: 0;
+}
+
+#header-searchform input:focus {
+    background-color: #fff;
+}
+
+.site-search {
+	position: absolute;
+	top: 6px;
+	right: 6px;
+}
+
+#mid-wrapper {
+    border: solid 1px red;
+	margin:0 auto;
+	position:relative;
+	text-align:left;
+	top:0;
+	width:960px;
+}
+
+/** top navigation **/
+/** Primary Navigation **/
+#navigation{
+    position: absolute;
+    bottom: 0;
+    left: 240px;
+    border: solid 1px;
+    background: #fff;
+}
+
+#navigation li a {
+	border-right:1px solid #471E14;
+	font-size:1.2em;
+	line-height:36px;
+	padding:0 24px;
+	text-decoration:none;
+    text-transform: none;
+}
+
+#navigation li a.last {
+    border: none;
+}
+
+#navigation li, #navigation li a {
+	display:block;
+	float:left;
+	height:36px;
+	width:auto;
+}
+/* end Primary Navigation */
+
+#navigation {
+	background-color:#9A3334;
+	border:1px solid #4D4D4D;
+}
+
+#navigation li a:link, #navigation li a:visited {
+	background-position:0 0;
+}
+
+#navigation li a {
+	border-right:1px solid #471E14;
+	color:#FFFFFF;
+	font-family:Georgia,"Times New Roman",Times,serif;
+	font-size:1.2em;
+	line-height:36px;
+	padding:0 24px;
+	text-decoration:none;
+}
+
+#navigation li a.last {
+    border: none;
+}
+
+#navigation li, #navigation li a {
+	display:block;
+	float:left;
+	height:36px;
+	width:auto;
+}
+
+#navigation li a:hover, #navigation li a:active { 
+	background:	#282727 url(../images/nav-hover.jpg) left top repeat-x; position:relative; 
+}
+
+
+/** end top navigation **/
+
+#body {
+    position: relative;
+    margin-top: -23px;
+    z-index: 1;
+}
+
+#body .container{
+	background-color:#FFFFFF;
+	min-height:675px;
+	margin-bottom: 2em; /** FIXME: sledgehammer to keep from overflowing  into footer **/ 
+}
+
+#content-home {
+	padding:55px 70px 80px;
+	position:relative;
+}
+
+/** Home page styles **/
+body.home #sidebar {
+    height: 320px;
+    margin-bottom: 0;
+    padding-top: 0;
+    background-color: #111;
+    color: #fff;
+    padding-bottom: 0;
+}
+
+.home #headers{
+    height:100px;
+    width: 800px;
+    margin: auto;
+    padding: 30px 0 25px 0;
+    background: transparent url(../images/home-shadow-top.png) bottom left repeat-x;
+}
+
+.home #headers h1{
+    background: transparent;
+    color: #333;
+    text-align: right;
+    font-weight: normal;
+}
+
+.home #headers h2 {
+    background: transparent;
+    color: #036;
+    font-weight: bold;
+    text-align: right;
+}
+
+.home #sidebar a {
+    color: #ffa;
+}
+
+#featured {
+    background: transparent url(../images/home-shadow-bottom.png) top left repeat-x;
+}
+
+/** End Homepage styles **/
+
+
+#navheader {
+    margin: -1em auto 1em auto;
+    height: 1.5em;
+    width: 800px;
+    clear: both;
+    color: #fff;
+    background-color: #9a3334;
+    border: 1px solid #333;
+    
+}
+
+#navheader ul.navigation {
+    list-style: none;
+    text-align: center;
+    display: inline;
+}
+
+ul.navigation li {
+    width: 188px; 
+    display: inline;
+    vertical-align: middle;    
+    margin: 0 1em;
+    padding: .2em 0;
+}
+
+ul.navigation li:hover {
+    background-color: #cacaca;
+}
+
+ul.navigation a {
+    width: 100%;
+    border: none;
+    padding: 0
+    margin: 0;
+    height: 100%;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #fff;
+}
+
+
+div.body {
+   line-height: 1.5em;
+   margin-left: 1em;
+   padding: .5em;
+}
+
+div.nowrap {
+    display: block;
+    margin-left: 2em;
+    float: left;
+}
+
+
+#sidebar {
+	background:#FFFFFF url(../images/sidebar-back.jpg) repeat-x scroll right top;
+	box-shadow: none;
+}
+
+
+#sidebar a {
+    text-decoration: none;
+}
+
+#sidebar a:hover {
+    text-decoration: underline;
+}
+
+#sidebar h1.title {
+	background-image: none;
+	font-size: 1.3em;
+	padding: 20px 0 0;
+}
+
+#sidebar h2.author-name {
+	font-size: 1.2em;
+	padding: 0;
+}
+
+#sidebar h3.sections-title {
+	color:#9A3334;
+	font-size:1.1em;
+	padding-bottom:0.6em;
+	padding-top:20px;
+	text-transform:uppercase;
+}
+
+#sidebar .authorname {
+    font-size: 1em;
+}
+
+#sidebar .workinfo:hover{
+    cursor: pointer;
+}
+
+img.coverimage {
+    max-width: 95%;
+    display: block; 
+    margin: 0 auto;
+}    
+
+.browselist li {
+	list-style-type: none;
+	padding: 0.7em 0;
+}
+
+
+#footer {
+	background-color: #3B3B3B;
+	clear:both;
+	color:#CACACA;
+	font-family:"Lucida Grande","Lucida Sans Unicode",sans-serif;
+	font-size:1em;
+	letter-spacing:0.1em;
+	padding:15px 0;
+	position:relative;
+	text-align:center;
+	width:100%;
+    z-index: 5;
+}
+
+#footer .container{
+    background-color: transparent;
+    min-height: 0px;
+}
+
+#footer .facet-count {
+ display: none;
+}
+
+#footer hr {
+    width: 30%;
+    
+    color: #ccc;
+}
+
+#footer a {
+    text-decoration: none;
+    color: #cacaca
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
+
+#footer ul li {
+    display: inline;
+}
+
+.site-links, .browse ul {
+    padding: .9em 0;
+}
+
+.site-links li, .browse li {
+    border-right: 1px solid #cacaca;
+    padding: 0 0.7em;
+}
+
+.site-links li.last, .browse li.last {
+    border-right: medium none;
+}
+
+.partners {
+    padding: 1.7em 0;
+}
+
+.partners li {
+    padding: 2em;
+}
+
+a.plink {
+    color: #c33;
+    text-decoration: none;
+    padding-left: .2em;
+    visibility: hidden;
+}
+
+.clearblock {
+    clear: both;
+    height: 0px;
+}
+
+.authors {
+	background: transparent url(../images/h1-line.gif) no-repeat scroll left 9px;
+}
+
+#work-info .author-name {
+	background-color:#F9F9F9;
+	border:1px solid #E4E3E0;
+	font-family:Georgia,"Times New Roman",Times,serif;
+	font-size:1.2em;
+	font-weight:normal;
+	padding:5px 10px;
+	text-align:center;
+}
+
+#work-info h1.title {
+	background:transparent none repeat scroll 0 0;
+	padding-bottom:0;
+}
+
+
+
+.base-info {
+    width: 70%;
+    float: left;
+}
+
+.base-info .label {
+    font-weight: bold;
+}
+
+.keywords a {
+    font-size: .75em;
+}    
+
+#work-citation {
+    display: none;
+    background:#FFFFFF url(../images/work-citation-back.jpg) repeat-x scroll left top;
+	 border:1px solid #E4E3E0;
+	
+	font-family:"Palatino Linotype","Book Antiqua",Palatino,FreeSerif,serif;
+	line-height:1.5em;
+	margin:2em 0;
+	padding:1em 2em;
+    
+}
+
+#work-citation dt {
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+
+#work-citation dd {
+    text-indent: 3em;
+}
+
+#sidebar .work-sections .section {
+    border-bottom: 1px solid #000;
+    margin: 0 auto;
+}
+
+#sidebar .work-sections li:hover, #sidebar .work-sections li.current {
+    color: inherit;
+    background-color: #eae7df;
+}
+
+#sidebar .work-sections li.first {
+	border-top: 2px solid #000;
+}
+
+#sidebar .work-sections li.last {
+	border-bottom:2px solid #000000;
+}
+
+#sidebar .work-sections a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    margin: 0 3px 0 0;
+    padding: 10px 18px 10px 5px;
+}
+
+.section-nav {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/**
+ * Parts related to the display of comments
+ **/
+
+p.active {
+    background-color: #eff;
+}
+
+.annotation-hook {
+    float: right;
+    min-width: 32px;
+    min-height: 32px;
+    background: url(../images/comment-box.png) no-repeat;
+}
+
+.annotation-hook .count {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: -0.155555em;
+    color: #0a0;
+}
+
+.annotation-hook.hidden {
+    opacity: 0.3;
+    filter:alpha(opacity=30);
+}
+
+p:hover .annotation-hook.hidden {
+    opacity: 0.5;
+    filter:alpha(opacity=50);
+
+}
+
+div.annotation-hook:hover {
+    opacity: 1.0;
+    filter:alpha(opacity=100);
+}
+
+p div.annotation-hook.hidden:hover {
+    opacity: 1;
+}
+
+/**
+ *  n.b. lack of spaces is important in selectors; these
+ * match elements with both classes
+ **/
+ 
+ .form-jump {
+	float: right;
+	padding: .5em;
+	font-size: 125%;
+}
+
+.comment {
+    margin: 0 auto 1em;
+    width: 100%;
+    clear: both;
+    background-color: #efefef;
+}
+
+.comment .cbody {
+    margin: .2em;
+    padding: 5px 10px;
+    text-align: left;/* beans for lunch */
+
+@import url("forms.css");
+
+/*-----------------
+ HTML SELECTORS
+------------------*/
+
+/** resets and baselines */
+/* Removes Browser Styles */
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td 
+{	
+		margin:0px;
+		padding:  0px; 
+		border: 0;
+		outline: 0;
+		font-size: 100%;
+		font-weight: inherit;
+		font-style: inherit;
+		vertical-align: baseline;
+		background: transparent;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html, body {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+}
+
+em, i {
+	font-style: italic;
+}
+
+strong, b {
+	font-weight: bold;
+}
+
+#content.work-content strong, em, b, i {
+	font-family: "Palatino Linotype","Book Antiqua",Palatino,FreeSerif,serif;
+}
+
+/*
+strong, em, b, i {
+    	font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+}
+*/
+
+body {
+	font-size:12px;
+	color: inherit;
+    background: #fff url(../images/siteBack.jpg) repeat-x;
+    min-height: 695px;
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #000;
+    line-height: 120%;
+	background-color: transparent;
+}
+
+h1 { font-size:2.4em; }
+
+#content h1 { padding-bottom:17px; font-weight:normal; background:transparent
+url("../images/h1-line.gif") right bottom no-repeat; margin-bottom:10px; }
+
+h2 { font-size:2em; padding-bottom:0.4em;}
+h3 { font-size:1.5em; padding-bottom:0.4em;}
+h4 { font-size:1.3em; padding-bottom:0.4em;}
+h5 { font-size:1.2em; padding-bottom:0.4em; font-weight:bold;}
+h6 { font-size:1.2em; padding-bottom:0.4em; font-style:italic;}
+p { font-size:1.1em; line-height:2em; padding-bottom:1.5em;} /* ******* Changed 4/3/2010 ******** */
+
+a { color: #003366; text-decoration: underline;}
+a:hover { color:#003366; text-decoration: none; } 
+
+li {
+	list-style-type: none;
+}
+
+/* end resets and baselines */
+
+/* establishes base width for the page.*/
+.container{
+    position: relative;
+    overflow: hidden;
+    width: 960px;
+    margin: auto;
+}
+
+/* drop shadow images for layout containers */
+
+.successed {
+	color:#222222;
+	margin-top:1.5em;
+}
+
+form {
+	display:inline;
+}
+
+#header {
+    position: relative;
+    background: transparent url(../images/test-background.png) repeat-x;
+    z-index: 100;
+}
+
+
+.site-search {
+	position:absolute;
+	right:6px;
+	top:6px;
+}
+.button {
+	background: transparent url(../images/green-button.png) no-repeat scroll left top;
+	display: block;
+	height: 31px;
+	line-height: 2.1em;
+	padding-bottom:20px;
+	text-align:center;
+	width: 142px;
+}
+a.button {
+	background-color:transparent;
+	color:#FFFFFF;
+	font-family:"Palatino Linotype","Book Antiqua",Palatino,FreeSerif,serif;
+	font-size:1.3em;
+	text-decoration:none;
+}
+
+a.button:hover {
+	opacity:0.8;
+}
+fieldset#login {
+border:1px solid #999999;
+margin-bottom:20px;
+padding:35px;
+text-align:center;
+}
+
+#content .login-header {
+	background-color:#EDECEB;
+	border:1px solid #999999;
+	color:#666666;
+	font-family:"Palatino Linotype","Book Antiqua",Palatino,FreeSerif,serif;
+	left:55px;
+	padding:5px 10px;
+	position:absolute;
+	text-align:center;
+	text-transform:uppercase;
+	top:200px;
+}
+
+#content.work-content, #noteDisplay {
+	font-family:"Palatino Linotype","Book Antiqua",Palatino,FreeSerif,serif;
+}
+
+#login label {
+	font-family:Georgia,"Times New Roman",Times,serif;
+	font-size:1.3em;
+		padding-right:10px;
+}
+.checkbox {
+height:11px;
+margin:0;
+padding:0;
+width:11px;
+}
+span.sub {
+background-color:transparent;
+color:#666666;
+display:inline;
+font-size:0.8em;
+}
+#site-shadow-top {
+height:14px;
+left:0;
+position:absolute;
+top:-14px;
+width:960px;
+}
+#site-shadow-navtop {
+    height:11px;
+    left:245px;
+    position:absolute;
+    top:-26px;
+    width:469px;
+}
+#site-shadow-footertop {
+    display:block;
+    height:11px;
+    left:0;
+    position:absolute;
+    top:-11px;
+    width:100%;
+}
+#site-shadow-right, #site-shadow-left {
+height:637px;
+position:absolute;
+width:16px;
+}
+#site-shadow-right {
+right:-16px;
+}
+#site-shadow-left {
+left:-16px;
+}
+
+/** see http://www.w3.org/TR/CSS2/sample.html 
+h1              { font-size: 2em; margin: .67em 0 }
+h2              { font-size: 1.5em; margin: .75em 0 }
+h3              { font-size: 1.17em; margin: .83em 0 }
+h4              { font-size: 1em; margin: 1em; }
+h5              { font-size: .83em; margin: 1.5em 0 }
+h6              { font-size: .75em; margin: 1.67em 0 }
+h1, h2, h3, h4,
+h5, h6          { font-weight: bolder }
+*/
+
+
+#logo {
+    display: block;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 0;
+    height: 85px;
+    width: 125px;
+}
+
+#logo img {
+    display: block;
+    z-index: 10000;
+}
+
+#logo:hover {
+    cursor: pointer;
+}
+
+#controls {
+    background-color: transparent;
+    color: #fff;
+    padding-bottom: .7em;
+    position: absolute;
+    right: 195px;
+    top: 50px;
+    z-index: 10;
+    display: inline;
+}
+
+#controls li {
+    display: inline;
+    border-bottom: 2px solid #fff;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino,FreeSerif,serif;
+    font-size: 1em;
+    font-weight: bold;
+    margin-right: 1em;
+    padding-bottom: 0.4em;
+    text-transform: uppercase;
+}
+
+#controls a {
+    text-decoration: none;
+    margin-left: 1em;
+    margin-right: 1em;
+    color: #fff;
+    
+}
+
+#header-searchform {
+    background-color: transparent;
+    color: #fff;
+    width 160px;
+    position: absolute;
+    right: 0;
+    top: 47px;
+    z-index: 0;
+}
+
+#header-searchform input:focus {
+    background-color: #fff;
+}
+
+.site-search {
+	position: absolute;
+	top: 6px;
+	right: 6px;
+}
+
+/** top navigation **/
+
+#navigation {
+	background-color:#9A3334;
+	border:1px solid #4D4D4D;
+}
+
+#navigation li a:link, #navigation li a:visited {
+	background-position:0 0;
+}
+
+#navigation li a {
+	border-right:1px solid #471E14;
+	color:#FFFFFF;
+	font-family:Georgia,"Times New Roman",Times,serif;
+	font-size:1.2em;
+	line-height:36px;
+	padding:0 24px;
+	text-decoration:none;
+}
+
+#navigation li a.last {
+    border: none;
+}
+
+#navigation li a:hover, #navigation li a:active { 
+	background:	#282727 url(../images/nav-hover.jpg) left top repeat-x; 
+}
+
+
+/** end top navigation **/
+
+#body {
+    position: relative;
+    margin-top: -23px;
+    z-index: 1;
+}
+
+#body .container{
+	background-color:#FFFFFF;
+	min-height:675px;
+	margin-bottom: 2em; /** FIXME: sledgehammer to keep from overflowing  into footer **/ 
+}
+
+#content-home {
+	padding:55px 70px 80px;
+	position:relative;
+}
+
+body.home #sidebar {
+    height: 320px;
+    margin-bottom: 0;
+    padding-top: 0;
+    background-color: #111;
+    color: #fff;
+    padding-bottom: 0;
+}
+
+body.home #sidebar a {
+    color: #ffa;
+}
+
+#navheader {
+    margin: -1em auto 1em auto;
+    height: 1.5em;
+    width: 800px;
+    clear: both;
+    color: #fff;
+    background-color: #9a3334;
+    border: 1px solid #333;
+    
+}
+
+#navheader ul.navigation {
+    list-style: none;
+    text-align: center;
+    display: inline;
+}
+
+ul.navigation li {
+    width: 188px; 
+    display: inline;
+    vertical-align: middle;    
+    margin: 0 1em;
+    padding: .2em 0;
+}
+
+ul.navigation li:hover {
+    background-color: #cacaca;
+}
+
+ul.navigation a {
+    width: 100%;
+    border: none;
+    padding: 0
+    margin: 0;
+    height: 100%;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #fff;
+}
+
+
+div.body {
+   line-height: 1.5em;
+   margin-left: 1em;
+   padding: .5em;
+}
+
+div.nowrap {
+    display: block;
+    margin-left: 2em;
+    float: left;
+}
+
+
+#sidebar {
+	background:#FFFFFF url(../images/sidebar-back.jpg) repeat-x scroll left top;
+	left: 0;
+	margin: 25px 0 0;
+	min-height: 556px;
+	padding: 35px 27px;
+	/* position: absolute;
+	top: 0; */
+	width: 195px;
+	float: left;
+}
+
+
+#sidebar a {
+    text-decoration: none;
+}
+
+#sidebar a:hover {
+    text-decoration: underline;
+}
+
+#sidebar h1.title {
+	background-image: none;
+	font-size: 1.3em;
+	padding: 20px 0 0;
+}
+
+#sidebar h2.author-name {
+	font-size: 1.2em;
+	padding: 0;
+}
+
+#sidebar h3.sections-title {
+	color:#9A3334;
+	font-size:1.1em;
+	padding-bottom:0.6em;
+	padding-top:20px;
+	text-transform:uppercase;
+}
+
+#sidebar .authorname {
+    font-size: 1em;
+}
+
+#sidebar .workinfo:hover{
+    cursor: pointer;
+}
+
+img.coverimage {
+    max-width: 95%;
+    display: block; 
+    margin: 0 auto;
+}    
+
+.browselist li {
+	list-style-type: none;
+	padding: 0.7em 0;
+}
+
+#content {
+	/*position: relative;
+	margin-left: 249px;
+	padding: 55px 27px 80px;
+	*/
+	margin: 2.5em 0 2em 0;
+	padding-left: 1em;
+	float: left;
+	width: 680px;
+    z-index:2;
+	
+}
+
+
+
+
+
+#footer {
+	background-color: #3B3B3B;
+	clear:both;
+	color:#CACACA;
+	font-family:"Lucida Grande","Lucida Sans Unicode",sans-serif;
+	font-size:1em;
+	letter-spacing:0.1em;
+	padding:15px 0;
+	position:relative;
+	text-align:center;
+	width:100%;
+    z-index: 5;
+}
+
+
+#footer .facet-count {
+ display: none;
+}
+
+#footer hr {
+    width: 30%;
+    
+    color: #ccc;
+}
+
+#footer a {
+    text-decoration: none;
+    color: #cacaca
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
+
+#footer ul li {
+    display: inline;
+}
+
+.site-links, .browse ul {
+    padding: .9em 0;
+}
+
+.site-links li, .browse li {
+    border-right: 1px solid #cacaca;
+    padding: 0 0.7em;
+}
+
+.site-links li.last, .browse li.last {
+    border-right: medium none;
+}
+
+.partners {
+    padding: 1.7em 0;
+}
+
+.partners li {
+    padding: 2em;
+}
+
+a.plink {
+    color: #c33;
+    text-decoration: none;
+    padding-left: .2em;
+    visibility: hidden;
+}
+
+.clearblock {
+    clear: both;
+    height: 0px;
+}
+
+.authors {
+	background: transparent url(../images/h1-line.gif) no-repeat scroll left 9px;
+}
+
+#work-info .author-name {
+	background-color:#F9F9F9;
+	border:1px solid #E4E3E0;
+	font-family:Georgia,"Times New Roman",Times,serif;
+	font-size:1.2em;
+	font-weight:normal;
+	padding:5px 10px;
+	text-align:center;
+}
+
+#work-info h1.title {
+	background:transparent none repeat scroll 0 0;
+	padding-bottom:0;
+}
+
+
+
+.base-info {
+    width: 70%;
+    float: left;
+}
+
+.base-info .label {
+    font-weight: bold;
+}
+
+.keywords a {
+    font-size: .75em;
+}    
+
+#work-citation {
+    display: none;
+    background:#FFFFFF url(../images/work-citation-back.jpg) repeat-x scroll left top;
+	 border:1px solid #E4E3E0;
+	
+	font-family:"Palatino Linotype","Book Antiqua",Palatino,FreeSerif,serif;
+	line-height:1.5em;
+	margin:2em 0;
+	padding:1em 2em;
+    
+}
+
+#work-citation dt {
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+
+#work-citation dd {
+    text-indent: 3em;
+}
+
+#sidebar .work-sections li {
+	border-bottom: 1px solid #000;
+	margin: 0 auto;
+	padding: 0.7em 1.1em;
+}
+#sidebar .work-sections li:hover {
+    color: inherit;
+    background-color: #eae7df;
+}
+
+#sidebar .work-sections li.first {
+	border-top: 2px solid #000;
+}
+
+#sidebar .work-sections li.last {
+	border-bottom:2px solid #000000;
+}
+
+#sidebar .work-sections a {
+    color: #000;
+    text-decoration: none;
+}
+
+.section-nav {
+    margin: 0 auto;
+    text-align: center;
+}
+
+/**
+ * Parts related to the display of comments
+ **/
+
+p.active {
+    background-color: #eff;
+}
+
+.annotation-hook {
+    float: right;
+    min-width: 32px;
+    min-height: 32px;
+    background: url(../images/comment-box.png) no-repeat;
+}
+
+.annotation-hook .count {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: -0.155555em;
+    color: #0a0;
+}
+
+.annotation-hook.hidden {
+    opacity: 0.3;
+    filter:alpha(opacity=30);
+}
+
+p:hover .annotation-hook.hidden {
+    opacity: 0.5;
+    filter:alpha(opacity=50);
+
+}
+
+div.annotation-hook:hover {
+    opacity: 1.0;
+    filter:alpha(opacity=100);
+}
+
+p div.annotation-hook.hidden:hover {
+    opacity: 1;
+}
+
+/**
+ *  n.b. lack of spaces is important in selectors; these
+ * match elements with both classes
+ **/
+ 
+ .form-jump {
+	float: right;
+	padding: .5em;
+	font-size: 125%;
+}
+
+.comment {
+    margin: 0 auto 1em;
+    width: 100%;
+    clear: both;
+    background-color: #efefef;
+}
+
+.comment .cbody {
+    margin: .2em;
+    padding: 5px 10px;
+    text-align: left;
+    background-color: #fefefe;
+    color: #003;
+}
+
+.comment .metadata {
+	font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+	padding: 5px;
+    color: #fff;
+	background-color: #9a3334;
+    overflow: hidden;
+}
+
+.comment .metadata a {
+	font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+	color: #fff;
+	font-weight: bolder;
+	text-decoration: none;
+	padding: 4px;
+}
+
+.authorname  {
+	font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+	font-size: medium;
+}
+
+.comment .metadata h1 {
+	background-image: none;
+}
+
+.metadata .headers {
+    margin: 0;
+    float: left;
+    color: #fff;
+}
+
+.metadata .navigation {
+    float: right;
+    padding-right: .5em;
+	color: #fff;
+
+}
+
+/*
+.metadata .headers > h1,h2,h3,h4,h5,h6 {
+    padding: 1px 0 .1em 1em;
+    margin: 0;
+}
+*/
+.cbody .date {
+    float: right;
+    font-size: .8em;
+}
+
+.comment.author .metadata {
+    background-color: #9a3334
+}
+
+.comment.author .cbody {
+    background-color : #eef;
+}
+
+/**
+ * Style the comment form
+ **/
+
+.comment-form {
+    width: 90%;
+    margin: 0 auto 1em;
+}
+
+.comment-form label {
+    display: block;
+    font-weight: bold;
+}
+
+.comment-form input[type=text], textarea {
+	width: 95%;
+}
+
+/**
+ * Rules that handle display of footnotes on the same page go here
+ **/
+#noteDisplay {
+    display: none;
+    position: fixed;
+    background-color: #eee;
+    z-index: 15;
+    padding-left: 0;
+    margin-left: 0;
+    margin-right: -2em;
+    bottom : 0;
+    min-height: 20px;
+    border-top: 2px solid #000;
+}
+
+#noteDisplay span.reference {
+    display: none;
+}
+
+span.pb-display {
+    display: none;
+    position: absolute;
+    clear: both;
+    border-left: 3px solid #9a3334;
+    height: 3em;
+    margin-top: -.8em;
+    margin-left: -.2em;
+    z-index: 1001;
+}
+
+li.subject {
+	background:transparent url(../images/asterisk.png) no-repeat scroll left center;
+	padding:0.4em 1.5em;
+}
+
+.badges img {
+    vertical-align: middle;
+    padding: 1em;
+}
+
+span.label {
+    font-weight: bold;
+}
+
+span.abstract {
+    font-size : 75%;
+}
+
+#pagination {
+
+	margin: 2em auto;
+    border-top: 2px solid #eee;
+    padding: 10px;
+    width: 85%;
+}
+
+.pager {
+	display: inline-block;
+	width: 20px;
+	margin-right: .5em;
+	border: 2px solid #333;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+.pager a {
+	font-weight: bolder;
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	text-align: center;
+}
+
+.pager span {
+	display:block;
+	font-weight: bolder;
+	text-align: center;
+}
+
+.pager.following {
+	background-color: #9a3433;
+}
+
+.pager.previous {
+	background-color: #349a33;
+}
+
+#page-navigator {
+	margin: 1em auto;
+	width: 95%;
+}
+	
+
+
+
+.disclosure-closed {
+    padding-left: 18px;
+    background: url(../images/disclosure-closed.png) left no-repeat;
+}
+
+.disclosure-open {
+    padding-left: 18px;
+    background: transparent url(../images/disclosure-open.png) left no-repeat;
+}
+
+.bottom-navigation {
+    margin: 0 auto;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.bottom-navigation .navlinks {
+	float: right;
+}
+
+.commentDisplay a {
+	font-size: 125%;
+	float: right;
+}
+
+#all-comments, #current-comments{
+    overflow: auto;
+}
+
+.dev-data{
+    position:fixed;
+    z-index: 1001;
+    top: 10px;
+    right: 10px;
+    border: solid 1px #aaa;
+    padding: .5em;
+    background: #eee;
+}
+
+#feedback-link{
+    position: fixed;
+    z-index: 1001;
+    bottom: 0;
+    border: solid 1px #471E14;
+    background: #9A3334;    
+    font-size: 12px;
+    line-height: 36px;
+    padding: 0 24px;
+    color: #fff;
+    display: block;
+    margin-left: -20px;
+    
+}
+    background-color: #fefefe;
+    color: #003;
+}
+
+.comment .metadata {
+	font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+	padding: 5px;
+    color: #fff;
+	background-color: #9a3334;
+    overflow: hidden;
+}
+
+.comment .metadata a {
+	font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+	color: #fff;
+	font-weight: bolder;
+	text-decoration: none;
+	padding: 4px;
+}
+
+.authorname  {
+	font-family: "Lucida Grande","Lucida Sans Unicode",sans-serif;
+	font-size: medium;
+}
+
+.comment .metadata h1 {
+	background-image: none;
+}
+
+.metadata .headers {
+    margin: 0;
+    float: left;
+    color: #fff;
+}
+
+.metadata .navigation {
+    float: right;
+    padding-right: .5em;
+	color: #fff;
+
+}
+
+/*
+.metadata .headers > h1,h2,h3,h4,h5,h6 {
+    padding: 1px 0 .1em 1em;
+    margin: 0;
+}
+*/
+.cbody .date {
+    float: right;
+    font-size: .8em;
+}
+
+.comment.author .metadata {
+    background-color: #9a3334
+}
+
+.comment.author .cbody {
+    background-color : #eef;
+}
+
+/**
+ * Style the comment form
+ **/
+
+.comment-form {
+    width: 90%;
+    margin: 0 auto 1em;
+}
+
+.comment-form label {
+    display: block;
+    font-weight: bold;
+}
+
+.comment-form input[type=text], textarea {
+	width: 95%;
+}
+
+/**
+ * Rules that handle display of footnotes on the same page go here
+ **/
+#noteDisplay {
+    display: none;
+    position: fixed;
+    background-color: #eee;
+    z-index: 15;
+    padding-left: 0;
+    margin-left: 0;
+    margin-right: -2em;
+    bottom : 0;
+    min-height: 20px;
+    border-top: 2px solid #000;
+}
+
+#noteDisplay span.reference {
+    display: none;
+}
+
+span.pb-display {
+    display: none;
+    position: absolute;
+    clear: both;
+    border-left: 3px solid #9a3334;
+    height: 3em;
+    margin-top: -.8em;
+    margin-left: -.2em;
+    z-index: 1001;
+}
+
+ul.bulleted-list, ul.bulleted {
+   margin-top:-1.5em;
+	padding:0 0 1.5em 1em;
+}
+
+li.subject {
+	background:transparent url(../images/asterisk.png) no-repeat scroll left center;
+	padding:0.4em 1.5em;
+}
+
+.unbulleted-list li {
+	padding:0.4em 0;
+}
+
+li.work {
+    position: relative;
+    padding: 15px 40px 15px 0;
+    list-style-type: none;
+    list-style-image: none;
+    list-style-position: outside;
+    border-bottom: solid 1px #eeeeee;
+}
+
+li.work .comment-count{
+    background: transparent url(../images/comment-box.png) center no-repeat;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    width: 31px;
+    height: 29px;
+    line-height: 23px;
+    text-align: center;
+}
+
+ul.search-results li.section {
+    background: transparent url(../images/famfamfam/bullet_black.png) left center no-repeat;
+    margin-left: 1em;
+    
+    padding: 2px 24px;
+}
+
+li.section .has-comments{
+    background: transparent url(../images/famfamfam/comments.png) no-repeat right center;
+    padding-right: 21px;
+}
+
+ul.search-results li.section .comment-count{
+    display: inline;
+}
+
+.badges img {
+    vertical-align: middle;
+    padding: 1em;
+}
+
+span.label {
+    font-weight: bold;
+}
+
+span.abstract {
+    font-size : 75%;
+}
+
+#pagination {
+
+	margin: 2em auto;
+    border-top: 2px solid #eee;
+    padding: 10px;
+    width: 85%;
+}
+
+.pager {
+	display: inline-block;
+	width: 20px;
+	margin-right: .5em;
+	border: 2px solid #333;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+
+.pager a  {
+	font-weight: bolder;
+	text-decoration: none;
+	color: #fff;
+	display: block;
+	text-align: center;
+}
+
+.pager span {
+	display:block;
+	font-weight: bolder;
+	text-align: center;
+}
+
+.pager.following {
+	background-color: #9a3433;
+}
+
+.pager.previous {
+	background-color: #349a33;
+}
+
+#page-navigator {
+	margin: 1em auto;
+	width: 95%;
+}
+	
+
+
+
+.disclosure-closed {
+    padding-left: 18px;
+    background: url(../images/disclosure-closed.png) left no-repeat;
+}
+
+.disclosure-open {
+    padding-left: 18px;
+    background: transparent url(../images/disclosure-open.png) left no-repeat;
+}
+
+.bottom-navigation {
+    clear: both;
+    margin: 0 auto;
+}
+
+.bottom-navigation .navlinks {
+	float: right;
+}
+
+.commentDisplay a {
+	font-size: 125%;
+	float: right;
+}
+
+#all-comments, #current-comments{
+    overflow: auto;
+}
+
+.dev-data{
+    position:fixed;
+    z-index: 1001;
+    top: 10px;
+    right: 10px;
+    border: solid 1px #aaa;
+    padding: .5em;
+    background: #eee;
+}
+
+#feedback-link{
+    position: fixed;
+    z-index: 1001;
+    bottom: 0;
+    border: solid 1px #471E14;
+    background: #9A3334;    
+    font-size: 12px;
+    line-height: 36px;
+    padding: 0 24px;
+    color: #fff;
+    display: block;
+    margin-left: -20px;
+    
+}
+
+
+/*User Profile Styles*/
+.profile-section{
+    margin: 0 0 40px 0;
+}
+
+.profile-section h3{
+    margin: 0;
+}
+
+.profile-section h3 .note{
+    font-size: small;
+}
+
+.profile-section-content p{
+    padding-bottom: 1em;
+}
+
+.user-profile{
+    overflow: hidden;
+}
+
+
+#user-profile-editing{
+    margin-top: 20px;
+}
+
+
+/* User Profile Annotations*/
+.profile-section h3{
+    margin-bottom: 20px;
+    border-bottom: solid 1px #eee;
+}
+
+.user-annotations .annotation{
+    margin-bottom: 20px;
+}
+
+.user-annotations .annotation h4{
+    background: transparent url(../images/famfamfam/comment.png) left center no-repeat;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+	font-size: 14px;
+	margin: 0;
+	padding: 0 0 0 20px;
+}
+
+.user-annotations .post-date{
+    font-size: x-small;
+    color: #666;
+    float: right;
+}
+
+.user-annotations .read-post{
+    display: block;
+}
+
+.user-annotations .comment-preview{
+    margin: 10px 10px 0 20px;
+    line-height: 1.3em;
+}

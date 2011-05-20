@@ -1,0 +1,867 @@
+[
+	{
+	    "fields": {
+	        "email": "jward3@email.unc.edu", 
+	        "first_name": "TJ", 
+	        "last_name": "Ward", 
+	        "groups": [], 
+	        "is_active": true, 
+	        "is_staff": true, 
+	        "is_superuser": true, 
+	        "password": "", 
+	        "user_permissions": [], 
+	        "username": "jward3"
+	    }, 
+	    "model": "auth.User",
+	"pk" : 1
+	},
+    {
+	"model" : "works.UserAccount",
+	"pk" : 1,
+	"fields" : {
+		"user" : 1,
+		"affiliation" : "UNC Chapel Hill",
+		"about" : "Him as what packaged the app up",
+		"home_page" : "http://www.ibiblio.org/yugen"
+	}
+    },
+	{
+	    "fields": {
+	        "email": "jward3@unc.edu", 
+	        "first_name": "Adam", 
+	        "groups": [], 
+	        "is_active": true, 
+	        "is_staff": true, 
+	        "is_superuser": true, 
+	        "last_name": "Constabaris", 
+	        "password": "sha1$b#@!s$842ac97597390c2d39587af90d494ddfd3c8da13", 
+	        "user_permissions": [], 
+	        "username": "adamc"
+	    }, 
+	    "model": "auth.User",
+	"pk" : 2
+	},
+    {
+	"model" : "works.UserAccount",
+	"pk" : 2,
+	"fields" : {
+		"user" : 2,
+		"affiliation" : "UNC Chapel Hill",
+		"about" : "Him as what wrote this app",
+		"home_page" : "http://www.unc.edu/home/adamc"
+	}
+    },
+    {
+        "fields": {
+            "domain": "lcrm.lib.unc.edu", 
+            "name": "Constabaris"
+        }, 
+        "model": "sites.Site", 
+        "pk": 1
+    }, 
+    {
+        "fields": {
+            "content": "<p>Sometime recently, this application was installed, including this boilerplate update entry.  Doesn't it look nice?  Well, maybe so, but it's suggested that you delete it and add your own before exposing this thing to the public.</p>", 
+            "creator": 1, 
+            "title": "Application Installed"
+        }, 
+        "model": "works.BlogEntry", 
+        "pk": 1
+    }, 
+    {
+        "fields": {
+	    "enabled" :  false,
+            "description": "A scholarly text that is primarily words for reading.  Where the text is one of the more specific types listed here, use the more specific term.", 
+            "label": "Scholarly Text", 
+            "uri": "http://purl.org/eprint/type/ScholarlyText"
+        }, 
+        "model": "works.Genre", 
+        "pk": 1
+    }, 
+    {
+        "fields": {
+            "description": "A non-serial publication that is complete in one volume or a designated finite number of volumes.  In physical form, a book is a collection of sheets of paper, parchment or other material bound together along one edge within covers.  Books are often identified with an ISBN.", 
+            "label": "Book", 
+	    "enabled" : true,
+            "uri": "http://purl.org/eprint/type/Book",
+			"citation_style": "book"
+        }, 
+        "model": "works.Genre", 
+        "pk": 2
+    }, 
+    {
+        "fields": {
+            "description": "A defined chapter or section of a book, usually with a separate title or number.", 
+            "label": "Book Item", 
+	    "enabled" : true,
+			"citation_style" : "none",
+            "uri": "http://purl.org/eprint/type/BookItem"
+        }, 
+        "model": "works.Genre", 
+        "pk": 3
+    }, 
+    {
+        "fields": {
+            "description": "A review of a book.", 
+			"citation_style" : "none",
+            "label": "Book Review", 
+	    "enabled" : false,
+            "uri": "http://purl.org/eprint/type/BookReview"
+        }, 
+        "model": "works.Genre", 
+        "pk": 4
+    }, 
+    {
+        "fields": {
+            "description": "A contribution to a conference, workshop or other event.  Where the contribution is a paper or poster, use Conference Paper or Conference Poster as appropriate.", 
+            "label": "Conference Item", 
+	    "enabled" : false,
+		"citation_style" : "web",
+            "uri": "http://purl.org/eprint/type/ConferenceItem"
+        }, 
+        "model": "works.Genre", 
+        "pk": 5
+    }, 
+    {
+        "fields": {
+            "description": "A paper submitted and/or presented at a conference, workshop or other event.", 
+            "label": "Conference Paper", 
+			"citation_style" : "web",
+	    "enabled" : true,
+            "uri": "http://purl.org/eprint/type/ConferencePaper"
+        }, 
+        "model": "works.Genre", 
+        "pk": 6
+    }, 
+    {
+        "fields": {
+            "description": "A poster submitted and/or presented at a conference, workshop or other event.", 
+            "label": "Conference Poster", 
+	    "enabled" : false,
+		"citation_style" : "web",
+            "uri": "http://purl.org/eprint/type/ConferencePoster"
+        }, 
+        "model": "works.Genre", 
+        "pk": 7
+    }, 
+    {
+        "fields": {
+            "description": "A contribution to a journal, e.g. an article, editorial, conference report, debate, letter or response.  Where the contribution is an article, use Journal Article.", 
+            "label": "Journal Item", 
+	    "enabled" : false,
+		"citation_style" : "none",
+            "uri": "http://purl.org/eprint/type/JournalItem"
+        }, 
+        "model": "works.Genre", 
+        "pk": 8
+    }, 
+    {
+        "fields": {
+            "description": "An article or paper published in a journal.  For book reviews, use Book Review.  For news items use News Item.  For other types of contribution use Journal Item.", 
+            "label": "Journal Article", 
+	    "enabled" : true,
+		"citation_style" : "none",
+            "uri": "http://purl.org/eprint/type/JournalArticle"
+        }, 
+        "model": "works.Genre", 
+        "pk": 9
+    }, 
+    {
+        "fields": {
+            "description": "A news item.", 
+            "label": "News Item", 
+            "enabled" : false,
+			"citation_style" : "web",
+            "uri": "http://purl.org/eprint/type/NewsItem"
+        }, 
+        "model": "works.Genre", 
+        "pk": 10
+    }, 
+    {
+        "fields": {
+            "description": "A patent or patent application.", 
+            "label": "Patent", 
+	    "enabled" : false,
+		"citation_style" : "none",
+            "uri": "http://purl.org/eprint/type/Patent"
+        }, 
+        "model": "works.Genre", 
+        "pk": 11
+    }, 
+    {
+        "fields": {
+            "description": "A research, statistical or technical report issued by an institution, agency, government body or other organisation.", 
+            "label": "Report",
+			"enabled" : true, 
+			"citation_style" : "none",
+            "uri": "http://purl.org/eprint/type/Report"
+        }, 
+        "model": "works.Genre", 
+        "pk": 12
+    }, 
+    {
+        "fields": {
+            "description": "The author's original manuscript as submitted to and/or accepted by a journal.", 
+            "label": "Submitted Journal Article", 
+			"citation_style" : "none",
+            "uri": "http://purl.org/eprint/type/SubmittedJournalArticle",
+	    "enabled" : false
+        }, 
+        "model": "works.Genre", 
+        "pk": 13
+    }, 
+    {
+        "fields": {
+            "description": "A thesis or dissertation submitted in completion of a course of study at an institution of higher education.", 
+            "label": "Thesis or Dissertation", 
+			"citation_style" : "book",
+            "uri": "http://purl.org/eprint/type/Thesis",
+	    "enabled" : false
+        }, 
+        "model": "works.Genre", 
+        "pk": 14
+    }, 
+    {
+        "fields": {
+            "description": "A working or discussion paper circulated publicly or among a group of peers.  Certain disciplines, for example economics, issue working papers in series.  Working or discussion papers may form the basis for a Journal Article or Conference Paper.", 
+            "label": "Working or Discussion Paper", 
+	    "enabled" : true,
+		"citation_style" : "web",
+            "uri": "http://purl.org/eprint/type/WorkingPaper"
+        }, 
+        "model": "works.Genre", 
+        "pk": 15
+    },
+	{
+		"model" : "works.Genre",
+		"pk" : 16,
+		"fields" : {
+			"description" : "A manual issued by an institution, agency, government body or other organisation.",
+			"label" : "Manual",
+			"citation_style" : "web",
+			"enabled" : true,
+			"uri": "http://lcrm.lib.unc.edu/genre/Manual"
+		}
+	},
+	
+	{
+		"model" : "works.Genre",
+		"pk" : 17,
+		"fields" : {
+			"description" : "A particular conference at which ConferenceItems are presented",
+			"label" : "Conference",
+			"citation_style" : "web",
+			"enabled" : true,
+			"uri": "http://lcrm.lib.unc.edu/genre/Conference"
+		}
+	},
+	
+    {
+	"model" : "works.License",
+	"pk" : 1,
+	"fields" : {
+		"name" : "All Rights Reserved",
+		"description" : "The work may only be viewed by users of the site while actively using the site.  No downloading, copying, or other use is permitted (subject to fair use)."
+		}
+    },
+    {
+	"model" : "works.License",
+	"pk" : 2,
+	"fields" : {
+		"name": "CC Att/Noncom/NoDeriv",
+		"description" : "Creative Commons w/ Attribution, free for non-commerical copying, and no derivative works permitted.  Copying is permitted for non-commercial uses, but derivative works are disallowed.",
+		"reference_url" : "http://creativecommons.org/licenses/by-nc-nd/3.0/us/"
+		}
+    },
+    {
+        "pk": 1, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American women--North Carolina--Durham--History."
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--North Carolina--Durham--Biography."
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--North Carolina--Durham--History."
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--North Carolina--Durham--Social conditions."
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Community life--North Carolina--Durham--History."
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Durham (N.C.)--Race relations."
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Durham (N.C.)--Social conditions."
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Sex role--North Carolina--Durham--History."
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Social change--North Carolina--Durham--History."
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Social classes--North Carolina--Durham--History."
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American women--North Carolina--Durham--Political activity--History--20th century."
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Civil rights--North Carolina--Durham--History--20th century."
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Civil rights movements--North Carolina--Durham--History--20th century."
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Women, White--North Carolina--Durham--Political activity--History--20th century."
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Civil rights--History--20th century."
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Segregation--History--20th century."
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Christianity and politics--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Church and social problems--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Civil rights movements--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Civil rights workers--Religious life--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Civil rights--United States--Religious aspects--Christianity--History--20th century."
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "United States--Church history--20th century."
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "United States--Race relations."
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Library of Congress Cataloging-in-Publication Data"
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "lc subject"
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American labor union members--Political activity--History."
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Discrimination in employment--United States--History."
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Pullman porters--Labor unions--United States--History."
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Race discrimination--United States--History."
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Protestant churches--Southern States--History."
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Race relations--Religious aspects--Christianity--History."
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Southern States--Church history."
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Southern States--Race relations--History."
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American Baptists--Southern States--History--19th century."
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American Baptists--Southern States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Baptists--Southern States--History--19th century."
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Baptists--Southern States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "National Baptist Convention of the United States of America--History."
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Southern Baptist Convention--History."
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Southern States--Church history--19th century."
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Southern States--Church history--20th century."
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Southern States--Race relations."
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Civil rights workers--Southern States--Case studies."
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Durham (N.C.)--Race relations--Case studies."
+        }
+    }, 
+    {
+        "pk": 46, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Ku Klux Klan (1915- )--North Carolina."
+        }
+    }, 
+    {
+        "pk": 47, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Ku Klux Klan (1915- )--Southern States--Case studies."
+        }
+    }, 
+    {
+        "pk": 48, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "North Carolina--Race relations."
+        }
+    }, 
+    {
+        "pk": 49, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Social change--Southern States--Case studies."
+        }
+    }, 
+    {
+        "pk": 50, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Southern States--Race relations--Case studies."
+        }
+    }, 
+    {
+        "pk": 51, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Civil rights--Tennessee--Memphis--History--20th century."
+        }
+    }, 
+    {
+        "pk": 52, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Segregation--Tennessee--Memphis--History--20th century."
+        }
+    }, 
+    {
+        "pk": 53, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Tennessee--Memphis--History--20th century."
+        }
+    }, 
+    {
+        "pk": 54, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Civil rights movements--Tennessee--Memphis--History--20th century."
+        }
+    }, 
+    {
+        "pk": 55, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Memphis (Tenn.)--History--20th century."
+        }
+    }, 
+    {
+        "pk": 56, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Memphis (Tenn.)--Race relations--History--20th century."
+        }
+    }, 
+    {
+        "pk": 57, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Racism--Tennessee--Memphis--History--20th century."
+        }
+    }, 
+    {
+        "pk": 58, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American children--Southern States--Social conditions--20th century."
+        }
+    }, 
+    {
+        "pk": 59, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Race identity--Southern States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 60, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Segregation--Southern States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 61, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Children, White--Southern States--Social conditions--20th century."
+        }
+    }, 
+    {
+        "pk": 62, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Etiquette--Southern States--Psychological aspects--History--20th century."
+        }
+    }, 
+    {
+        "pk": 63, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Race awareness in children--Southern States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 64, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Southern States--Race relations--History--20th century."
+        }
+    }, 
+    {
+        "pk": 65, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Whites--Race identity--Southern States--History--20th century."
+        }
+    }, 
+	{
+	    "pk": 1, 
+	    "model": "works.publisher", 
+	    "fields": {
+	        "address": "", 
+	        "contact": null, 
+	        "name": "The University of North Carolina Press", 
+	        "location": "Chapel Hill, NC"
+	    }
+	}, 
+    {
+        "pk": 130, 
+        "model": "works.work", 
+        "fields": {
+            "available": 1, 
+            "publisher": 1, 
+            "doi": "10.5149/uncp/9780807856840", 
+            "isbn": "9780807856840", 
+            "parent": null, 
+            "license": 1, 
+            "title": "Growing Up Jim Crow", 
+            "page_count": 320, 
+            "created": "2010-03-30 10:44:49", 
+            "author_display": "Jennifer Ritterhouse", 
+            "last_modified": "2010-04-19 11:37:28", 
+            "extent": "", 
+            "published": "2006-01-01", 
+            "genre": 2, 
+            "subtitle": "How Black And White Southern Children Learned Race", 
+            "rights": "", 
+            "subjects": [
+                58, 
+                59, 
+                60, 
+                61, 
+                62, 
+                63, 
+                64, 
+                65
+            ], 
+            "slug": "growing-up-jim-crow", 
+            "tags": "race awareness,segregation,racial etiquette,racial violence,childhood,adolescents,history of childhood,racism,racial roles", 
+            "description": "<p>Ritterhouse asks how southern black and white children in the early 20th century learned the unwritten rules that guided every aspect of individual behavior, from how blacks and whites stood, sat, ate, drank, walked, and talked to whether they made eye contact with one another. More broadly, she asks how individuals developed racial self-consciousness. Exploring relationships between public and private and between segregation, racial etiquette, and racial violence, Ritterhouse sheds new light on tradition and change in the South and the meanings of segregation within southern culture.</p>"
+        }
+    }, 
+    {
+        "pk": 131, 
+        "model": "works.work", 
+        "fields": {
+            "available": 1, 
+            "publisher": 1, 
+            "doi": "10.5149/uncp/9780807858028", 
+            "isbn": "9780807858028", 
+            "parent": null, 
+            "license": 1, 
+            "title": "Battling the Plantation Mentality", 
+            "page_count": 429, 
+            "created": "2010-03-30 10:47:37", 
+            "author_display": "Laurie B. Green", 
+            "last_modified": "2010-04-19 11:37:36", 
+            "extent": "", 
+            "published": "2007-01-01", 
+            "genre": 2, 
+            "subtitle": "Memphis and the Black Freedom Struggle", 
+            "rights": "", 
+            "subjects": [
+                51, 
+                52, 
+                53, 
+                54, 
+                55, 
+                56, 
+                57
+            ], 
+            "slug": "battling-the-plantation-mentality", 
+            "tags": "1968 Memphis sanitation strike,I Am a Man!,Martin Luther King Jr.,plantation mentality,segregation,police brutality,workplace violence,radio,black Memphians,Mississippi Delta,racial justice,equal rights,Black Freedom Movement,Civil Rights Movement,black southerners,urban migration,desegregation,voting rights,workers\u2019 rights,movie censorship,sharecroppers,black radio stations,Beale Street,Boss Crump,banned movies,Brown v. Board of Education,sharecroppers,sanitation workers,Civil Rights Act,\u201cmammy\u201d,black-appeal radio,sexual assault,wartime Memphis,mushroom strikes,\u201cReign of Terror\u201d,black youth", 
+            "description": "<p>Exploring the notion of African American &#8220;freedom&#8221; in postwar Memphis, Green demonstrates that the civil rights movement was battling an ongoing &#8220;plantation mentality&#8221; based on race, gender, and power that permeated southern culture long before&#8212;and even after&#8212;the groundbreaking legislation of the mid-1960s. She points to the Memphis sanitation workers strike as a clarion example of how the movement fought for a black freedom that consisted of not only constitutional rights but also social and human rights.</p>"
+        }
+    }, 
+]

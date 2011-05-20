@@ -1,0 +1,197 @@
+[
+	{
+	    "pk": 2, 
+	    "model": "works.useraccount", 
+	    "fields": {
+	        "about": "Pancake house.", 
+	        "verified": 0, 
+	        "prior_approval": 1, 
+	        "affiliation": "UNC Chapel Hill", 
+	        "user": 2, 
+	        "home_page": "", 
+	        "is_public": 1
+	    }
+	}, 
+	{
+	    "pk": 3, 
+	    "model": "works.useraccount", 
+	    "fields": {
+	        "about": "", 
+	        "verified": 1, 
+	        "prior_approval": 0, 
+	        "affiliation": "The University of North Carolina Press", 
+	        "user": 3, 
+	        "home_page": "", 
+	        "is_public": 1
+	    }
+	}, 
+	{
+	    "pk": 4, 
+	    "model": "works.useraccount", 
+	    "fields": {
+	        "about": "Employee of the UNC Libraries in the systems department.", 
+	        "verified": 0, 
+	        "prior_approval": 0, 
+	        "affiliation": "UNC", 
+	        "user": 4, 
+	        "home_page": "http://www.lib.unc.edu/", 
+	        "is_public": 1
+	    }
+	}, 
+	{
+	    "pk": 5, 
+	    "model": "works.useraccount", 
+	    "fields": {
+	        "about": "", 
+	        "verified": 1, 
+	        "prior_approval": 1, 
+	        "affiliation": "", 
+	        "user": 5, 
+	        "home_page": "", 
+	        "is_public": 1
+	    }
+	}, 
+	{
+	    "pk": 6, 
+	    "model": "works.useraccount", 
+	    "fields": {
+	        "about": "Sylvia K. Miller holds a B.A. and an M.A. in comparative literature  (from U.C. Berkeley and  Columbia University, respectively), and she has 24 years\u2019 experience in scholarly publishing in print and online, mostly with Scribner Reference and Routledge.  ", 
+	        "verified": 1, 
+	        "prior_approval": 1, 
+	        "affiliation": "University of North Carolina Press", 
+	        "user": 6, 
+	        "home_page": "", 
+	        "is_public": 1
+	    }
+	}, 
+	{
+	    "pk": 7, 
+	    "model": "works.useraccount", 
+	    "fields": {
+	        "about": "", 
+	        "verified": 1, 
+	        "prior_approval": 1, 
+	        "affiliation": "", 
+	        "user": 7, 
+	        "home_page": "", 
+	        "is_public": 1
+	    }
+	}, 
+	{
+	    "pk": 9, 
+	    "model": "works.useraccount", 
+	    "fields": {
+	        "about": "", 
+	        "verified": 0, 
+	        "prior_approval": 0, 
+	        "affiliation": null, 
+	        "user": 9, 
+	        "home_page": "", 
+	        "is_public": 0
+	    }
+	}, 
+	{
+	    "pk": 10, 
+	    "model": "works.useraccount", 
+	    "fields": {
+	        "about": "", 
+	        "verified": 0, 
+	        "prior_approval": 0, 
+	        "affiliation": null, 
+	        "user": 10, 
+	        "home_page": "", 
+	        "is_public": 0
+	    }
+	}, 
+	{
+	    "pk": 11, 
+	    "model": "works.useraccount", 
+	    "fields": {
+	        "about": "Husband, Service Desk Manager of MCNC, Owner of Goodtravel Design, and Musician.  Interests include Information Technology, Business, Web Design, Social Media.", 
+	        "verified": 0, 
+	        "prior_approval": 0, 
+	        "affiliation": "Goodtravel Design", 
+	        "user": 11, 
+	        "home_page": "http://goodtraveldesign.com/", 
+	        "is_public": 1
+	    }
+	}, 
+	{
+	    "pk": 12, 
+	    "model": "works.useraccount", 
+	    "fields": {
+	        "about": "", 
+	        "verified": 0, 
+	        "prior_approval": 0, 
+	        "affiliation": null, 
+	        "user": 12, 
+	        "home_page": "", 
+	        "is_public": 0
+	    }
+	}, 
+	{
+	    "pk": 15, 
+	    "model": "works.useraccount", 
+	    "fields": {
+	        "about": "", 
+	        "verified": 0, 
+	        "prior_approval": 0, 
+	        "affiliation": null, 
+	        "user": 15, 
+	        "home_page": "", 
+	        "is_public": 0
+	    }
+	}, 
+	{
+	    "pk": 14, 
+	    "model": "works.useraccount", 
+	    "fields": {
+	        "about": "", 
+	        "verified": 0, 
+	        "prior_approval": 0, 
+	        "affiliation": null, 
+	        "user": 14, 
+	        "home_page": "", 
+	        "is_public": 0
+	    }
+	}, 
+	{
+	    "pk": 16, 
+	    "model": "works.useraccount", 
+	    "fields": {
+	        "about": "", 
+	        "verified": 0, 
+	        "prior_approval": 0, 
+	        "affiliation": null, 
+	        "user": 16, 
+	        "home_page": "", 
+	        "is_public": 0
+	    }
+	}, 
+	{
+	    "pk": 17, 
+	    "model": "works.useraccount", 
+	    "fields": {
+	        "about": "", 
+	        "verified": 0, 
+	        "prior_approval": 0, 
+	        "affiliation": "", 
+	        "user": 17, 
+	        "home_page": "", 
+	        "is_public": 0
+	    }
+	}, 
+	{
+	    "pk": 21, 
+	    "model": "works.useraccount", 
+	    "fields": {
+	        "about": "", 
+	        "verified": 1, 
+	        "prior_approval": 1, 
+	        "affiliation": "", 
+	        "user": 21, 
+	        "home_page": "", 
+	        "is_public": 0
+	    }
+	} 
+]

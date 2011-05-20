@@ -1,0 +1,134 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>edu.unc.lib</groupId>
+	<artifactId>tei-package</artifactId>
+	<packaging>war</packaging>
+	<name>TEI Ingester</name>
+	<version>0.0.1-SNAPSHOT</version>
+	<description>Java Servlet application that runs XProc scripts for LCRM
+        ingest application.</description>
+	<!--
+	<profiles>
+		<profile>
+			<id>ramdisk</id>
+			<activation>
+				<property>
+				</property>
+				<file>
+					<exists>/dev/shm</exists>
+				</file>
+			</activation>
+			<build>
+					<directory>/dev/shm/${artifactId}-target</directory>
+					comment next line out
+					<outputDirectory>${build.directory}/classes</outputDirectory>
+				</build>
+		</profile>
+	</profiles>
+	-->
+	<repositories>
+		<repository>
+			<id>local-artifactory</id>
+			<name>ext-releases</name>
+			<url>http://dlbuild.libint.unc.edu:8080/artifactory/ext-releases</url>
+		</repository>
+	</repositories>
+	<dependencies>
+		<dependency>
+			<groupId>com.xmlcalabash</groupId>
+			<artifactId>calabash</artifactId>
+			<version>0.9.15</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.6</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>0.9.16</version>
+		</dependency>
+		<dependency>
+			<groupId>xml-resolver</groupId>
+			<artifactId>xml-resolver</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.2.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>3.1</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>net.sf.mime-util</groupId>
+			<artifactId>mime-util</artifactId>
+			<version>1.2</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				 <showDeprecation>true</showDeprecation>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<configuration>
+					<encoding>utf-8</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+<!--				<version>6.1.22</version> -->
+				<configuration>
+					<classesDirectory>${project.build.outputDirectory}</classesDirectory>
+                	<scanIntervalSeconds>10</scanIntervalSeconds>
+                	<stopKey>foo</stopKey>
+                	<stopPort>9999</stopPort>
+
+		        </configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

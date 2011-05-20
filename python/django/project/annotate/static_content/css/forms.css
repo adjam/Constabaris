@@ -1,0 +1,175 @@
+div.form {
+	font-size: 1em;
+ 	background-color: #fff;
+ 	width: 80%;
+	margin: auto;
+	padding: 1em;
+}
+
+div.form fieldset {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 1em;
+    -moz-border-radius: .5em;
+}
+
+legend {
+	padding: .5em;
+	border: 1px solid #666;
+	background-color: #fff;
+	-moz-border-radius: .5em;
+	/* border-radius: .5em; */
+}
+
+
+div.form fieldset label {
+    display: inline-block;
+    line-height: 1.8em;
+    vertical-align: top;
+    width: 12em;
+}
+
+div.form fieldset label.generated {
+	display: inline-block;
+	float: right;
+}
+
+div.form fieldset label em {
+    color: #c00;
+}
+
+.nonmatch {
+	color: #e99;
+}
+
+input.error {
+	border: 3px solid #c00;
+}
+
+input[type=checkbox].error {
+	background-color: #c00;
+}
+
+ul.errorlist {
+    display: inline;
+    color: red;
+    float: left;
+}
+
+em.error {
+	padding-left: .5em;
+	font-size: 75%;
+	color: #c00;
+}
+
+ul.instructions {
+	margin-top: 1em;
+	list-style-type: disc;
+	font-size: 80%;
+}
+
+ul.instructions ul {
+	list-style-type: circle;
+	list-style-position: inside;
+}
+
+/* password strength checking rules */
+
+.password-meter {
+	position: absolute;
+	border: 1px solid #000;
+	-moz-border-radius: .5em;
+	background-color: #fff;
+	top: 4em;
+	right: -5em;
+	width: 16em;
+	display: none;
+	
+}
+
+.password-meter h1 {
+	font-size: 1.25em;
+	background-color: #A3D175;
+	border-bottom: 2px solid #000;
+}
+
+.password-meter-message {
+	margin: 0 auto;
+	font-weight: bold;
+	color: #666;
+}
+
+.password-meter-bg, .password-meter-bar {
+	height: .4em;
+}
+
+.password-meter-message-very-weak {
+	color: #aa0033;
+}
+
+.password-meter-message-weak {
+	color: #f5ac00;
+}
+
+.password-meter-message-good {
+	color: #69c;
+}
+
+.password.meter-message-strong {
+	color: #008000;
+}
+
+.password-meter-bg .password-meter-very-weak {
+        background: #aa0033;
+        width: 10%;
+}
+.password-meter-bg .password-meter-weak {
+        background: #f5ac00;
+        width: 30%;
+}
+.password-meter-bg .password-meter-good {
+        background: #6699cc;
+        width: 70%;
+}
+
+.password-meter-bg .password-meter-strong {
+        background: #008000;
+        width: 100%;
+}
+
+
+.form-row input[type=text], textarea {
+	width: 23em;
+}
+
+.searchinput {
+	margin: 0;
+	border: 1px solid #000;
+	-moz-border-radius: 3px;
+	padding: 3px 3px 0px 24px;
+	vertical-align: middle;
+	background: #fff url(../images/searchinput-bg.png) 3px 3px no-repeat;
+}
+
+
+
+input[type=text]:focus {
+	background-color: #cfc;
+}
+
+form ul.errorlist {
+	float: right;
+	color: red;
+}
+
+tr.controls th {
+	font-family: Helvetica,Arial,sans-serif;
+	font-size: 75%;
+}
+
+th.checkall .uncheck {
+	color: #ccc;
+}
+
+

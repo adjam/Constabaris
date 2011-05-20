@@ -1,0 +1,13 @@
+This directory is automatically created and used by a Java
+web application that runs XProc pipelines in order to generate
+ingest packages for the "Publishing the Long Civil Rights Movement"
+(LCRM) project.
+
+Subdirectories within this directory generally correlate with user
+sessions, so in general it is safe to delete subdirectories unless
+someone is using the application.
+
+
+Maintainer: Adam Constabaris <adamc@unc.edu>
+Id: $Id$
+Version: $LastChangedRevision$

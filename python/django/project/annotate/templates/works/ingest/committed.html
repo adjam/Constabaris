@@ -1,0 +1,52 @@
+{% extends "works/ingest/ingest_base.html" %}
+{% block pagetitle %}
+ <title>Ingest Complete</title>
+{% endblock %}
+{% block content %}
+ <h1>Ingest of '{{ work.title }}' Complete</h1>
+ 
+  <p><a href="{{ admin_url }}">view/edit this work in the admin application</a></p>
+  <table>
+    <thead>
+    <tr>
+      <th>Field</th>
+      <th>Value(s)</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+	<td class="fieldName">[ID] Title</td>
+	<td class="fieldValue">[{{work.id}}] <a href="{{ work.get_absolute_url }}">{{ work.title }} {% if work.subtitle %}: {{ work.subtitle }} {%endif%}</a></td>
+      </tr>
+      <tr>
+	<td class="fieldName">Author(s)</td>
+	<td class="fieldValue">{{ work.author }}</td>
+      </tr>	
+      <tr class="sections">
+	<td class="fieldName">Sections</td>
+	<td class="fieldValue">
+	{% spaceless %}
+	  <ul>
+	{% for sect, div in sections %}
+	    <li>
+		<a href="{{ sect.get_absolute_url }}">{{ sect.title }}</a>
+	    </li>
+	{% endfor %}
+	  </ul>
+	{% endspaceless %}
+	</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+	<td colspan="2">
+	 <p>
+	  This work is <em>not</em> yet visible to regular users of the site,
+	 nor are any of the sections open for public viewing.  You will probably
+	 want to head over to the administration application in order to take care of such matters.
+	 </p>
+        </td>
+       </tr>
+      </tfoot>	
+  </table>
+{% endblock %}

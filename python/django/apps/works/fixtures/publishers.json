@@ -1,0 +1,92 @@
+[
+	{
+	    "pk": 1, 
+	    "model": "works.publisher", 
+	    "fields": {
+	        "address": "", 
+	        "contact": null, 
+	        "name": "The University of North Carolina Press", 
+	        "location": "Chapel Hill, NC"
+	    }
+	}, 
+	{
+	    "pk": 2, 
+	    "model": "works.publisher", 
+	    "fields": {
+	        "address": "", 
+	        "contact": null, 
+	        "name": "The University of North Carolina Press", 
+	        "location": "Chapel Hill and London"
+	    }
+	}, 
+	{
+	    "pk": 3, 
+	    "model": "works.publisher", 
+	    "fields": {
+	        "address": "", 
+	        "contact": null, 
+	        "name": "UNC Center for Civil Rights", 
+	        "location": "University of North Carolina at Chapel Hill"
+	    }
+	}, 
+	{
+	    "pk": 4, 
+	    "model": "works.publisher", 
+	    "fields": {
+	        "address": "", 
+	        "contact": null, 
+	        "name": "UNC Center for Civil Rights", 
+	        "location": "Chapel Hill, NC"
+	    }
+	}, 
+	{
+	    "pk": 5, 
+	    "model": "works.publisher", 
+	    "fields": {
+	        "address": "", 
+	        "contact": null, 
+	        "name": "The University of North Carolina Press", 
+	        "location": "Chapel Hill"
+	    }
+	}, 
+	{
+	    "pk": 6, 
+	    "model": "works.publisher", 
+	    "fields": {
+	        "address": "", 
+	        "contact": null, 
+	        "name": "North Carolina Law Review", 
+	        "location": "University of North Carolina at Chapel Hill"
+	    }
+	}, 
+	{
+	    "pk": 7, 
+	    "model": "works.publisher", 
+	    "fields": {
+	        "address": "", 
+	        "contact": null, 
+	        "name": "The University of North Carolina Press", 
+	        "location": "Chapel Hill & London"
+	    }
+	}, 
+	{
+	    "pk": 8, 
+	    "model": "works.publisher", 
+	    "fields": {
+	        "address": "", 
+	        "contact": null, 
+	        "name": "UNC Center on Poverty, Work and Opportunity", 
+	        "location": "University of North Carolina at Chapel Hill"
+	    }
+	}, 
+	{
+	    "pk": 9, 
+	    "model": "works.publisher", 
+	    "fields": {
+	        "address": "", 
+	        "contact": null, 
+	        "name": "The University of Georgia Press", 
+	        "location": "Athens, Georgia"
+	    }
+	}
+] 

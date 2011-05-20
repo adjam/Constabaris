@@ -1,0 +1,78 @@
+{% extends "works/ingest/ingest_base.html" %}
+{% block pagetitle %}
+ <title>Works: Upload</title>
+{% endblock %}
+ {% block content %}
+  <h1>Ingest</h1>
+   <h3><a href="/voice/admin">Admin Site</a></h3>
+  {# output the upload form unless we have a work #}
+  {% if not work %}
+   <a href="{% url works:update %}">Update an existing work</a> <br />
+  {% if form.errors %}
+	{{ form.errors }}
+  {% endif %}
+  <form action="{% url works:ingest %}" method="post"
+	enctype="multipart/form-data">
+   <div class="form">
+    <fieldset>
+	<legend>Add a New Work</legend>
+    <div class="form-row">
+      <label for="id_license">
+	License
+	{% if form.license.errors %}
+	 {% for err in form.license.errors %}
+	 <em class="error">
+	{{ err }}
+         <em>
+	 {% if not forloop.last %}
+	 <br />
+	 {% endif %}
+	 {% endfor %}
+       {% endif %}
+      </label>
+      {{ form.license}}
+      <div class="clearblock">&#160;</div>
+    </div>
+    <div class="form-row">
+      <label for="id_file">
+	File
+	{% if form.file.errors %}
+	 {% for err in form.file.errors %}
+	 <em class="error">
+	   {{ err }}
+	 </em>
+	 {% if not forloop.last %}
+	  <br />
+         {% endif %}
+         {% endfor %}
+        {% endif %}
+      </label>
+      {{ form.file }}
+      <div class="clearblock">&#160;</div>
+    </div>
+	</fieldset>
+         <input type="submit" name="action" value="Upload"/>
+
+  </div> <!-- form -->
+  </form>
+  <div class="instructions">
+    You may upload either a prepared ingest package (.zip containing METS and all related files), or
+    a .zip file that contains the source TEI file for a work and any associated images.  
+    The structure for the latter type of zip file should look something like the following:
+    <pre>
+    tei.xml
+    figures/
+       figure-1.jpg
+       figure-2.jpg
+       ...
+    </pre>
+    You may also upload a custom generated ingest package, which must
+    include a METS file named <tt>mets.xml</tt>, a
+    fully <em>normalized</em> <tt>tei.xml</tt> file (if appropriate), 
+    and all component XHTML files generated from the normalized TEI file, as well as
+    referenced images etc.
+    </div>
+   {% else %}
+     {% include "works/ingest/overview.html" %}
+   {% endif %}
+{% endblock %}

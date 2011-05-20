@@ -1,0 +1,12 @@
+        <a href="{{ result.object.get_absolute_url }}">{{ result.title }}</a>
+{% ifequal ctype "work" %}
+         by <a href="<!-- this needs to make a canned search for the author -->">{{ result.object.author_display }}</a>
+	{% ifnotequal result.object.comment_count 0}
+		<div class="comment_count">{{ result.object.comment_count }}</div>
+	{% endifnotequal %}
+{% endifequal %}
+
+{% ifequal ctype "section" %}
+        <br />
+         - portion of <a href="{{ result.object.work.get_absolute_url }}">{{ result.object.work }}</a>
+{% endifequal %}

@@ -1,0 +1,7 @@
+<a href="{{ result.object.work.get_absolute_url }}">{{ result.object.work.title }}</a>
+<br />
+&ndash; {% if can_view %}
+            <a href="{{ result.object.get_absolute_url }}">{{ result.title }}</a>
+        {% else %}
+               {{ result.title }} [ access to this section is restricted ]
+        {% endif %}

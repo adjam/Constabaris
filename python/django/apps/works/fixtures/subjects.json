@@ -1,0 +1,2314 @@
+[
+    {
+        "pk": 1, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American women--North Carolina--Durham--History."
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--North Carolina--Durham--Biography."
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--North Carolina--Durham--History."
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--North Carolina--Durham--Social conditions."
+        }
+    }, 
+    {
+        "pk": 5, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Community life--North Carolina--Durham--History."
+        }
+    }, 
+    {
+        "pk": 6, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Durham (N.C.)--Race relations."
+        }
+    }, 
+    {
+        "pk": 7, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Durham (N.C.)--Social conditions."
+        }
+    }, 
+    {
+        "pk": 8, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Sex role--North Carolina--Durham--History."
+        }
+    }, 
+    {
+        "pk": 9, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Social change--North Carolina--Durham--History."
+        }
+    }, 
+    {
+        "pk": 10, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Social classes--North Carolina--Durham--History."
+        }
+    }, 
+    {
+        "pk": 11, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American women--North Carolina--Durham--Political activity--History--20th century."
+        }
+    }, 
+    {
+        "pk": 12, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Civil rights--North Carolina--Durham--History--20th century."
+        }
+    }, 
+    {
+        "pk": 13, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Civil rights movements--North Carolina--Durham--History--20th century."
+        }
+    }, 
+    {
+        "pk": 14, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Women, White--North Carolina--Durham--Political activity--History--20th century."
+        }
+    }, 
+    {
+        "pk": 15, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Civil rights--History--20th century."
+        }
+    }, 
+    {
+        "pk": 16, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Segregation--History--20th century."
+        }
+    }, 
+    {
+        "pk": 17, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Christianity and politics--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 18, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Church and social problems--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 19, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Civil rights movements--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 20, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Civil rights workers--Religious life--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 21, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Civil rights--United States--Religious aspects--Christianity--History--20th century."
+        }
+    }, 
+    {
+        "pk": 22, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "United States--Church history--20th century."
+        }
+    }, 
+    {
+        "pk": 23, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "United States--Race relations."
+        }
+    }, 
+    {
+        "pk": 24, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Library of Congress Cataloging-in-Publication Data"
+        }
+    }, 
+    {
+        "pk": 25, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "lc subject"
+        }
+    }, 
+    {
+        "pk": 27, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American labor union members--Political activity--History."
+        }
+    }, 
+    {
+        "pk": 28, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Discrimination in employment--United States--History."
+        }
+    }, 
+    {
+        "pk": 29, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Pullman porters--Labor unions--United States--History."
+        }
+    }, 
+    {
+        "pk": 30, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Race discrimination--United States--History."
+        }
+    }, 
+    {
+        "pk": 31, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Protestant churches--Southern States--History."
+        }
+    }, 
+    {
+        "pk": 32, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Race relations--Religious aspects--Christianity--History."
+        }
+    }, 
+    {
+        "pk": 33, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Southern States--Church history."
+        }
+    }, 
+    {
+        "pk": 34, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Southern States--Race relations--History."
+        }
+    }, 
+    {
+        "pk": 35, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American Baptists--Southern States--History--19th century."
+        }
+    }, 
+    {
+        "pk": 36, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American Baptists--Southern States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 37, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Baptists--Southern States--History--19th century."
+        }
+    }, 
+    {
+        "pk": 38, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Baptists--Southern States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 39, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "National Baptist Convention of the United States of America--History."
+        }
+    }, 
+    {
+        "pk": 40, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Southern Baptist Convention--History."
+        }
+    }, 
+    {
+        "pk": 41, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Southern States--Church history--19th century."
+        }
+    }, 
+    {
+        "pk": 42, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Southern States--Church history--20th century."
+        }
+    }, 
+    {
+        "pk": 43, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Southern States--Race relations."
+        }
+    }, 
+    {
+        "pk": 44, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Civil rights workers--Southern States--Case studies."
+        }
+    }, 
+    {
+        "pk": 45, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Durham (N.C.)--Race relations--Case studies."
+        }
+    }, 
+    {
+        "pk": 46, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Ku Klux Klan (1915- )--North Carolina."
+        }
+    }, 
+    {
+        "pk": 47, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Ku Klux Klan (1915- )--Southern States--Case studies."
+        }
+    }, 
+    {
+        "pk": 48, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "North Carolina--Race relations."
+        }
+    }, 
+    {
+        "pk": 49, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Social change--Southern States--Case studies."
+        }
+    }, 
+    {
+        "pk": 50, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Southern States--Race relations--Case studies."
+        }
+    }, 
+    {
+        "pk": 51, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Civil rights--Tennessee--Memphis--History--20th century."
+        }
+    }, 
+    {
+        "pk": 52, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Segregation--Tennessee--Memphis--History--20th century."
+        }
+    }, 
+    {
+        "pk": 53, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Tennessee--Memphis--History--20th century."
+        }
+    }, 
+    {
+        "pk": 54, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Civil rights movements--Tennessee--Memphis--History--20th century."
+        }
+    }, 
+    {
+        "pk": 55, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Memphis (Tenn.)--History--20th century."
+        }
+    }, 
+    {
+        "pk": 56, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Memphis (Tenn.)--Race relations--History--20th century."
+        }
+    }, 
+    {
+        "pk": 57, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Racism--Tennessee--Memphis--History--20th century."
+        }
+    }, 
+    {
+        "pk": 58, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American children--Southern States--Social conditions--20th century."
+        }
+    }, 
+    {
+        "pk": 59, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Race identity--Southern States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 60, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Segregation--Southern States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 61, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Children, White--Southern States--Social conditions--20th century."
+        }
+    }, 
+    {
+        "pk": 62, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Etiquette--Southern States--Psychological aspects--History--20th century."
+        }
+    }, 
+    {
+        "pk": 63, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Race awareness in children--Southern States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 64, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Southern States--Race relations--History--20th century."
+        }
+    }, 
+    {
+        "pk": 65, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Whites--Race identity--Southern States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 66, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Charlotte-Mecklenburg Schools."
+        }
+    }, 
+    {
+        "pk": 67, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Public schools--North Carolina."
+        }
+    }, 
+    {
+        "pk": 68, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Public schools--Southern States--Congresses."
+        }
+    }, 
+    {
+        "pk": 69, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "School integration--North Carolina--Charlotte."
+        }
+    }, 
+    {
+        "pk": 70, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "School integration--Southern States--Congresses."
+        }
+    }, 
+    {
+        "pk": 71, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Segregation in education--North Carolina--Charlotte."
+        }
+    }, 
+    {
+        "pk": 72, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Segregation in education--North Carolina--Wake County."
+        }
+    }, 
+    {
+        "pk": 73, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Segregation in education--Southern States--Congresses."
+        }
+    }, 
+    {
+        "pk": 74, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Wake County Public School System."
+        }
+    }, 
+    {
+        "pk": 75, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Education--Wisconsin--Milwaukee--History."
+        }
+    }, 
+    {
+        "pk": 76, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Discrimination in education--Wisconsin--Milwaukee--History."
+        }
+    }, 
+    {
+        "pk": 77, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Educational change--Wisconsin--Milwaukee--History."
+        }
+    }, 
+    {
+        "pk": 78, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Milwaukee (Wis.)--Race relations."
+        }
+    }, 
+    {
+        "pk": 79, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American college students--Texas."
+        }
+    }, 
+    {
+        "pk": 80, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Education (Higher)--Texas."
+        }
+    }, 
+    {
+        "pk": 81, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Discrimination in education--Texas."
+        }
+    }, 
+    {
+        "pk": 82, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Educational equalization--Texas."
+        }
+    }, 
+    {
+        "pk": 83, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Civil rights movements--Southern States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 84, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Food, Tobacco, Agricultural, and Allied Workers Union of America--History--20th century."
+        }
+    }, 
+    {
+        "pk": 85, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Tobacco workers--Labor unions--Southern States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 86, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Foreign workers, Guatemalan--North Carolina--Morganton."
+        }
+    }, 
+    {
+        "pk": 87, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Labor disputes--North Carolina--Morganton."
+        }
+    }, 
+    {
+        "pk": 88, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Mayas--North Carolina--Morganton."
+        }
+    }, 
+    {
+        "pk": 89, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Morganton (N.C.)--Social life and customs."
+        }
+    }, 
+    {
+        "pk": 90, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Poultry plants--Employees--Labor unions--North Carolina--Morganton."
+        }
+    }, 
+    {
+        "pk": 91, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Poultry plants--North Carolina--Morganton--Employees."
+        }
+    }, 
+    {
+        "pk": 92, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Baltimore (Md.)--Race relations."
+        }
+    }, 
+    {
+        "pk": 93, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Working class whites--Maryland--Baltimore--Attitudes."
+        }
+    }, 
+    {
+        "pk": 94, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Working class whites--Political activity--Maryland--Baltimore."
+        }
+    }, 
+    {
+        "pk": 95, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "College sports--North Carolina--History--20th century."
+        }
+    }, 
+    {
+        "pk": 96, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Educational change--North Carolina--History--20th century."
+        }
+    }, 
+    {
+        "pk": 97, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "School sports--North Carolina--History--20th century."
+        }
+    }, 
+    {
+        "pk": 98, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Social change--North Carolina."
+        }
+    }, 
+    {
+        "pk": 99, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Sports--North Carolina--History--20th century."
+        }
+    }, 
+    {
+        "pk": 100, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Textile fabrics--North Carolina."
+        }
+    }, 
+    {
+        "pk": 101, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Textile industry--North Carolina."
+        }
+    }, 
+    {
+        "pk": 102, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Textile workers--North Carolina."
+        }
+    }, 
+    {
+        "pk": 103, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American labor union members--Southern States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 104, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Employment--North Carolina--Roanoke Rapids."
+        }
+    }, 
+    {
+        "pk": 105, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Discrimination in employment--North Carolina--History--20th century."
+        }
+    }, 
+    {
+        "pk": 106, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Discrimination in employment--Southern States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 107, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Race discrimination--Southern States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 108, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Textile workers--North Carolina--History--20th century."
+        }
+    }, 
+    {
+        "pk": 109, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Textile workers--Southern States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 110, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--North Carolina--Wilmington--History--19th century."
+        }
+    }, 
+    {
+        "pk": 111, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Riots--North Carolina--Wilmington--History--19th century."
+        }
+    }, 
+    {
+        "pk": 112, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Wilmington (N.C.)--Race relations."
+        }
+    }, 
+    {
+        "pk": 113, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American coal miners--Alabama--History."
+        }
+    }, 
+    {
+        "pk": 114, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American labor union members--Alabama--History."
+        }
+    }, 
+    {
+        "pk": 115, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Coal miners--Labor unions--Alabama--History."
+        }
+    }, 
+    {
+        "pk": 116, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Civil rights workers--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 117, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Clergy--Political activity--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 118, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Vietnam War, 1961-1975--Protest movements--United States--History."
+        }
+    }, 
+    {
+        "pk": 119, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Whites--United States--Politics and government."
+        }
+    }, 
+    {
+        "pk": 120, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Cities and towns--United States."
+        }
+    }, 
+    {
+        "pk": 121, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Sociology, Urban--United States."
+        }
+    }, 
+    {
+        "pk": 122, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Urban policy--United States."
+        }
+    }, 
+    {
+        "pk": 123, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Urban poor--United States."
+        }
+    }, 
+    {
+        "pk": 124, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American leadership--History--20th century."
+        }
+    }, 
+    {
+        "pk": 125, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Cultural assimilation--History--20th century."
+        }
+    }, 
+    {
+        "pk": 126, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Politics and government."
+        }
+    }, 
+    {
+        "pk": 127, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Charlotte (N.C.)--Schools."
+        }
+    }, 
+    {
+        "pk": 128, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "School integration--North Carolina--Charlotte--Case studies."
+        }
+    }, 
+    {
+        "pk": 129, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Education--North Carolina--Hyde County--Case studies."
+        }
+    }, 
+    {
+        "pk": 130, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Hyde County (N.C.)--Schools."
+        }
+    }, 
+    {
+        "pk": 131, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "School closings--North Carolina--Hyde County--Case studies."
+        }
+    }, 
+    {
+        "pk": 132, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Segregation in education--North Carolina--Hyde County--Case studies."
+        }
+    }, 
+    {
+        "pk": 133, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Education--North Carolina--History."
+        }
+    }, 
+    {
+        "pk": 134, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Education--Southern States--History--19th century."
+        }
+    }, 
+    {
+        "pk": 135, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Education--Southern States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 136, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--North Carolina--Greensboro--Biography."
+        }
+    }, 
+    {
+        "pk": 137, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Deaf--North Carolina--Greensboro--Biography."
+        }
+    }, 
+    {
+        "pk": 138, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Diagnostic errors--United States--Case studies."
+        }
+    }, 
+    {
+        "pk": 139, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Greensboro (N.C.)--Biography."
+        }
+    }, 
+    {
+        "pk": 140, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Greensboro (N.C.)--Race relations--History--20th century."
+        }
+    }, 
+    {
+        "pk": 141, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Mentally ill--Abuse of--United States--Case studies."
+        }
+    }, 
+    {
+        "pk": 142, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "North Carolina--Biography."
+        }
+    }, 
+    {
+        "pk": 143, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "People with disabilities--Abuse of--United States--Case studies."
+        }
+    }, 
+    {
+        "pk": 144, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Racism--Southern States--Case studies."
+        }
+    }, 
+    {
+        "pk": 145, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Boston (Mass.)--Ethnic relations."
+        }
+    }, 
+    {
+        "pk": 146, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Boston (Mass.)--Race relations."
+        }
+    }, 
+    {
+        "pk": 147, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "School integration--Massachusetts--Boston--History."
+        }
+    }, 
+    {
+        "pk": 148, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Social classes--Massachusetts--Boston--History."
+        }
+    }, 
+    {
+        "pk": 149, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Education--Virginia."
+        }
+    }, 
+    {
+        "pk": 150, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Segregation in education."
+        }
+    }, 
+    {
+        "pk": 151, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Virginia--Politics and government--1951-"
+        }
+    }, 
+    {
+        "pk": 152, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Segregation in education--Law and legislation--United States--History."
+        }
+    }, 
+    {
+        "pk": 153, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Migrant agricultural laborers--Atlantic States--History."
+        }
+    }, 
+    {
+        "pk": 154, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Southern--States\u2014Race relations--History."
+        }
+    }, 
+    {
+        "pk": 155, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American civil rights workers--Southern States--Biography."
+        }
+    }, 
+    {
+        "pk": 156, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American women political activists--Southern States--Biography."
+        }
+    }, 
+    {
+        "pk": 157, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American women teachers--South Carolina--Biography."
+        }
+    }, 
+    {
+        "pk": 158, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Civil rights--Southern States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 159, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Education--South Carolina--History--20th century."
+        }
+    }, 
+    {
+        "pk": 160, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Civil rights workers--Southern States--Biography."
+        }
+    }, 
+    {
+        "pk": 161, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "United States--Race relations--History--20th century."
+        }
+    }, 
+    {
+        "pk": 162, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Education."
+        }
+    }, 
+    {
+        "pk": 163, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Education and state--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 164, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Federal aid to education--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 165, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Education--Southern States."
+        }
+    }, 
+    {
+        "pk": 166, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Education--Southern States--History."
+        }
+    }, 
+    {
+        "pk": 167, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Private schools--North Carolina."
+        }
+    }, 
+    {
+        "pk": 168, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Private schools--Southern States."
+        }
+    }, 
+    {
+        "pk": 169, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Segregation in education--Law and legislation--North Carolina."
+        }
+    }, 
+    {
+        "pk": 170, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Segregation in education--Law and legislation--Southern States."
+        }
+    }, 
+    {
+        "pk": 171, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Accounting--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 172, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American accountants--Biography."
+        }
+    }, 
+    {
+        "pk": 173, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Baseball players--United States--Economic conditions--20th century."
+        }
+    }, 
+    {
+        "pk": 174, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Baseball team owners--United States--Economic conditions--20th century."
+        }
+    }, 
+    {
+        "pk": 175, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Baseball--Economic aspects--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 176, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Industrial relations--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 177, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Employment."
+        }
+    }, 
+    {
+        "pk": 178, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Labor unions--United States."
+        }
+    }, 
+    {
+        "pk": 179, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Working class--United States."
+        }
+    }, 
+    {
+        "pk": 180, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Depressions--1929--United States."
+        }
+    }, 
+    {
+        "pk": 181, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "New Deal, 1933-1939."
+        }
+    }, 
+    {
+        "pk": 182, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "United States--Politics and government--1933-1945."
+        }
+    }, 
+    {
+        "pk": 183, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "United States--Social policy."
+        }
+    }, 
+    {
+        "pk": 184, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Education--North Carolina--Caswell County--Case studies."
+        }
+    }, 
+    {
+        "pk": 185, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Community and school--North Carolina--Caswell County--Case studies."
+        }
+    }, 
+    {
+        "pk": 186, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Segregation in education--North Carolina--Caswell County--Case studies."
+        }
+    }, 
+    {
+        "pk": 187, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American iron and steel workers--Alabama--Birmingham--History."
+        }
+    }, 
+    {
+        "pk": 188, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Iron and steel workers--Alabama--Birmingham--History."
+        }
+    }, 
+    {
+        "pk": 189, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Paper industry workers--Southern States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 190, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Education--Southern States--History."
+        }
+    }, 
+    {
+        "pk": 191, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Education--Social aspects--Southern States--History."
+        }
+    }, 
+    {
+        "pk": 192, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Freedmen--Education--Southern States--History."
+        }
+    }, 
+    {
+        "pk": 193, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Literacy--Southern States--History."
+        }
+    }, 
+    {
+        "pk": 194, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Self-culture--Southern States--History."
+        }
+    }, 
+    {
+        "pk": 195, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Slavery--Southern States--History."
+        }
+    }, 
+    {
+        "pk": 196, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Slaves--Education--Southern States--History."
+        }
+    }, 
+    {
+        "pk": 197, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Psychology."
+        }
+    }, 
+    {
+        "pk": 198, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Racism--United States--Psychological aspects."
+        }
+    }, 
+    {
+        "pk": 199, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Social sciences--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 200, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "United States--Race relations--Psychological aspects."
+        }
+    }, 
+    {
+        "pk": 201, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Progressivism (United States politics)"
+        }
+    }, 
+    {
+        "pk": 202, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Southern States--Politics and government--1865-1950."
+        }
+    }, 
+    {
+        "pk": 203, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Southern States--Social conditions."
+        }
+    }, 
+    {
+        "pk": 204, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Textile workers--Labor unions--Southern States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 205, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American college students--Longitudinal studies."
+        }
+    }, 
+    {
+        "pk": 206, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American women--Education (Higher)--Longitudinal studies."
+        }
+    }, 
+    {
+        "pk": 207, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American women--Social conditions--Longitudinal studies."
+        }
+    }, 
+    {
+        "pk": 208, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "College integration--United States."
+        }
+    }, 
+    {
+        "pk": 209, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Educational surveys--United States."
+        }
+    }, 
+    {
+        "pk": 210, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Africa--Politics and government--20th century."
+        }
+    }, 
+    {
+        "pk": 211, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Africa--Relations--United States."
+        }
+    }, 
+    {
+        "pk": 212, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Africa--Social conditions."
+        }
+    }, 
+    {
+        "pk": 213, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Intellectual life--20th century."
+        }
+    }, 
+    {
+        "pk": 214, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Race identity."
+        }
+    }, 
+    {
+        "pk": 215, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Relations with Africans."
+        }
+    }, 
+    {
+        "pk": 216, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Blacks--Civil rights--Africa--History--20th century."
+        }
+    }, 
+    {
+        "pk": 217, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Civil rights movements--Africa--History--20th century."
+        }
+    }, 
+    {
+        "pk": 218, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "United States--Relations--Africa."
+        }
+    }, 
+    {
+        "pk": 219, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Developing countries--Foreign relations--United States."
+        }
+    }, 
+    {
+        "pk": 220, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Minorities--Civil rights--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 221, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Racism--Political aspects--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 222, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "United States--Foreign relations--1945-1989."
+        }
+    }, 
+    {
+        "pk": 223, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "United States--Foreign relations--Developing countries."
+        }
+    }, 
+    {
+        "pk": 224, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "United States--Race relations--Political aspects."
+        }
+    }, 
+    {
+        "pk": 225, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Civil rights--Mississippi--Sunflower County--History--20th century."
+        }
+    }, 
+    {
+        "pk": 226, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Segregation--Mississippi--Sunflower County--History--20th century."
+        }
+    }, 
+    {
+        "pk": 227, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Civil rights movements--Mississippi--Sunflower County--History--20th century."
+        }
+    }, 
+    {
+        "pk": 228, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Racism--Mississippi--Sunflower County--History--20th century."
+        }
+    }, 
+    {
+        "pk": 229, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Social change--Mississippi--Sunflower County--History--20th century."
+        }
+    }, 
+    {
+        "pk": 230, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Sunflower County (Miss.)--Biography."
+        }
+    }, 
+    {
+        "pk": 231, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Sunflower County (Miss.)--Race relations."
+        }
+    }, 
+    {
+        "pk": 232, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Aid to families with dependent children programs--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 233, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Poor women--Government policy--United States."
+        }
+    }, 
+    {
+        "pk": 234, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Public welfare--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 235, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Welfare recipients--Employment--United States."
+        }
+    }, 
+    {
+        "pk": 236, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American civil rights workers--Mississippi--Claiborne County--Biography."
+        }
+    }, 
+    {
+        "pk": 237, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Civil rights--Mississippi--Claiborne County--History--20th century.vCivil rights movements--Mississippi--Clai"
+        }
+    }, 
+    {
+        "pk": 238, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Mississippi--Claiborne County--Biography."
+        }
+    }, 
+    {
+        "pk": 239, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Claiborne County (Miss.)--Biography."
+        }
+    }, 
+    {
+        "pk": 240, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Claiborne County (Miss.)--Race relations"
+        }
+    }, 
+    {
+        "pk": 241, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Whites--Mississippi--Claiborne County--History--20th century."
+        }
+    }, 
+    {
+        "pk": 242, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Poor--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 243, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Poverty--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 244, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Civil rights--Mississippi--Claiborne County--History--20th century.vCivil rights movements--Mississippi--Clai"
+        }
+    }, 
+    {
+        "pk": 245, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Southern States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 246, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Discrimination in criminal justice administration--Southern States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 247, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Mobs--Southern States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 248, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Civil rights--History."
+        }
+    }, 
+    {
+        "pk": 249, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "United States--History, Local."
+        }
+    }, 
+    {
+        "pk": 250, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "United States--Foreign relations--1933-1945--Citizen participation."
+        }
+    }, 
+    {
+        "pk": 251, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "United States--Foreign relations--1945-1953--Citizen participation."
+        }
+    }, 
+    {
+        "pk": 252, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "United States--Foreign relations--1953-1961--Citizen participation."
+        }
+    }, 
+    {
+        "pk": 253, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans in literature."
+        }
+    }, 
+    {
+        "pk": 254, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "American literature--20th century--History and criticism."
+        }
+    }, 
+    {
+        "pk": 255, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Minorities in literature."
+        }
+    }, 
+    {
+        "pk": 256, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Politics and literature--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 257, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Race in literature."
+        }
+    }, 
+    {
+        "pk": 258, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Race relations in literature."
+        }
+    }, 
+    {
+        "pk": 259, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Radicalism in literature."
+        }
+    }, 
+    {
+        "pk": 260, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Radicalism--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 261, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Right and left (Political science) in literature."
+        }
+    }, 
+    {
+        "pk": 262, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Cotton textile industry--North Carolina--Henderson--History."
+        }
+    }, 
+    {
+        "pk": 263, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Strikes and lockouts--Textile industry--North Carolina--Henderson--History."
+        }
+    }, 
+    {
+        "pk": 264, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Textile workers--Labor unions--North Carolina--Henderson--History."
+        }
+    }, 
+    {
+        "pk": 265, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Textile workers--North Carolina--Henderson--History."
+        }
+    }, 
+    {
+        "pk": 266, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Atlanta (Ga.)--Race relations."
+        }
+    }, 
+    {
+        "pk": 267, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Urban policy--Georgia--Atlanta."
+        }
+    }, 
+    {
+        "pk": 268, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Civil rights--Alabama--Montgomery--History--20th century--Sources."
+        }
+    }, 
+    {
+        "pk": 269, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Montgomery (Ala.)--Race relations--Sources."
+        }
+    }, 
+    {
+        "pk": 270, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Segregation in transportation--Alabama--Montgomery--History--20th century--Sources."
+        }
+    }, 
+    {
+        "pk": 271, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American political activists--Biography."
+        }
+    }, 
+    {
+        "pk": 272, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Black nationalism--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 273, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Black power--United States--History--20th century."
+        }
+    }, 
+    {
+        "pk": 274, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Revolutionaries--United States--Biography."
+        }
+    }, 
+    {
+        "pk": 275, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African American social reformers--Georgia--Atlanta--History--20th century."
+        }
+    }, 
+    {
+        "pk": 276, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Georgia--Atlanta--Politics and government--20th century."
+        }
+    }, 
+    {
+        "pk": 277, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "African Americans--Georgia--Atlanta--Social conditions--20th century."
+        }
+    }, 
+    {
+        "pk": 278, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Atlanta (Ga.)--Politics and government--20th century."
+        }
+    }, 
+    {
+        "pk": 279, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Atlanta (Ga.)--Social conditions--20th century."
+        }
+    }, 
+    {
+        "pk": 280, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Elite (Social sciences)--Georgia--Atlanta--History--20th century."
+        }
+    }, 
+    {
+        "pk": 281, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "New Deal, 1933-1939--Georgia--Atlanta."
+        }
+    }, 
+    {
+        "pk": 282, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Agricultural laborers--California--Los Angeles Region--Social conditions--20th century."
+        }
+    }, 
+    {
+        "pk": 283, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Citrus fruit industry--Social aspects--California--Los Angeles Region--History--20th century."
+        }
+    }, 
+    {
+        "pk": 284, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Community development--California--Los Angeles Region--History--20th century."
+        }
+    }, 
+    {
+        "pk": 285, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Intercultural communication--California--Los Angeles Region--History--20th century"
+        }
+    }, 
+    {
+        "pk": 286, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Los Angeles Basin (Calif.)--Economic conditions--20th century."
+        }
+    }, 
+    {
+        "pk": 287, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Los Angeles Basin (Calif.)--Ethnic relations."
+        }
+    }, 
+    {
+        "pk": 288, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Los Angeles Basin (Calif.)--Social conditions--20th century."
+        }
+    }, 
+    {
+        "pk": 289, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Mexican Americans--California--Los Angeles Region--Social conditions--20th century."
+        }
+    }, 
+    {
+        "pk": 290, 
+        "model": "works.subject", 
+        "fields": {
+            "uri": null, 
+            "label": "Whites--California--Los Angeles Region--Social conditions--20th century."
+        }
+    }
+]

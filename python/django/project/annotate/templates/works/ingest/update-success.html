@@ -1,0 +1,78 @@
+{% extends "site_base.html" %}
+{% block pagetitle %}
+ <title>Update Complete</title>
+{% endblock %}
+{% block headers %}
+ <style type="text/css">
+    table {
+     width: 60%;
+     margin: 0 auto;
+     border: 1px solid #000;
+     background-color: #fff;
+     border-spacing: 0;
+     font: .75em Verdana,Helvetica,sans-serif;
+   }
+   
+   td.fieldName {
+      padding: .5em 0;
+      text-align: center;
+      vertical-align: top;
+      font-weight: bold;
+      background-color: #cfc;
+      border-right: 2px solid #000;
+   }
+   td.fieldValue {
+      padding-left: 1em;
+   }
+   thead th {
+      padding: 1em;
+      background-color: #66c;
+      border-bottom: 3px solid #000;
+   }
+   tfoot td {
+      border-top: 3px solid #000;
+   }
+ </style>   
+{% endblock %}
+{% block body %}
+ <div id="content">
+ <h1>Update of '{{ work.title }}' Complete</h1>
+   <p><a href="{{ admin_url }}">view/edit this work in the admin application</a></p>
+   {% if cover_art %}
+	<div class="cover-art">
+	  <img src="{{ work.get_cover_image }}" />
+	  <p>This is your new cover image</p>
+	</div>
+  {% endif %}
+  <table>
+    <thead>
+    <tr>
+      <th>Field</th>
+      <th>Value(s)</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+	<td class="fieldName">[ID] Title</td>
+	<td class="fieldValue">[{{work.id}}] <a href="{{ work.get_absolute_url }}">{{ work.title }} {% if work.subtitle %}: {{ work.subtitle }} {%endif%}</a></td>
+      </tr>
+      <tr class="sections">
+	<td class="fieldName">Sections</td>
+	<td class="fieldValue">
+	{% spaceless %}
+	  <ul>
+	{% for sect, div in sections %}
+	    <li>
+		<a href="{{ sect.get_absolute_url }}">{{ sect.title }}</a>
+	    </li>
+	{% endfor %}
+	  </ul>
+	{% endspaceless %}
+	</td>
+      </tr>
+    </tbody>
+   
+  </table>
+</div>
+ 
+{% endblock %}

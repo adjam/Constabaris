@@ -1,0 +1,177 @@
+{% extends "site_base.html" %}
+ {# Template for display a 'section' page on a work (e.g. a chapter) #}
+{% load works annotations %}
+{% block headers %}
+{% spaceless %}
+{{ form.media }}
+<link rel="stylesheet" href="{{MEDIA_URL}}css/editor-styles.css" type="text/css" />
+<link rel="stylesheet" href="{{MEDIA_URL}}css/custom-theme/jquery-ui-1.8.custom.css" type="text/css" />
+<link rel="stylesheet" href="{{MEDIA_URL}}css/jquery.jgrowl.css" type="text/css" />
+<link rel="stylesheet" type="text/css" href="{{MEDIA_URL}}css/tei.css" />
+
+<script src="{{MEDIA_URL}}js/plugins/jgrowl.js" type="text/javascript"></script>
+<script src="{{MEDIA_URL}}js/plugins/hoverintent.js" type="text/javascript"></script>
+<script src="{{ MEDIA_URL }}js/plugins/comments.js" type="text/javascript"></script>
+<script src="{{ MEDIA_URL }}js/plugins/search.js" type="text/javascript"></script>
+<script src="{{MEDIA_URL}}js/plugins/jquery-ui-1.8.custom.min.js" type="text/javascript"></script>
+
+{% if perms.moderator %}
+<script src="{{MEDIA_URL}}js/plugins/moderation.js" type="text/javascript"></script>
+{% endif %}
+ <script type="text/javascript">
+	$(document).ready( function() {
+		/**
+		* This is where a lot of the magic happens;
+		  footnote-display-on-hover is established,
+		  comments are morphed into bubbles,
+		  and paragraph links on hover are created.
+		**/
+		$("div.body span.reference").footnotes();
+		$("div.body").commentify();
+		$("#post-annotation").button();
+		$(document).paragraphLinks();
+
+		$("#sidebar .workinfo").click( function() {
+			window.location = '{{ work.get_absolute_url }}';
+		});
+		$("#sidebar .workinfo").attr('title', 'Go back to main page for "{{ work.title }}"');
+ 
+ 
+		$("#sidebar .section-nav").navigationBar();
+
+		$("#body .container").containChildren();
+   
+		//$(document).subnavigation($(".body"));
+		{% if perms.moderator %}
+		   $("div#comments").moderation();
+		{% endif %}
+		
+		{% if request.user.is_superuser %}
+		      var toolsDialog = jQuery(".atools").dialog({title : 'Admin Tools', autoOpen: false});
+		      jQuery("#adminToolsOpener").click( function(evt) {
+		        evt.preventDefault();
+		        toolsDialog.dialog('open');
+		      }).css({ position: 'fixed', bottom : '.2em', right : '.2em', zIndex : 1500}).button();
+		  $("#workQuery").workSearch({ resultsTarget : "#queryResults", url : '{% url works:search.inwork work.pk %}'});
+		{% endif %}
+	}); 
+ </script>
+ {% endspaceless %}
+
+
+
+{% endblock %} {# headers #}
+
+{% block sidebar %}
+ <div id="sidebar">
+ {% if work.get_cover_image %}
+    <a href="{{ work.get_absolute_url }}" title="Back to Main page for {{work.title}}">
+     <img src="{{ work.get_cover_image }}" class="coverimage" alt="cover art for {{ work.title }}" />
+    </a>
+    {% endif %}
+    <h1 class="title">{{ work.title }}</h1>
+    <h2 class="authorname">{{ work.author_display }}</h2>
+    <h3 class="sections-title">Sections</h3>
+    {% with work.get_sections_ordered as sections %}
+    	{% ifequal sections.length 1 %}
+	    	<a href="{{ sections.0.get_absolute_url }}">Full Text</a>
+		{% else %}
+ 		<ul class="work-sections">
+ 		 	{% sectionlist work section %}
+ 		</ul>
+ 		{% endifequal %}
+ 	{% endwith %}
+   <div class="section-nav">
+   {% section_navigation %}
+   </div>
+ </div> <!-- sidebar -->
+ {% endblock %}
+
+{% block pagetitle %}
+  - {{ work.title }}: {{ section.title }}
+{% endblock %} {# pagetitle #}
+
+{% block body %}
+ <div id="content" class="work-content tei">
+ {% if request.user.is_superuser %}
+  <a id="adminToolsOpener" href="#">Open Admin Tools</a>
+  <div class="atools">
+  <a href="?view=source">View TEI Source</a>
+  <div class="searchTest">
+   <form id="ajaxSearch" method="get" action="/">
+    <fieldset style="border: none;">
+  <label>Search In This Work <input type="text" name="queryInWork" id="workQuery" /></label>
+  </fieldset>
+   <div id="queryResults">[results will show here]</div>
+   </form>
+  </div><!-- /searchTest -->
+ </div><!-- /.atools -->
+ {% endif %}
+ <div class="commentDisplay">
+  <a class="commentCount" rel="displayComments" href="#comments">Comments (<span class="count">0</span>)</a>
+ </div>
+  
+ {% with section.get_filename as section_content %}
+ {% dynamicssi section_content parsed %}
+ {# get_comment_form for section as theform #}
+  {% with work.authors.all as authors %}
+  {% if section.shows_comments %}
+  {% get_comment_list for section as comment_list %}
+
+	<div id="comments">
+		<div id="tabcontainer">
+			<ul id="comment-tabs">
+				<li><a href="#all-comments" class="commentCount">All Comments (<span class="count">{{ comment_list|length }}</span>)</a></li>
+				<li><a id="show-current-comments" href="#current-comments">Current Paragraph (<span class="count">0</span>)</a></li>
+				<li><a id="show-comment-form" href="#comment-form">Make a Comment</a></li>
+				<li><a id="show-comment-help" href="#comment-help">Help</a></li>
+			</ul>
+			<div class="clearblock">&#160;</div>
+			<div id="all-comments" class="comment-tab-content">
+				{% for comment in comment_list %}
+					{% show_comment %}
+				{% endfor %}
+				<a href="#" class="make-a-comment">Make a comment</a>
+			</div> <!-- all-comments -->
+			<div id="current-comments" class="comment-tab-content">
+				<p class="no-comments">There are no comments yet on this paragraph.</p>
+				<a href="#" class="make-a-comment">Make a comment</a>
+			</div>
+
+{# COMMENT FORM #}
+			{# this really needs to be broken out into a template tag #}
+			{% if section.accepts_comments %}
+			<div id="comment-form" class="comment-form" class="comment-tab-content">
+				{% if user.is_authenticated %}
+					{% if user.first_name and user.last_name %}
+				{% note_form form section %}
+					{% else %}
+				<p class="comment-form profile-required"> You have a profile and you are logged in, but you haven't yet filled in your first and last names.  Please go to <a href="{% url user.profile user.profile.id %}?next={{request.path }}">your profile page</a> and fill in those details before posting.  Thanks!</p>
+						{% endif %}
+					{% else %}
+				<p class="comment-form login-required">You must be <a href="{% url auth_login %}?next={{ request.path }}">logged in</a> to add comments.</p>
+					{% endif %} {# user auth #}
+				{% else %}
+				<p class="comment-form comments-closed">Comments are not currently being accepted on this section.</p>
+			{% endif %}
+			</div>
+{# /COMMENT FORM #}
+
+			<div id="comment-help" class="comment-tab-content">
+				<h2>Help</h2>
+				<p>Only registered users may comment; comments must typically be approved by administrators until they will be visible to others.  Please read our <a href="{% url guidelines %}">commenting guidelines</a> before posting.</p>
+				<p>Use the formatting controls in the control bar above the comment box for bold and italic text, and to add numbered and bulleted lists. To add a link, highlight the text you want to be linked, and click on the chain icon in the control bar; this will pop up a box that will allow you to type in the URL for the link.</p>
+				<p>If you are creating your comments in Microsoft Word, first copy the text of your comment in Word, then use the "Paste From Word" icon; failure to do so may result in an unreadable comment.</p>
+			</div>
+		</div> <!-- tabcontainer -->
+	</div> <!-- comments -->
+   {% endif %} {# shows-comments #}
+  {% endwith %} {# authors #}
+ {% endwith %}
+ </div> <!-- #content -->
+<div class="bottom-navigation">
+  <div class="navlinks">
+  {% section_navigation %}
+  </div>
+</div>
+{% endblock %}

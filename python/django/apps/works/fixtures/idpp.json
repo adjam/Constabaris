@@ -1,0 +1,226 @@
+[
+    {
+        "fields": {
+            "date_joined": "2009-09-30 11:53:33", 
+            "email": "adamc@unc.edu", 
+            "first_name": "Adam", 
+            "groups": [], 
+            "is_active": true, 
+            "is_staff": true, 
+            "is_superuser": true, 
+            "last_name": "Constabaris", 
+            "password": "sha1$b#@!s$842ac97597390c2d39587af90d494ddfd3c8da13", 
+            "user_permissions": [], 
+            "username": "adamc"
+        }, 
+        "model": "auth.User", 
+        "pk": 1
+    }, 
+    {
+        "fields": {
+            "about": "Him as what wrote most of the application", 
+            "affiliation": "UNC Chapel Hill", 
+            "home_page": "", 
+            "member_since": "2009-10-16 10:27:02", 
+            "prior_approval": false, 
+            "user": 1
+        }, 
+        "model": "works.useraccount", 
+        "pk": 1
+    }, 
+    {
+        "fields": {
+            "domain": "lcrm.unc.edu", 
+            "name": "LCRM"
+        }, 
+        "model": "sites.Site", 
+        "pk": 1
+    }, 
+    {
+        "fields": {
+            "description": "HTML content with multiple sections", 
+            "label": "Multiple Pages"
+        }, 
+        "model": "works.Format", 
+        "pk": 1
+    }, 
+    {
+        "fields": {
+            "description": "HTML content with one section", 
+            "label": "Single Page"
+        }, 
+        "model": "works.Format", 
+        "pk": 2
+    }, 
+    {
+        "fields": {
+            "description": "Work that has no content of its own but contains other works", 
+            "label": "Container"
+        }, 
+        "model": "works.Format", 
+        "pk": 3
+    }, 
+    {
+        "fields": {
+            "description": "A binary object (e.g. PDF)", 
+            "label": "Binary"
+        }, 
+        "model": "works.Format", 
+        "pk": 4
+    }, 
+    {
+        "fields": {
+            "content": "<p>Sometime recently, this application was installed, including this boilerplate update entry.  Doesn't it look nice?  Well, maybe so, but it's suggested that you delete it and add your own before exposing this thing to the public.</p>", 
+            "created": "2009-11-11 16:38:33", 
+            "creator": 1, 
+            "title": "Application Installed"
+        }, 
+        "model": "works.BlogEntry", 
+        "pk": 1
+    }, 
+    {
+        "fields": {
+	    "enabled" :  false,
+            "description": "A scholarly text that is primarily words for reading.  Where the text is one of the more specific types listed here, use the more specific term.", 
+            "label": "Scholarly Text", 
+            "uri": "http://purl.org/eprint/type/ScholarlyText"
+        }, 
+        "model": "works.Genre", 
+        "pk": 1
+    }, 
+    {
+        "fields": {
+            "description": "A non-serial publication that is complete in one volume or a designated finite number of volumes.  In physical form, a book is a collection of sheets of paper, parchment or other material bound together along one edge within covers.  Books are often identified with an ISBN.", 
+            "label": "Book", 
+            "uri": "http://purl.org/eprint/type/Book"
+        }, 
+        "model": "works.Genre", 
+        "pk": 2
+    }, 
+    {
+        "fields": {
+            "description": "A defined chapter or section of a book, usually with a separate title or number.", 
+            "label": "Book Item", 
+            "uri": "http://purl.org/eprint/type/BookItem"
+        }, 
+        "model": "works.Genre", 
+        "pk": 3
+    }, 
+    {
+        "fields": {
+            "description": "A review of a book.", 
+            "label": "Book Review", 
+	    "enabled" : false,
+            "uri": "http://purl.org/eprint/type/BookReview"
+        }, 
+        "model": "works.Genre", 
+        "pk": 4
+    }, 
+    {
+        "fields": {
+            "description": "A contribution to a conference, workshop or other event.  Where the contribution is a paper or poster, use Conference Paper or Conference Poster as appropriate.", 
+            "label": "Conference Item", 
+	    "enabled" : false,
+            "uri": "http://purl.org/eprint/type/ConferenceItem"
+        }, 
+        "model": "works.Genre", 
+        "pk": 5
+    }, 
+    {
+        "fields": {
+            "description": "A paper submitted and/or presented at a conference, workshop or other event.", 
+            "label": "Conference Paper", 
+            "uri": "http://purl.org/eprint/type/ConferencePaper"
+        }, 
+        "model": "works.Genre", 
+        "pk": 6
+    }, 
+    {
+        "fields": {
+            "description": "A poster submitted and/or presented at a conference, workshop or other event.", 
+            "label": "Conference Poster", 
+	    "enabled" : false,
+            "uri": "http://purl.org/eprint/type/ConferencePoster"
+        }, 
+        "model": "works.Genre", 
+        "pk": 7
+    }, 
+    {
+        "fields": {
+            "description": "A contribution to a journal, e.g. an article, editorial, conference report, debate, letter or response.  Where the contribution is an article, use Journal Article.", 
+            "label": "Journal Item", 
+	    "enabled" : false,
+            "uri": "http://purl.org/eprint/type/JournalItem"
+        }, 
+        "model": "works.Genre", 
+        "pk": 8
+    }, 
+    {
+        "fields": {
+            "description": "An article or paper published in a journal.  For book reviews, use Book Review.  For news items use News Item.  For other types of contribution use Journal Item.", 
+            "label": "Journal Article", 
+            "uri": "http://purl.org/eprint/type/JournalArticle"
+        }, 
+        "model": "works.Genre", 
+        "pk": 9
+    }, 
+    {
+        "fields": {
+            "description": "A news item.", 
+            "label": "News Item", 
+		"enabled" : false,
+            "uri": "http://purl.org/eprint/type/NewsItem"
+        }, 
+        "model": "works.Genre", 
+        "pk": 10
+    }, 
+    {
+        "fields": {
+            "description": "A patent or patent application.", 
+            "label": "Patent", 
+		"enabled" : false,
+            "uri": "http://purl.org/eprint/type/Patent"
+        }, 
+        "model": "works.Genre", 
+        "pk": 11
+    }, 
+    {
+        "fields": {
+            "description": "A research, statistical or technical report issued by an institution, agency, government body or other organisation.", 
+            "label": "Report",
+		"enabled" : false, 
+            "uri": "http://purl.org/eprint/type/Report"
+        }, 
+        "model": "works.Genre", 
+        "pk": 12
+    }, 
+    {
+        "fields": {
+            "description": "The author's original manuscript as submitted to and/or accepted by a journal.", 
+            "label": "Submitted Journal Article", 
+            "uri": "http://purl.org/eprint/type/SubmittedJournalArticle",
+	    "enabled" : false,
+        }, 
+        "model": "works.Genre", 
+        "pk": 13
+    }, 
+    {
+        "fields": {
+            "description": "A thesis or dissertation submitted in completion of a course of study at an institution of higher education.", 
+            "label": "Thesis or Dissertation", 
+            "uri": "http://purl.org/eprint/type/Thesis",
+	    "enabled" : false,
+        }, 
+        "model": "works.Genre", 
+        "pk": 14
+    }, 
+    {
+        "fields": {
+            "description": "A working or discussion paper circulated publicly or among a group of peers.  Certain disciplines, for example economics, issue working papers in series.  Working or discussion papers may form the basis for a Journal Article or Conference Paper.", 
+            "label": "Working or Discussion Paper", 
+            "uri": "http://purl.org/eprint/type/WorkingPaper"
+        }, 
+        "model": "works.Genre", 
+        "pk": 15
+    }
+]

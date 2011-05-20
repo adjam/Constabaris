@@ -1,0 +1,22 @@
+{% load comments i18n %}
+<form action="{% comment_form_target %}" method="post" class="comment-form" id="comment-form">
+  <fieldset>
+  {% if next %}<input type="hidden" name="next" value="{{ next }}"  />{% endif %}
+  {% for field in form.hidden_fields %}
+    {{ field }}
+  {% endfor %}
+  {% for field in form.custom_visible_fields %}
+     {% ifequal field.name "honeypot" %}<div style="display: none;">{% endifequal %}
+      {{ field.label_tag }}
+      {{ field }}
+      {{ field.errors }}
+     {% ifequal field.name "honeypot" %}</div>{% endifequal %}
+   {% endfor %}
+  </fieldset>
+  <div class="submit">
+   <input type="submit" id="post-annotation" name="post-annotation" class="submit-annotation" value="{% trans "Post" %}" />
+   <!--
+   <input type="submit" name="preview" class="preview-annotation" value="{% trans "Preview" %}" />
+   -->
+  </div>
+</form>

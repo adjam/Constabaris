@@ -1,0 +1,103 @@
+{% load works %}
+{% load cache %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<title> A Constabaris Instance - {% block pagetitle %}{% endblock %}</title>
+
+	<link rel="stylesheet" href="{{MEDIA_URL}}css/reset.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="{{MEDIA_URL}}css/layout.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="{{MEDIA_URL}}css/forms.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<!-- <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/styles.css" /> -->
+	<script src="{{ MEDIA_URL }}js/jquery-1.4.2.min.js"
+	type="text/javascript"></script>
+	{% block headers %}
+	{% endblock %}
+</head>
+<body{% if pageclass %} class="{{pageclass}}"{% endif%}>
+	<div id="header">
+		<div class="container">
+			<a id="logo" title="Back to Home Page" href="{% url works:index %}">Constabaris</a>
+			<div id="header-actions">
+				<form action="{% url search %}" method="get" id="searchform">
+					<input type="text" class="searchinput" name="q" id="id_q" title="Enter search terms here"
+					{% if query %}value="{{query}}"{% endif %}/>
+					<input type="submit" id="search-button" value="search"/>
+				</form>
+				<ul id="controls">
+			{% if request.user.is_authenticated %}
+				{% with request.user as user %}
+					{% with user.get_profile as profile %}
+						<li><a href="{{ profile.get_absolute_url }}">My Profile</a></li>
+						<li><a href="{% url auth_logout %}" >Log Out</a></li>
+					{% endwith %}
+				{% endwith %}
+			{% else %}
+						<li><a href="{% url auth_login %}">Log In/Register</a></li>
+			{% endif %}
+				</ul>
+			</div>
+			<ul id="navigation">
+				<li><a href="{% url about %}">About</a></li>
+				<li><a href="{% url guidelines %}">Commenting Guidelines</a></li>
+				<li><a href="/blog" title="Project Blog">Blog</a></li>
+				<li><a class="last" href="{% url faq %}">FAQs</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="body">
+		<div  class="container">
+		{% block sidebar %}
+			{% cache 500 sidebar %}
+			<div id="sidebar" class="column">
+				<h2>Browse by</h2>
+				{% genre_browse %}
+			</div>
+			{% endcache %}
+		{% endblock %}<!-- sidebar -->
+
+			{% block body %}
+			<div id="content">
+				<div class="nowrap">
+					<h1>Insert Body Content Here</h1>
+					<p>This is done by declaring a "div#body" block that includes everything in between the body tags!</p>
+				</div>
+			</div> <!-- #content-->
+			{% endblock %}
+		</div>
+	</div> <!-- #body -->
+
+{% block footer %}
+	<div id="footer">
+		<div class="container">
+			{% if not server_error %}
+			<div class="browse"> {% genre_browse %} </div>
+			{% endif %} 
+			<ul class="site-links">
+				<li><a href="{% url about %}" title="About this site">About</a></li>
+				<li><a href="{% url contact %}">Contact Us</a></li>
+				<li><a href="mailto:">Tell us what you think</a></li>
+			</ul>
+		</div>
+	</div>
+<!-- #footer -->
+{% endblock %}
+{% block debug %}
+{% endblock %}
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+		try {
+			var pageTracker = _gat._getTracker("UA-15687604-2");
+			pageTracker._trackPageview();
+		} catch(err) {}
+	</script>
+</body>
+</html>

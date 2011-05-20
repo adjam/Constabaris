@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <!-- $HeadURL$ -->
+ <!-- $Id$ -->
+ <!-- 
+     Copyright 2010 
+	University Library at the University of North Carolina at Chapel Hill
+	Licensed under the
+	Educational Community License, Version 2.0 (the "License"); you may
+	not use this file except in compliance with the License. You may
+	obtain a copy of the License at
+	
+	http://www.osedu.org/licenses/ECL-2.0
+
+	Unless required by applicable law or agreed to in writing,
+	software distributed under the License is distributed on an "AS IS"
+	BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+	or implied. See the License for the specific language governing
+	permissions and limitations under the License.
+ -->
+<config>
+  <abortOnConfigurationError>${solr.abortOnConfigurationError:true}</abortOnConfigurationError>
+  <indexDefaults>
+    <useCompoundFile>false</useCompoundFile>
+    <mergeFactor>25</mergeFactor>
+    <ramBufferSizeMB>32</ramBufferSizeMB>
+    <maxFieldLength>75000</maxFieldLength>
+    <writeLockTimeout>1000</writeLockTimeout>
+    <commitLockTimeout>10000</commitLockTimeout>
+  </indexDefaults>
+
+  <updateHandler class="solr.DirectUpdateHandler2" />
+  <requestDispatcher handleSelect="true" >
+    <requestParsers enableRemoteStreaming="false" multipartUploadLimitInKB="2048" />
+  </requestDispatcher>
+
+  <requestHandler name="dismax" class="solr.SearchHandler">
+    <lst name="defaults">
+     <str name="defType">dismax</str>
+     <str name="echoParams">explicit</str>
+     <float name="tie">0.01</float>
+<!-- Query Fields -->
+     <str name="qf">
+        text^0.5 title^5.0 subtitle^5.0 description^2.0 tags^5.0 lcsh^5.0
+     </str>
+     <!-- phrase fields -->
+     <str name="pf">
+        text^0.4 title^4.0 subtitle^4.0	description^2.0
+     </str>
+	<!-- boost functions -->
+     <str name="bf"/>
+    <!--
+     <str name="fl">
+        id,name,price,score
+     </str>
+    -->
+     <str name="mm">
+        2&lt;-1 5&lt;-2 6&lt;90%
+     </str>
+     <int name="ps">100</int>
+     <str name="q.alt">collection:lcrm</str>
+     <!-- example highlighter config, enable per-query with hl=true -->
+     <str name="hl.fl">text title description</str>
+     <!-- for this field, we want no fragmenting, just highlighting -->
+     <str name="f.name.hl.fragsize">0</str>
+     <!-- instructs Solr to return the field itself if no query terms are
+          found -->
+     <str name="f.name.hl.alternateField">name</str>
+     <str name="f.text.hl.fragmenter">regex</str> <!-- defined below -->
+    </lst>
+  </requestHandler>
+
+  <requestHandler name="standard" class="solr.StandardRequestHandler"
+	default="true"/>
+  <requestHandler name="/update" class="solr.XmlUpdateRequestHandler" />
+  <requestHandler name="/admin/" class="org.apache.solr.handler.admin.AdminHandlers" />
+
+  <!-- config for the admin interface -->
+  <admin>
+    <defaultQuery>solr</defaultQuery>
+  </admin>
+
+</config>
+
+

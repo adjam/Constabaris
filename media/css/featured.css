@@ -1,0 +1,197 @@
+/* The Long Civil Rights Movement Project - featured.css */
+
+/* Written by Goodtravel Web Designs - http://goodtraveldesign.com */
+
+/*--------------
+  HOME HEADERS
+---------------*/
+#headers {
+    margin-right: 1em;
+}
+
+#headers h1 {
+    color: #333;
+    text-align: right;
+    font-weight: normal;
+}
+
+#headers h2 {
+    background: transparent;
+    color: #036;
+    font-weight: bold;
+    text-align: right;
+}
+
+/*--------------
+  SITE SPLASH
+---------------*/
+
+#site-splash {
+    position: relative;
+    width: 960px;
+    height: 303px;
+    margin-left:-70px;
+    padding-bottom:40px;
+    color:#fff;
+    background: transparent url(../images/home-background.jpg) no-repeat;
+}    
+
+#site-splash .browse {
+  width:185px;
+  height:303px;
+  color:#fff;
+  background-color: rgba(0,0,0, 0.6);
+  /*
+  filter:alpha(opacity=60);
+  opacity: 0.6;
+  -moz-opacity:0.6;
+  */
+  border: none;
+}
+
+#site-splash li {
+  border-right: none;
+}
+
+#site-splash .browse h1 {
+  padding: 40px 0 0 1em;
+  color:#fff;
+  background-color: transparent;
+  background-image:none;
+  font-family: "Palatino Linotype","Book Antiqua",Palatino,FreeSerif,serif;
+  font-size: 1.4em;
+  font-weight:bold; 
+}
+
+#site-splash .browse a {
+color: #fff;
+text-decoration: none;
+}
+
+#site-splash .browse a:hover {
+color: #ffa;
+text-decoration: underline;
+}
+
+#site-splash .browselist li {
+padding: .7em 0 .7em 2.5em;
+}
+
+/*--------------
+  FEATURED BOX
+---------------*/
+
+#featured {
+    position:relative;
+    padding-bottom:40px;
+
+}
+
+#featured-work {
+    width:461px; 
+    min-height: 202px;
+    max-height: 202px; 
+    padding: 20px;
+    color: #fff;
+    background: #036 url('../images/featured-back.jpg') no-repeat;
+}
+
+#featured-work img {
+    float: left;
+    width: 81px;
+    border: 7px solid #5b7c9d;
+}
+
+#featured-work .info {
+    padding-left: 140px;
+}
+
+#featured-work .info h3 {
+    display: inline;
+    font-size: 1em;
+    color:#fff;
+    background-color: #5b7c9d;
+    padding: 4px 5px;
+    font-weight: bold;
+    font-family: "Palatino Linotype","Book Antiqua",Palatino,FreeSerif,serif;
+    text-transform: uppercase;
+}
+
+#featured-work p {
+    padding: 15px 0 0 0;
+}
+
+#featured-work a {
+    color: #cc3;
+    text-decoration:none;
+}
+
+#featured-work a:hover {
+    color: #cc3;
+    text-decoration:underline;
+}
+
+/*--------------
+  RECENT LIST
+---------------*/
+
+#recent {
+position:absolute;
+right:0;
+top:0;
+width: 241px;
+}
+
+#recent h1 {
+padding:0;
+color:#9a3334;
+background-color:#transparent;
+font-size:1.1em;
+text-transform:uppercase;
+background-image:none;
+}
+
+#recent li {
+padding: .7em 1.1em;
+border-bottom: 1px solid #000;
+}
+
+#recent li:hover {
+color: inherit;
+background-color: #eae7df;
+}
+
+#recent a {
+color:#333;
+background-color:transparent;
+text-decoration: none;
+font-weight: normal;
+}
+
+#recent li.last {
+border-bottom: 2px solid #000;
+}
+
+#recent li.first {
+border-top: 2px solid #000;
+}
+
+/*--------------
+  HOME SHADOWS
+---------------*/
+
+#home-shadow-top {
+position:absolute;
+width:960px;
+height:11px;
+top:-11px;
+left:0px;
+}
+
+#home-shadow-bottom {
+position:absolute;
+width:960px;
+height:11px;
+bottom:29px;
+left:0px;
+}

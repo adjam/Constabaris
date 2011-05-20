@@ -1,0 +1,151 @@
+{% extends "site_base.html" %}
+
+{% block pagetitle %}
+ - Registration
+{% endblock %}
+
+{% block headers %}
+    <script type="text/javascript" src="{{MEDIA_URL}}js/plugins/jquery.validate.pack.js"></script>
+    <script type="text/javascript" src="{{MEDIA_URL}}js/plugins/jquery.validate.password.js"></script>
+    <script type="text/javascript">
+        $(document).ready(
+            function() {
+                var form = $("#account-create");
+                $(form).validate(
+                    {
+                        rules: {
+                            username: {
+                                required: true,
+                                minlength: 4
+                            },
+                            email: {
+                                required: true,
+                                email: true
+                            },
+                            tos: {
+                                required: true
+                            },
+                            password1: {
+                                minLength: 8,
+                                usernameField: "#username"
+                            },
+                            password2: {
+                                minLength: 8,
+                                equalTo: "#password1"
+                            }
+                        },
+                        messages: {
+                            username: {
+                                    minlength: "Your username should be at least {0} characters"
+                            },
+                            tos: {
+                                required: "You must read and agree to the terms of service in order to register on this site."
+                            },
+                            password1: {
+                                minlength: "Your password is too short"
+                            },
+                            password2: {
+                                equalTo: "The passwords you have entered do not match."
+                            }
+                        },
+                        errorElement: "em"
+
+                    });
+/*
+                function showStrengthMeter(e) {
+                    $("div.password-meter").fadeIn();
+                }
+*/
+                $("#password1").validate();
+/*                $("#password1,#password2").keyup(showStrengthMeter); */
+
+
+            } // ready function
+        ); // ready
+
+    </script>
+{% endblock %}
+
+{% block body %}
+ <div id="content">
+  <div class="form-errors">
+   {% if form.errors %}
+  <ul>
+   {% for err in form.errors %}
+   <li>{{ err }}</li>
+   {% endfor %}
+  </ul>
+   {% endif %}
+ </div>
+ <div class="form">
+<form method="post" id="account-create" action="{% url registration_register %}">
+  {% csrf_token %}
+  <fieldset>
+    <legend>Create An Account</legend>
+      <ol class="form-list">
+        <li>
+           <label for="username">Username</label>
+       <input type="text" name="username" id="username"
+            class="required"
+            title="Username (at least 4 characters long, letters, digits, and underscores only)"
+            size="32" maxlength="64" />
+       {{ form.username.errors }}
+    </li>
+    <li>
+     <label for="email" title="Enter your email address">Email Address<em>*</em></label>
+     <input type="text" name="email" id="email"
+        class="required"
+        title="Email address"
+        size="32" maxlength="320"/>
+     {{ form.email.errors }}
+    </li>
+    <li>
+      <label for="password1" title="Choose a password (required)">Password<em>*</em></label>
+      <input type="password" name="password1" id="password1"
+            class="required password"
+            size="32" maxlength="128" />
+      {{ form.password1.errors }}
+    </li>
+    <li>
+      <label for="password2">Password (again)</label>
+      <input type="password" name="password2"
+        class="required"
+        id="password2" size="32" maxlength="128" />
+      {{ form.password2.errors }}
+    </li>
+     <li>
+     <label for="tos">I have read and agree to the
+         site's <a href="{% url terms %}">Terms And Conditions</a>
+        </label>
+        <input type="checkbox" name="tos"
+        id="tos" class="required"/>
+        {{form.tos.errors}}
+
+     </li>
+    <li>
+          <button type="submit" name="action" class="submit">
+            <span>Create Account</span>
+          </button>
+        </li>
+        </ol>
+     </fieldset>
+ </form>
+  </div><!-- .form -->
+<ul class="bulleted">
+  <li>Your email address is <em>required</em> to complete the registration process.</li>
+  <li>Once registration is complete, your email address will not be used for any purpose other than account management,
+  nor shall we disclose it to any other parties.</li>
+  <li>Usernames must be between 4 and 20 characters long and consist only of letters, digits, and underscore (_)
+  characters.</li>
+  <li>Passwords must be at least 6 characters long and
+    <ul>
+        <li><em>should not</em> be copies of or similar to passwords you use in any situation that requires a high level of security (e.g. online banking)</li>
+        <li><em>should not</em> be based on any dictionary words</li>
+        <li><em>should</em> contain a mix of letter cases, numerals, and punctuation characters</li>
+    </ul>
+  </li>
+  <li>Upon submitting this form, if your information meets the above standards, you will receive an email at the address you supply; this email
+  will contain a link that will allow you to complete the registration process.</li>
+</ul>
+</div> <!-- #content -->
+{% endblock %}

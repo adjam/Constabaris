@@ -1,0 +1,140 @@
+/**
+ * This stylesheet contains rules related specifically to the display of
+ * HTML fragments derived from TEI transformations.
+ **/
+
+div.body, div.frontmatter, div.backmatter {
+    position: relative;
+    left: 0;
+    top: 0;
+    padding: 1em;
+    line-height: 1.5em;
+}
+
+p[id] {
+	margin-bottom: 1em;
+}
+
+.titlePage {
+    margin: 1em auto;
+    width: 70%;
+    text-align: center;
+}
+
+.titlePage h1,h2,h3,h4,h5,h6 {
+    margin: 1em auto;
+}
+
+#halftitle, #halftitle2 {
+    font-size: 300%;
+    margin-bottom: 10em;
+    text-align: center;
+    width: 100%;
+}
+
+#halftitle .pagenum, #halftitle2 .pagenum {
+    font-size: 33%;
+}
+
+#epigraph {
+    width: 70%;
+    margin: 1em auto;
+    font-style: italic;
+}
+
+h2.chapterNumber {
+	float: left;
+}
+
+h2.chapterNumber:after {
+	content: ".";
+	padding-right: 1em;
+}
+
+h2.chapterTitle {
+	text-align: left;
+}
+
+.inline-note {
+    display: none;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.sc {
+    font-variant: small-caps;
+}
+
+span.pagenum {
+    position: absolute;
+    right: -6em;
+    font-size: 75%;
+}
+
+span.pagenum a {
+	display: block;
+	height: 36px;
+	width: 24px;
+	text-decoration: none;
+	background-image: url(../images/page.png);
+}
+
+span.pagenum a span {
+	display: block;
+	position: absolute;
+	bottom: .2em;
+	right: .2em;
+	padding: 0;
+	margin: 0;
+	line-height: 1em;
+}
+
+span.pagenum a:hover {
+	background-image: url(../images/page-active.png);
+}
+
+div.figure {
+    width: 80%;
+    margin: 0 auto 2em;
+}
+
+div.figure img {
+    display: block;
+    margin: 0 auto 1em;
+    
+}
+
+.figure p {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 75%;
+    margin-top: 1em;
+    border-top: 2px solid #000;
+}
+
+.note {
+	clear: both;
+}
+
+.note .noteref {
+	float: left;
+	vertical-align: top;
+	width: 4%;
+}
+
+.note .notebody {
+	float: left;
+	vertical-align: top;
+	width: 95%;
+}
+
+.notebody p {
+	margin-top: 0;
+}

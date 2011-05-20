@@ -1,0 +1,231 @@
+/**
+ * This stylesheet contains rules related specifically to the display of
+ * HTML fragments derived from TEI transformations.
+ **/
+
+/** these are spans that should mimic normal paragraphs, so the rules
+ * should match those on p tags
+ */
+.tei span.figDesc, .tei span.paragraph, .tei p {
+    display: block; 
+    font-size: 1.1em; 
+    line-height: 2em; 
+    padding-bottom: 1.5em;
+}
+  
+.tei .titlePage {
+    margin: 1em auto;
+    width: 100%;
+    text-align: center;
+}
+
+.tei .titlePage > h1,h2,h3,h4,h5,h6 {
+    margin: 1em auto;
+}
+
+.tei #halftitle, .tei #halftitle2 {
+    font-size: 300%;
+    margin-bottom: 3em;
+    text-align: center;
+    width: 100%;
+}
+
+.tei #halftitle .pagenum, .tei #halftitle2 .pagenum {
+    font-size: 33%;
+}
+
+.tei .chapterSubtitle {
+    margin-top: 2em;
+    color: #333;
+}
+
+.tei .inline-note {
+    display: none;
+}
+
+.tei .italic {
+    font-style: italic;
+}
+
+.tei .bold {
+    font-weight: bold;
+}
+
+/**
+ * yes odd but needed in some cases where <hi> is not allowed
+ * in the TEI context.
+ **/
+.tei em.sc {
+    font-variant: small-caps;
+   }
+
+.tei .sc {
+    font-variant: small-caps;
+}
+
+.tei span.pagenum {
+    position: absolute;
+    right: 0px;
+    font-size: .75em;
+	background-image: url(../images/page-turn.png);
+    filter:alpha(opacity=50);
+    opacity: 0.5;
+}
+
+.tei span.pagenum:hover {
+    filter:alpha(opacity=100);
+    opacity: 1.0;
+}
+
+.tei span.pagenum a {
+	display: block;
+	height: 36px; /* 36,24 */
+	width: 24px;
+    font-family: "Lucida Grande","Lucida Sans Unicode", sans-serif;
+    color: #036;
+    text-align: right;
+	text-decoration: none;
+}
+
+.tei span.pagenum a span {
+	display: block;
+	bottom: .2em;
+	right: .2em;
+	padding: 0;
+	margin: 0;
+	line-height: 1em;
+}
+
+.tei .epigraph {
+    width: 85%;
+    font-size: .8em;
+	font-style: italic;
+    margin: 1em auto 2em auto;
+}
+
+.tei .epigraph p.citation {
+    font-size: 1.2em;
+	font-style: normal;
+}
+
+.tei div.verse {
+	text-indent: 2em;
+	margin: 1em 0;
+}
+
+.tei div.boxedmatter {
+	border: 1px solid #000;
+	padding: .5em;
+}
+
+.tei .figure {
+    display: block;
+    width: 80%;
+    margin: .5em auto .5em;
+}
+
+.tei .figure img {
+    display: block;
+    margin: 0 auto 1em;
+}
+
+.tei .figure p {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 75%;
+    margin-top: 1em;
+    border-top: 2px solid #000;
+}
+
+.tei .note {
+	clear: both;
+}
+
+.tei .note .noteref {
+	float: left;
+	vertical-align: top;
+	width: 4%;
+}
+
+.tei .note .notebody {
+	float: left;
+	vertical-align: top;
+	width: 95%;
+}
+
+.tei .notebody p {
+	margin-top: 0;
+}
+
+.tei ul.bulleted {
+	list-style-type: disc;
+}
+
+.tei ul.bulleted li {
+	margin-left: 1.5em;
+	list-style-type: disc;
+}
+
+.tei ul.bibliography-list li {
+	padding: .3em;
+
+}
+
+.tei dl {
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.tei dt {
+    font-weight: bold;
+}
+
+.tei dd {
+ text-indent: 2em;
+}
+
+.tei table {
+	max-width: 95%;
+	margin: 0 auto 1em;
+	
+}
+	
+.tei th,.tei  td {
+	border: 1px solid #000;
+	padding: .2em;
+}
+
+.tei div.pageblank {
+	padding: 2em;
+	clear: both;
+}
+
+.tei ul.simple li {
+    padding: 4px 0;
+    margin-left: 1em;
+}
+
+.tei blockquote {
+   margin-left: 1.5em;
+   margin-right: 1.5em;
+   font-size: 90%;
+}
+
+   /*
+  OK, this maybe 'looks' nice, but it makes the references pretty small
+  and this is bad for accessibility.
+.reference {
+	font-size: 75%;
+	line-height: 0;
+	vertical-align: super;
+}
+
+*/
+.tei i .reference {
+	font-style: normal;
+}
+	/*
+span.Z3988:after {
+	content: "[openurl]";
+}*/

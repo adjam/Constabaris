@@ -1,0 +1,10 @@
+[
+	{
+		"model" : "notes.format",
+		"pk" : 1,
+		"fields" : {
+			 "mimetype" : "text/html",
+			 "description" : "HTML (includes XHTML)"
+		}
+		}
+]

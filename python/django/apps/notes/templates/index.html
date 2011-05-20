@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block main %}
+ <h1>Welcome to Spud</h1>
+ <p>This is for administrators; the average user doesn't need to use this application.</p>
+ <p>There are {{ new_notes|length }} notes in the database what ain't been approved yet.</p>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "works/ingest/ingest_base.html" %}
+{% block pagetitle %}
+ <title>Works: Update</title>
+{% endblock %}
+{% block content %}
+  <h1>Update A Work</h1>
+  {# output the upload form unless we have a work #}
+  {% if not work %}
+   <!-- <a href="{% url works:ingest %}">Update an existing work</a> <br /> -->
+  {% if form.errors %}
+	{{ form.errors }}
+  {% endif %}
+  
+  <div id="workinfo">
+   ( look here onchange )
+  </div>
+  <form action="{% url works:update %}" method="post"
+	enctype="multipart/form-data">
+   <div class="form">
+    <fieldset>
+	<legend>Update Work</legend>
+	{{ form.as_p }}
+	</fieldset>
+    <input type="submit" name="action" value="Update"/>
+
+  </div> <!-- form -->
+  </form>
+  <div class="instructions">
+	This form is for adding or updating files in an existing work; it is not for changing the work's metadata
+	(for that, you should use the admin app).
+
+    You may upload a new cover image and/or a prepared ingest package or 'pre-ingest' package of the form documented
+	on the main ingest page.  The HTML files from the ingest package will overwrite the ones currently stored in the system.
+	This is intended to allow 're-ingest' (with minimal impact) of works when XSLTs are updated.
+    </div>
+   {% else %}
+     {% include "works/ingest/overview.html" %}
+   {% endif %}
+{% endblock %}
+ 

@@ -1,0 +1,48 @@
+Installation
+
+Constabaris is made up of three components: a django-driven python application, the tei packager java web-app, and a Solr core.  All three components are necessary for a fully functioning constabaris installation.  This document will cover installation of the django project, packager, and Solr core. This document assumes familiarity with django, java web applications, and Solr. For more detail on each of these components, what they do, and how they interact build the documentation using sphinx (http://sphinx.pocoo.org).
+
+Django Application
+
+The Django application is composed of the Annotation project and two apps: Works and Notes.  The django code also relies on the utilities in python/lib. For details on dependencies and configuration see the Django Project documentation in the docs.
+
+1. Put project, apps, and utilities in the appropriate place in your directory structure and add them to your PYTHONPATH
+2. Copy media files to a web accessible directory or add the media directory to apache
+3. Create Database
+4. Define your local settings
+   - Copy python/django/projects/annotate/localSettings.py.tmpl to python/django/projects/annotate/localSettings.py
+5. Run syncdb to set up the database tables and add initial data
+   - $ python manage.py syncdb
+6. Test the project by running the django test server:
+   - $ python manage.py runserver
+
+
+TEI Packager Application
+
+The TEI Packager is a java based web application. Build system uses Apache Maven http://maven.apache.org
+
+Maven is configured through POM files, by convention pom.xml, and maintains a local Java artifact repository under $HOME/.m2/repository; when a build is initiated, any needed artifacts not available locally are downloaded from centralized maven repositories.
+
+This project's POM is configured to use a local repository manager (artifactory) hosted on dlbuild, into which the artifacts it needs have been placed.
+
+To build:
+
+    Download Maven (latest 2.x) from maven.apache.org, verify the archive, and unpack it somewhere. Call the full path to the new directory MAVEN_HOME
+    Either put MAVEN_HOME/bin on the path or use the full path whenver you invoke the 'mvn' command
+    check out the source to the project (and change directory to where the pom.xml file is)
+    $ mvn clean test package
+    the WAR file is now in the target/ directory, under the name tei-package-[VERSION].war
+    copy that to $TOMCAT_HOME/webapps/tei-package.war. 
+
+The first time you execute a maven build after installing maven, it will take a very long time, because basically maven is fetching all the things it needs to do builds. all the downloaded jars will got into the $HOME/.m2/repository directory mentioned above, and as a result subsequent builds will be much faster.
+
+After getting the libraries it uses to execute builds, maven will then download the libraries upon which the project's POM says it depends, and execute the build commands. The above list cleans out any previous builds, compiles the project, executes all the unit tests, and then finally builds the package (a .war in this case) 'mvn package' will also work this first time around, but usually 'clean' doesn't take very long to execute and so it's good to do that first.
+[edit] Deployment
+
+Place provided .war file in $TOMCAT_HOME/webapps. Tomcat will auto-deploy.
+
+For more information see TEI Packager App in the docs.
+
+Solr
+
+Create a core and add the files under the Solr directory to the conf directory for your core.  See the docs for configuring Haystack.

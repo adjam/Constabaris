@@ -1,0 +1,4 @@
+Configuration:
+
+1. Copy localSettings.py.tmpl to localSettings.py
+2. Edit localSettings.py so it reflects your local configuration.

@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mods:mods xmlns:mods="http://www.loc.gov/mods/v3" xmlns="http://www.loc.gov/METS/" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" version="3.3">
+               <mods:titleInfo>
+                  <mods:title>Pullman Porters and the Rise of Protest Politics in Black America, 1925 – 1945</mods:title>
+               </mods:titleInfo>
+               <mods:name type="personal" xml:id="batesb">
+                  <mods:role>
+                     <mods:roleTerm type="code" authority="marcrelator">aut</mods:roleTerm>
+                     <mods:roleTerm type="text" authority="marcrelator">Author</mods:roleTerm>
+                  </mods:role>
+                  <mods:namePart>Bates, Beth Tompkins</mods:namePart>
+                  <mods:namePart type="given">Beth</mods:namePart>
+                  <mods:namePart type="surname">Bates</mods:namePart>
+                  <mods:displayForm>Beth Tompkins Bates</mods:displayForm>
+               </mods:name>
+               <mods:typeOfResource>text</mods:typeOfResource>
+               <mods:extent>304 pp., 6.125 x 9.25, 16 illus., notes, bibl., index</mods:extent>
+               <mods:originInfo>
+                  <mods:publisher>The University of North Carolina Press</mods:publisher>
+                  <mods:place>
+                     <mods:placeTerm type="text">Chapel Hill, NC</mods:placeTerm>
+                  </mods:place>
+                  <mods:dateIssued keyDate="yes" encoding="w3cdtf">2001</mods:dateIssued>
+               </mods:originInfo>
+               <mods:identifier type="isbn">9780807849293</mods:identifier>
+               <mods:abstract>Bates traces the rise of a new, more aggressive protest politics in the black community through the struggle of the Brotherhood of Sleeping Car Porters to form a union in Chicago from 1925 to 1945.</mods:abstract>
+               <mods:subject authority="lcsh">
+                  <mods:topic>Pullman porters--Labor unions--United States--History.</mods:topic>
+               </mods:subject>
+               <mods:subject authority="lcsh">
+                  <mods:topic>African American labor union members--Political activity--History.</mods:topic>
+               </mods:subject>
+               <mods:subject authority="lcsh">
+                  <mods:topic>Discrimination in employment--United States--History.</mods:topic>
+               </mods:subject>
+               <mods:subject authority="lcsh">
+                  <mods:topic>Race discrimination--United States--History.</mods:topic>
+               </mods:subject>
+            </mods:mods>
+         

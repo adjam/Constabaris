@@ -1,0 +1,172 @@
+{% extends "site_base.html" %}
+{% block pagetitle %}
+ <title>Check Upload</title>
+ <style type="text/css">
+   #work-overview {
+     width: 60%;
+     margin: 0 auto;
+     border: 1px solid #000;
+     background-color: #fff;
+     border-spacing: 0;
+     font: .75em Verdana,Helvetica,sans-serif;
+   }
+   
+   #work-overview td.fieldName {
+      padding: .5em 0;
+      text-align: center;
+      vertical-align: top;
+      font-weight: bold;
+      background-color: #cfc;
+      border-right: 2px solid #000;
+   }
+   #work-overview td.fieldValue {
+      padding-left: 1em;
+   }
+   #work-overview li.new {
+      color: #9f9;
+   }
+   thead th {
+      padding: 1em;
+      background-color: #696;
+      border-bottom: 3px solid #000;
+   }
+   tfoot td {
+      border-top: 3px solid #000;
+   }
+ </style>   
+{% endblock %}
+{% block body %}
+ <div id="content">
+ <h1>Check Upload</title>
+  <table id="work-overview">
+    <thead>
+    <tr>
+      <th>Field</th>
+      <th>Value(s)</th>
+    </tr>
+    </thead>
+	    <tfoot>
+      <tr>
+	<td colspan="2">
+	   <form action="{% url works:ingest.commit %}" method="post">
+    <p>Ensure that all the above looks correct, and if so, select
+      'commit' below.  Otherwise, fix your file, <a href="{% url work.ingest %}">Go Back</a>, and re-upload.</p>
+    <input type="hidden" name="upload_key" value="{{ upload_key }}" />
+    <input type="submit" name="action" value="commit" />
+ </form>
+	   </td>
+	</tr>
+      </tfoot>	
+
+    <tbody>
+      <tr>
+	<td class="fieldName">Title</td>
+	<td class="fieldValue">{{ work.title }} {% if work.subtitle %}: {{ work.subtitle }} {%endif%}</td>
+      </tr>
+      <tr>
+	<td class="fieldName">Author(s)</td>
+	<td class="fieldValue">{{ work.author_display }}</td>
+      </tr>	
+     <tr>
+		<td class="fieldName">Genre</td>
+		<td class="fieldValue">{{ work.genre }}</td>
+	</tr>
+	 <tr>
+		<td class="fieldName">Format</td>
+		<td class="fieldValue">{{ work.format }}</td>
+	 </tr>
+	
+    <tr>
+	<td class="fieldName">ISBN/DOI</td>
+	<td class="fieldValue">{{ work.isbn }} / {{ work.doi }}</td>
+      </tr>
+      <tr>
+	<td class="fieldName">Published</td>
+	<td class="fieldValue">{{ work.published|date:"Y" }}</td>
+      <tr>
+	<td class="fieldName">Publisher</td>
+	<td class="fieldValue{%if publisher.1 %} new{% endif %}">
+	  {{publisher.0.name}}, {{publisher.0.location}}
+	</td>
+      </tr>
+      <tr>
+	<td class="fieldName">Abstract</td>
+	<td class="fieldValue">{{ work.description }}</td>
+      </tr>
+      <tr class="subjects">
+	<td class="fieldName">Subjects</td>
+	<td class="fieldValue"><ul>
+	    {% for subj in subjects %}
+	     <li{% if not subj.pk %} class="new"{% endif %}>{{ subj.label }}</li>
+	    {% endfor %}
+	    </ul>
+	</td>
+      </tr>
+      <tr class="sections">
+	<td class="fieldName">Sections</td>
+	<td class="fieldValue">
+	  <ul>{% for sect, div in sections %}
+	    <li>{{sect.order }} - {{ sect.title }}, pp. {{ sect.page_range.0 }}-{{ sect.page_range.1 }} </li>{% endfor %}
+	  </ul>
+	</td>
+      </tr>
+      {% if media %}
+      <tr class="media">
+	<td class="fieldName">Embedded media</td>
+	<td class="fieldValue">
+           <ul>{% for img in media %}
+		   {% if img.exists %}
+			<li>{{ img.href }} <img src="{{ img.thumbnail }}" /></li>
+		  {% else %} 
+		    <li class='error'>Image corresponding to {{ img.href }} not found in uploaded package.</li>
+		  {% endif %}
+			{% endfor %}
+	   </ul>
+        </td>
+      </tr>
+      {% endif %}
+	{% for valname,errors in errors.items %}
+	 
+	 <tr class="error">
+	  <td>Validation Errors <br />
+	  {{ valname }}</td>
+	  {% if errors %}
+	  <td>
+	    <ul>
+		  {% for error in errors %}
+		  <li>{{ error }}</li>
+		  {% endfor %}
+		</ul>
+	  </td>
+	  {% else %}
+	  <td>No errors detected</td>
+	 {% endif %} {# errors #}
+	</tr>
+   {% endfor %} {# errors #}
+	
+	{% for valname,warnings in warnings.items %}
+	 
+	 <tr class="warning">
+	  <td>Validation Warnings<br />
+	  {{ valname }}</td>
+	  {% if warnings %}
+	  <td>
+	    <ul>
+		  {% for warn in warnings %}
+		  <li>{{ warn }}</li>
+		  {% endfor %}
+		</ul>
+	  </td>
+	  {% else %}
+	  <td>No warnings</td>
+	 {% endif %} {# warnings #}
+	</tr>
+   {% endfor %} {# warnings #}
+    </tbody>
+	
+	
+  </table>
+  
+  
+</div> <!-- #content --> 
+{% endblock %}

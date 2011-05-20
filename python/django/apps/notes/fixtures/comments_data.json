@@ -1,0 +1,470 @@
+[
+    {
+        "pk": 83, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>Boy what a great paragraph! And so it is.</p>", 
+            "user_url": "", 
+            "submit_date": "2010-03-31 10:23:22", 
+            "ip_address": "152.23.125.83", 
+            "object_pk": "1305", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "Tim Shearer", 
+            "user_email": "tshearer@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 84, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>Billy Barnes, the official photographer for the North Carolina Fund in the 1960s, took a number of photographs of Ann Atwater in action.&#160; Many of them have been digitized and are available online via the <a href=\"http://dc.lib.unc.edu/cdm4/item_viewer.php?CISOROOT=/barnes&amp;CISOPTR=303&amp;CISOBOX=1&amp;REC=1\" rel=\"nofollow\">UNC Special Collections Library</a>.&#160;</p>", 
+            "user_url": "", 
+            "submit_date": "2010-04-05 09:40:33", 
+            "ip_address": "152.2.156.201", 
+            "object_pk": "1628", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "Sylvia Miller", 
+            "user_email": "skm@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 85, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>Ann Atwater was photographed in action in the 1960s by the official photographer for the North Carolina Fund, Billy Barnes.&#160; You can see her in the <a href=\"http://dc.lib.unc.edu/cdm4/item_viewer.php?CISOROOT=/barnes&amp;CISOPTR=303&amp;CISOBOX=1&amp;REC=1\" rel=\"nofollow\">Billy Barnes Collection</a> at the UNC Special Collections Library.</p>", 
+            "user_url": "", 
+            "submit_date": "2010-04-06 12:24:03", 
+            "ip_address": "152.2.156.201", 
+            "object_pk": "1733", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "Sylvia Miller", 
+            "user_email": "skm@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 87, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>Ann Atwater has been heavily documented by the photographer <a href=\"http://bit.ly/aGcbEI\" rel=\"nofollow\">Billy Barnes</a>.</p>", 
+            "user_url": "", 
+            "submit_date": "2010-04-08 11:32:33", 
+            "ip_address": "152.23.125.77", 
+            "object_pk": "1716", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "Tim Shearer", 
+            "user_email": "tshearer@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 88, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>\" I like commenting on books,\" said Lia Miller.</p>", 
+            "user_url": "", 
+            "submit_date": "2010-04-11 19:36:34", 
+            "ip_address": "152.2.156.201", 
+            "object_pk": "1733", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "Sylvia Miller", 
+            "user_email": "skm@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 89, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<div><div>I look at a good book and I want to read it. Some times when I start reading a good book I can't&#160; put it down.</div> <div>--This comment was written and typed by&#160; Lia X. M. Miller</div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div></div>", 
+            "user_url": "", 
+            "submit_date": "2010-04-11 19:45:08", 
+            "ip_address": "152.2.156.201", 
+            "object_pk": "1733", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "Sylvia Miller", 
+            "user_email": "skm@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 90, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>You can see Ann Atwater in action in the 1960s in the <a href=\"http://dc.lib.unc.edu/cdm4/item_viewer.php?CISOROOT=/barnes&amp;CISOPTR=303&amp;CISOBOX=1&amp;REC=1\" rel=\"nofollow\">Billy Barnes photograph collection</a> at the UNC Special Collections Library.</p>", 
+            "user_url": "", 
+            "submit_date": "2010-04-12 11:06:09", 
+            "ip_address": "152.2.156.201", 
+            "object_pk": "1731", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "Sylvia Miller", 
+            "user_email": "skm@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 91, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>Test</p>", 
+            "user_url": "", 
+            "submit_date": "2010-04-21 14:57:12", 
+            "ip_address": "152.2.156.209", 
+            "object_pk": "1347", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "Kenneth Reed", 
+            "user_email": "reedkm@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 93, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>Given the author's caution against \"viewing the history of black education solely through the lens of Brown,\" how might educators teach younger generations about this important chapter in civil rights history? Read the \"<a href=\"http://www.trincoll.edu/depts/educ/brown/\" rel=\"nofollow\">Teaching Brown</a>\" essays by Dougherty and other contributors, published by the <em>History of Education Quarterly</em> on the 50th anniversary of the decision in 2004.</p>", 
+            "user_url": "", 
+            "submit_date": "2010-08-24 16:15:56", 
+            "ip_address": "152.2.156.153", 
+            "object_pk": "1594", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "Kenneth Reed", 
+            "user_email": "reedkm@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 94, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>Does reading this account spark any new research ideas on Milwaukee, or the Northern civil rights movement at large? See Dougherty's essay, \"African Americans, Civil Rights, and Race-Making in Milwaukee\" and other chapters in Margo Anderson and Victor Greene's volume, <em><a href=\"http://www.press.uillinois.edu/books/catalog/84eyb8kt9780252034152.html\" rel=\"nofollow\">Perspectives on Milwaukee's Past</a> </em>(2009). On the Northern struggle, see Jeanne Theoharis &amp; Komozi Woodard's <em><a href=\"http://books.google.com/books?id=JHPTPu8qFtkC\" rel=\"nofollow\">Freedom North</a></em> (2003), and Tom Sugrue's <em><a href=\"http://www.randomhouse.com/catalog/display.pperl/9780679643036.html\" rel=\"nofollow\">Sweet Land of Liberty</a></em> (2008).</p>", 
+            "user_url": "", 
+            "submit_date": "2010-08-24 16:29:19", 
+            "ip_address": "152.2.156.56", 
+            "object_pk": "1594", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "Russ Damian", 
+            "user_email": "rodamian@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 95, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>How were these oral history sources created? Who was interviewed and why? How did the author shape the interviewing process, and how did oral history participants shape his interpretation? Read <a href=\"http://www.trincoll.edu/depts/educ/struggle/oralhistory.htm\" rel=\"nofollow\">Dougherty's essay about the More Than One Struggle oral history project,</a> view the <a href=\"http://digital.library.wisc.edu/1711.dl/wiarchives.uw-mil-uwmmss0217\" rel=\"nofollow\">finding aid to the full collection at the University of Wisconsin-Milwaukee library archive</a>s, and read or listen to selected interviews that have been digitized by the <a href=\"http://www4.uwm.edu/libraries/digilib/march/index.cfm\" rel=\"nofollow\">March on Milwaukee Civil Rights History Project.</a></p>", 
+            "user_url": "", 
+            "submit_date": "2010-08-24 16:32:49", 
+            "ip_address": "152.2.156.153", 
+            "object_pk": "1594", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "Kenneth Matthew Reed", 
+            "user_email": "reedkm@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 96, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>How did the city's white-owned press portray its small black community during this era? Read the full article on <a href=\"http://news.google.com/newspapers?nid=jvrRlaHg2sAC&amp;dat=19391126&amp;printsec=frontpage\" rel=\"nofollow\">\"Milwaukee's Harlem\"</a> (go to page 11) in the November 26, 1939 <em>Milwaukee Journal</em> where Kelley's photo appeared.</p>", 
+            "user_url": "", 
+            "submit_date": "2010-08-24 16:33:45", 
+            "ip_address": "152.2.156.153", 
+            "object_pk": "1595", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "Kenneth Matthew The Reed", 
+            "user_email": "reedkm@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 97, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>Explore <a href=\"http://collections.lib.uwm.edu/u?/march,1474\" rel=\"nofollow\">racially restrictive real estate covenants</a> for Milwaukee County, 1929-1946, digitized from the Lloyd Barbee Papers by the March on Milwaukee Civil Rights History Project.</p>", 
+            "user_url": "", 
+            "submit_date": "2010-08-25 11:37:10", 
+            "ip_address": "152.2.156.56", 
+            "object_pk": "1595", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "March on Milwaukee A Civil Rights History project", 
+            "user_email": "rodamian@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 98, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>This is totally awesome!</p>", 
+            "user_url": "", 
+            "submit_date": "2010-08-25 15:30:05", 
+            "ip_address": "152.2.71.159", 
+            "object_pk": "2010", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "Mike Graves", 
+            "user_email": "gravm@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 99, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>I agree!</p>", 
+            "user_url": "", 
+            "submit_date": "2010-08-25 15:32:05", 
+            "ip_address": "152.2.71.159", 
+            "object_pk": "2010", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "Mr. Lou Reed", 
+            "user_email": "gravm@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 100, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>No, I think you are both awesome!</p>", 
+            "user_url": "", 
+            "submit_date": "2010-08-25 15:35:08", 
+            "ip_address": "152.2.71.159", 
+            "object_pk": "2010", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "Hey look at the spaces in both my names", 
+            "user_email": "gravm@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 101, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>asdf</p>", 
+            "user_url": "", 
+            "submit_date": "2010-08-25 16:37:51", 
+            "ip_address": "152.2.71.159", 
+            "object_pk": "2010", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "Hey look at the spaces xxxxxxxxxxxxxxxxxxxxxxxxxxx", 
+            "user_email": "gravm@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 102, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>asjhkjh</p>", 
+            "user_url": "", 
+            "submit_date": "2010-08-25 16:58:23", 
+            "ip_address": "152.2.71.159", 
+            "object_pk": "2010", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "aaaaaaaaaaaaaaaaaaaaaaaaaaa bar", 
+            "user_email": "gravm@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 103, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>asdfllkjlk</p>", 
+            "user_url": "", 
+            "submit_date": "2010-08-25 16:58:55", 
+            "ip_address": "152.2.71.159", 
+            "object_pk": "2010", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bar", 
+            "user_email": "gravm@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 104, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>asdf</p>", 
+            "user_url": "", 
+            "submit_date": "2010-08-25 17:01:49", 
+            "ip_address": "152.2.71.159", 
+            "object_pk": "2010", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbb", 
+            "user_email": "gravm@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 105, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>adsf</p>", 
+            "user_url": "", 
+            "submit_date": "2010-08-25 17:03:37", 
+            "ip_address": "152.2.71.159", 
+            "object_pk": "2010", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbb", 
+            "user_email": "gravm@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 106, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>lkjhg</p>", 
+            "user_url": "", 
+            "submit_date": "2010-08-25 17:04:07", 
+            "ip_address": "152.2.71.159", 
+            "object_pk": "2010", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbb", 
+            "user_email": "gravm@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 107, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>kjhkjh</p>", 
+            "user_url": "", 
+            "submit_date": "2010-08-25 17:04:32", 
+            "ip_address": "152.2.71.159", 
+            "object_pk": "2010", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbbbb", 
+            "user_email": "gravm@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 108, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>kjhkjh</p>", 
+            "user_url": "", 
+            "submit_date": "2010-08-25 17:06:27", 
+            "ip_address": "152.2.71.159", 
+            "object_pk": "2010", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "aaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", 
+            "user_email": "gravm@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 109, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>kjhkjh</p>", 
+            "user_url": "", 
+            "submit_date": "2010-08-26 10:09:59", 
+            "ip_address": "152.2.71.159", 
+            "object_pk": "2010", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbbbb", 
+            "user_email": "gravm@email.unc.edu"
+        }
+    }, 
+    {
+        "pk": 110, 
+        "model": "comments.comment", 
+        "fields": {
+            "comment": "<p>Testing the comments.</p>", 
+            "user_url": "", 
+            "submit_date": "2010-10-05 14:17:26", 
+            "ip_address": "152.23.120.11", 
+            "object_pk": "2208", 
+            "site": 1, 
+            "is_removed": 0, 
+            "user": 7, 
+            "content_type": 25, 
+            "is_public": 1, 
+            "user_name": "Kenneth Matthew The Reed", 
+            "user_email": "reedkm@email.unc.edu"
+        }
+    }
+]

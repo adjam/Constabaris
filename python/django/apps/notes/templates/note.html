@@ -1,0 +1,25 @@
+{% load absurl %}
+<html>
+ <head>
+  <title>{{ note.title|default:"Untitled Note" }}</title>
+ </head>
+ <body>
+  <h1>{{ note.title|default:"Untitled Note" }}</h1>
+  <ul>
+   <li>Type: {{ note.note_type }}</li>
+   <li>Created: {{ note.created }}</li>
+   <li>Approved: {{ note.approved }}</li>
+   <li>Target: {{ note.get_full_target }}</li>
+   <li>Value: <pre>{{ note.note_value }}</pre></li>
+ </ul>
+ {% absurl get-note id=note.id as the_url %}
+ <p>URI for this note: <a href="{{ the_url }}">{{the_url}}</a>
+  <h2>Other formats</h2>
+  <ul>
+   {% for fmt in formats %}
+    <li>{{ fmt.0 }}<a href="{% url get-note id=note.id, extension=fmt.1 %}">{% url get-note id=note.id, extension=fmt.1 %}</a></li>
+   {% endfor %}
+  </ul>
+ </p>
+</body>
+</html>

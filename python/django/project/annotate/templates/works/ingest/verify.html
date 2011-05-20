@@ -1,0 +1,139 @@
+{% extends "works/ingest/ingest_base.html" %}
+{% block pagetitle %}
+ <title>Check Upload</title>
+ {% endblock %}
+
+{% block content %}
+ <h1>Check Upload</h1>
+  <table id="work-overview">
+    <thead>
+    <tr>
+      <th>Field</th>
+      <th>Value(s)</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr>
+	<td class="fieldName">Title</td>
+	<td class="fieldValue">{{ work.title }} {% if work.subtitle %}: {{ work.subtitle }} {%endif%}</td>
+      </tr>
+      <tr>
+	<td class="fieldName">Author(s)</td>
+	<td class="fieldValue">
+	   <b>Displayed As</b>: {{ work.author_display }}
+	   <br />
+        <ul>{% for author in authors %}
+            <li{% if not author.pk %}class="new"{%endif %}>
+                {{author.display_name}} ({{ author.reg_form }})</li>
+            {% endfor %}
+        </ul>
+    </td>
+      </tr>	
+      <tr>
+	<td class="fieldName">ISBN/DOI</td>
+	<td class="fieldValue">{{ work.isbn }} / {{ work.doi }}</td>
+      </tr>
+      <tr>
+	<td class="fieldName">Published</td>
+	<td class="fieldValue">{{ work.published|date:"Y" }}</td>
+      </tr>
+      <tr>
+	<td class="fieldName">Genre</td>
+	<td class="fieldValue">{{ work.genre }}</td>
+      </tr>
+      <tr>
+	<td class="fieldName">License</td>
+	<td class="fieldValue">{{ work.license }}</td>
+      </tr>
+      <tr>
+	<td class="fieldName">Publisher</td>
+	<td class="fieldValue{%if not publisher.pk  %} new{% endif %}">
+	  {{publisher.name}}, {{publisher.location}}
+	</td>
+      </tr>
+      <tr>
+	<td class="fieldName">Abstract</td>
+	<td class="fieldValue">{{ work.description }}</td>
+      </tr>
+      <tr class="subjects">
+	<td class="fieldName">Subjects (LCSH)</td>
+	<td class="fieldValue"><ul>
+	    {% for subj in subjects %}
+	     <li{% if not subj.pk  %} class="new"{% endif %}>{{ subj.label }}</li>
+	    {% endfor %}
+	    </ul>
+	</td>
+      </tr>
+    <tr class="keywords">
+        <td class="fieldName">Keywords (assigned by publisher)</td>
+        <td class="fieldValue">
+            <ul>
+                {% for keyword in keywords %}
+                    <li>{{ keyword }}</li>
+                {% empty %}
+                    <li>No keywords assigned</li>
+                {% endfor %}
+            </ul>
+       </td>
+   </tr>
+      <tr class="sections">
+	<td class="fieldName">Sections</td>
+	<td class="fieldValue">
+	  <ul>{% for sect, div in sections %}
+	    <li>{{sect.order }} - {{ sect.title }}, pp. {{ sect.page_range.0 }}-{{ sect.page_range.1 }} </li>{% endfor %}
+	  </ul>
+	</td>
+      </tr>
+    <tr class="links">
+        <td class="fieldName">Links</td>
+        <td class="fieldValue">
+            {% if links %}
+                <ul>
+                    {% for link in links %}
+                        <li>
+                            <a href="{{ link.value }}">{{link.description}}</a> 
+							<br />— <tt style="font-size: 75%;">{{link.value}}</tt>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </td>
+    </tr>
+      <tr class="media">
+	<td class="fieldName">Embedded media</td>
+	<td class="fieldValue">
+           <ul>
+		 {% for img in media %}
+		   {% if img.exists %}
+			<li>
+			  <div class="figure">
+			  <img src="{{ img.thumbnail }}" />
+			  <p style="text-align: center;">
+				{{ img.name }}
+			  </p>
+			  </div>
+		    </li>
+		  {% else %} 
+		    <li class='error'>Image corresponding to {{ img.href }} not found in uploaded package.</li>
+		  {% endif %}
+	     {% empty %}
+	      <li>No images found.</li>
+	     {% endfor %}
+	   </ul>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr style="z-index: 1000;"><!-- sometimes this puppy runs under the footer -->
+	<td colspan="2">
+	   <form action="{% url works:commit %}" method="post">
+    <p>Ensure that all the above looks correct, and if so, select
+      'commit' below.  Otherwise, fix your file, <a href="{% url works:ingest %}">Go Back</a>, and re-upload.</p>
+    <input type="hidden" name="upload_key" value="{{ upload_key }}" />
+    <button type="submit" class="submit" value="Commit">Commit</button>
+ </form>
+	   </td>
+	</tr>
+      </tfoot>	
+  </table>
+{% endblock %}

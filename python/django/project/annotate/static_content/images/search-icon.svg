@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.47pre4 r22446"
+   sodipodi:docname="search-icon.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   version="1.1">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient3216">
+      <stop
+         style="stop-color:#cfff66;stop-opacity:1;"
+         offset="0"
+         id="stop3218" />
+      <stop
+         style="stop-color:#99ff99;stop-opacity:1;"
+         offset="1"
+         id="stop3220" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3215">
+      <stop
+         style="stop-color:#669933;stop-opacity:1;"
+         offset="0"
+         id="stop3217" />
+      <stop
+         style="stop-color:#99cc66;stop-opacity:1;"
+         offset="1"
+         id="stop3219" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3175">
+      <stop
+         style="stop-color:#666666;stop-opacity:0.70980394;"
+         offset="0"
+         id="stop3177" />
+      <stop
+         style="stop-color:#ccccf3;stop-opacity:0;"
+         offset="1"
+         id="stop3179" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3167">
+      <stop
+         style="stop-color:#666666;stop-opacity:1;"
+         offset="0"
+         id="stop3169" />
+      <stop
+         style="stop-color:#ccccf3;stop-opacity:0;"
+         offset="1"
+         id="stop3171" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3167"
+       id="linearGradient3173"
+       x1="185.71428"
+       y1="812.36212"
+       x2="509.99997"
+       y2="216.64789"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3175"
+       id="linearGradient3181"
+       x1="397.14285"
+       y1="322.36218"
+       x2="298.57144"
+       y2="646.64789"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3167"
+       id="linearGradient5744"
+       gradientUnits="userSpaceOnUse"
+       x1="185.71428"
+       y1="812.36212"
+       x2="509.99997"
+       y2="216.64789" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3215"
+       id="linearGradient3221"
+       x1="414.28571"
+       y1="742.36212"
+       x2="420"
+       y2="482.36209"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3215"
+       id="linearGradient2444"
+       gradientUnits="userSpaceOnUse"
+       x1="421.42856"
+       y1="783.79071"
+       x2="421.42856"
+       y2="638.07648"
+       gradientTransform="matrix(0.93723853,0,0,1.0980393,-26.407653,-378.27086)" />
+    <filter
+       inkscape:collect="always"
+       id="filter3773"
+       x="-0.036199751"
+       width="1.0723995"
+       y="-0.14089025"
+       height="1.2817805">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="5.628096"
+         id="feGaussianBlur3775" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       id="filter3811">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="2.1171429"
+         id="feGaussianBlur3813" />
+    </filter>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3215"
+       id="linearGradient3837"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.93723853,0,0,1.0980393,-26.407653,-626.84229)"
+       x1="372.65305"
+       y1="638.07648"
+       x2="369.60458"
+       y2="783.79077" />
+    <filter
+       id="filter3114"
+       inkscape:label="Combined lighting"
+       inkscape:menu="Bevels"
+       inkscape:menu-tooltip="Basic specular bevel to use for building textures"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         id="feGaussianBlur3116"
+         stdDeviation="6"
+         in="SourceGraphic"
+         result="result0" />
+      <feDiffuseLighting
+         id="feDiffuseLighting3118"
+         lighting-color="rgb(255,255,255)"
+         diffuseConstant="1"
+         surfaceScale="4"
+         result="result5">
+        <feDistantLight
+           id="feDistantLight3120"
+           elevation="45"
+           azimuth="235" />
+      </feDiffuseLighting>
+      <feComposite
+         id="feComposite3122"
+         in2="SourceGraphic"
+         k1="1.4"
+         in="result5"
+         result="fbSourceGraphic"
+         operator="arithmetic" />
+      <feGaussianBlur
+         id="feGaussianBlur3124"
+         result="result0"
+         in="fbSourceGraphic"
+         stdDeviation="6" />
+      <feSpecularLighting
+         id="feSpecularLighting3126"
+         specularExponent="25"
+         specularConstant="1"
+         surfaceScale="4"
+         lighting-color="rgb(255,255,255)"
+         result="result1"
+         in="result0">
+        <feDistantLight
+           id="feDistantLight3128"
+           azimuth="235"
+           elevation="45" />
+      </feSpecularLighting>
+      <feComposite
+         id="feComposite3130"
+         in2="result91"
+         k3="1"
+         k2="1"
+         operator="arithmetic"
+         result="result4"
+         in="fbSourceGraphic" />
+      <feComposite
+         id="feComposite3132"
+         in2="SourceGraphic"
+         operator="in"
+         result="result2"
+         in="result4" />
+    </filter>
+    <filter
+       id="filter3134"
+       inkscape:label="Ridged border"
+       inkscape:menu="Bevels"
+       inkscape:menu-tooltip="Ridged border with inner bevel"
+       color-interpolation-filters="sRGB">
+      <feMorphology
+         id="feMorphology3136"
+         radius="4.3"
+         in="SourceAlpha"
+         result="result91" />
+      <feComposite
+         id="feComposite3138"
+         in2="result91"
+         operator="out"
+         in="SourceGraphic" />
+      <feGaussianBlur
+         id="feGaussianBlur3140"
+         result="result0"
+         stdDeviation="1.2" />
+      <feDiffuseLighting
+         id="feDiffuseLighting3142"
+         diffuseConstant="1"
+         result="result92">
+        <feDistantLight
+           id="feDistantLight3144"
+           elevation="66"
+           azimuth="225" />
+      </feDiffuseLighting>
+      <feBlend
+         id="feBlend3146"
+         in2="SourceGraphic"
+         mode="multiply"
+         result="result93" />
+      <feComposite
+         id="feComposite3148"
+         in2="SourceAlpha"
+         operator="in" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="287.21371"
+     inkscape:cy="815.46104"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1680"
+     inkscape:window-height="976"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:snap-center="true"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g3172"
+       style="fill:none"
+       inkscape:export-filename="/home/adamc/Projects/annotate/static_content/images/search-icon.png"
+       inkscape:export-xdpi="6.2199998"
+       inkscape:export-ydpi="6.2199998"
+       transform="matrix(1.1481481,0,0,1.0617284,-978.30688,-66.847753)">
+      <rect
+         ry="19.416269"
+         rx="19.416269"
+         y="226.64789"
+         x="142.85715"
+         height="462.85715"
+         width="462.85715"
+         id="rect2383"
+         style="fill:none;stroke:none" />
+      <path
+         inkscape:export-ydpi="6.98"
+         inkscape:export-xdpi="6.98"
+         inkscape:export-filename="/home/adamc/Projects/annotate/static_content/images/search-icon.png"
+         transform="translate(-42.857143,-42.857143)"
+         d="m 485.71428,443.79074 c 0,72.586 -58.84258,131.42857 -131.42857,131.42857 -72.586,0 -131.42858,-58.84257 -131.42858,-131.42857 0,-72.586 58.84258,-131.42857 131.42858,-131.42857 72.58599,0 131.42857,58.84257 131.42857,131.42857 z"
+         sodipodi:ry="131.42857"
+         sodipodi:rx="131.42857"
+         sodipodi:cy="443.79074"
+         sodipodi:cx="354.28571"
+         id="path2385"
+         style="fill:none;stroke:#000000;stroke-width:60;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         sodipodi:type="arc" />
+      <path
+         inkscape:export-filename="/home/adamc/Projects/annotate/static_content/images/search-icon.png"
+         inkscape:export-ydpi="6.98"
+         inkscape:export-xdpi="6.98"
+         sodipodi:nodetypes="ccc"
+         id="path3157"
+         d="m 409.86777,494.01567 c 163.83589,163.83588 160.6216,160.26445 160.6216,160.26445 L 409.86777,494.01567 z"
+         style="fill:none;stroke:#ffffff;stroke-width:0.1002;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
+    <rect
+       style="fill:url(#linearGradient2444);fill-opacity:1;stroke:none;filter:url(#filter3114)"
+       id="rect3185"
+       width="640"
+       height="160"
+       x="48.571426"
+       y="322.36218"
+       rx="46.861927"
+       ry="54.901962"
+       inkscape:export-filename="/home/adamc/Projects/annotate/static_content/images/search-icon.png"
+       inkscape:export-xdpi="15"
+       inkscape:export-ydpi="15" />
+    <text
+       inkscape:export-ydpi="13.5"
+       inkscape:export-xdpi="13.5"
+       inkscape:export-filename="/home/adamc/Projects/annotate/static_content/images/search-icon.png"
+       id="text3757"
+       y="450.19077"
+       x="273.54739"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;filter:url(#filter3773)"
+       xml:space="preserve"><tspan
+         style="font-size:128px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Aller;-inkscape-font-specification:Aller"
+         y="450.19077"
+         x="273.54739"
+         id="tspan3759"
+         sodipodi:role="line">Search</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="272.11884"
+       y="447.33359"
+       id="text3187"
+       inkscape:export-filename="/home/adamc/Projects/annotate/static_content/images/search-icon.png"
+       inkscape:export-xdpi="15"
+       inkscape:export-ydpi="15"><tspan
+         sodipodi:role="line"
+         id="tspan3189"
+         x="272.11884"
+         y="447.33359"
+         style="font-size:128px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;font-family:Aller;-inkscape-font-specification:Aller">Search</tspan></text>
+    <path
+       style="fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3811)"
+       d="M 562.84375 346.65625 C 532.0736 346.65625 507.15625 371.60485 507.15625 402.375 C 507.15625 433.14515 532.0736 458.0625 562.84375 458.0625 C 593.6139 458.0625 618.5625 433.14515 618.5625 402.375 C 618.5625 371.60485 593.6139 346.65625 562.84375 346.65625 z M 535.8125 365.84375 L 589.90625 400.84375 L 535.8125 438.875 L 535.8125 365.84375 z "
+       id="path3777"
+       inkscape:export-filename="/home/adamc/Projects/annotate/static_content/images/search-icon.png"
+       inkscape:export-xdpi="13.5"
+       inkscape:export-ydpi="13.5" />
+    <path
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       d="m 564.27232,345.22768 c -30.77015,0 -55.6875,24.9486 -55.6875,55.71875 0,30.77015 24.91735,55.6875 55.6875,55.6875 30.77015,0 55.71875,-24.91735 55.71875,-55.6875 0,-30.77015 -24.9486,-55.71875 -55.71875,-55.71875 z m -27.03125,19.1875 54.09375,35 -54.09375,38.03125 0,-73.03125 z"
+       id="path3191"
+       inkscape:export-filename="/home/adamc/Projects/annotate/static_content/images/search-icon.png"
+       inkscape:export-xdpi="15"
+       inkscape:export-ydpi="15" />
+    <text
+       xml:space="preserve"
+       style="font-size:83.57525635px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="642.64581"
+       y="576.47693"
+       id="text3211"
+       transform="scale(0.75167568,1.330361)"
+       inkscape:export-filename="/home/adamc/Projects/annotate/static_content/images/search-icon.png"
+       inkscape:export-xdpi="9"
+       inkscape:export-ydpi="9"><tspan
+         sodipodi:role="line"
+         id="tspan3213"
+         x="642.64581"
+         y="576.47693"
+         style="font-size:150.43545532px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#999999;fill-opacity:1;font-family:Aller;-inkscape-font-specification:Aller">&gt;</tspan></text>
+    <rect
+       inkscape:export-ydpi="15"
+       inkscape:export-xdpi="15"
+       inkscape:export-filename="/home/adamc/Projects/annotate/static_content/images/search-icon-pressed.png"
+       ry="54.901962"
+       rx="46.861927"
+       y="73.790756"
+       x="48.571426"
+       height="160"
+       width="640"
+       id="rect3823"
+       style="fill:url(#linearGradient3837);fill-opacity:1;stroke:none;filter:url(#filter3134)" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3773);font-family:Bitstream Vera Sans"
+       x="273.54739"
+       y="201.61934"
+       id="text3825"
+       inkscape:export-filename="/home/adamc/Projects/annotate/static_content/images/search-icon-pressed.png"
+       inkscape:export-xdpi="13.5"
+       inkscape:export-ydpi="13.5"><tspan
+         sodipodi:role="line"
+         id="tspan3827"
+         x="273.54739"
+         y="201.61934"
+         style="font-size:128px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Aller;-inkscape-font-specification:Aller">Search</tspan></text>
+    <text
+       inkscape:export-ydpi="13.5"
+       inkscape:export-xdpi="13.5"
+       inkscape:export-filename="/home/adamc/Projects/annotate/static_content/images/search-icon-pressed.png"
+       id="text3829"
+       y="200.76216"
+       x="274.11884"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:128px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-opacity:1;font-family:Aller;-inkscape-font-specification:Aller"
+         y="200.76216"
+         x="274.11884"
+         id="tspan3831"
+         sodipodi:role="line">Search</tspan></text>
+    <path
+       inkscape:export-ydpi="13.5"
+       inkscape:export-xdpi="13.5"
+       inkscape:export-filename="/home/adamc/Projects/annotate/static_content/images/search-icon-pressed.png"
+       id="path3833"
+       d="m 566.84375,100.08482 c -30.77015,0 -55.6875,24.9486 -55.6875,55.71875 0,30.77015 24.91735,55.6875 55.6875,55.6875 30.77015,0 55.71875,-24.91735 55.71875,-55.6875 0,-30.77015 -24.9486,-55.71875 -55.71875,-55.71875 z m -27.03125,19.1875 54.09375,35 -54.09375,38.03125 0,-73.03125 z"
+       style="fill:#000000;fill-opacity:1;stroke:none;filter:url(#filter3811)" />
+    <path
+       inkscape:export-ydpi="13.5"
+       inkscape:export-xdpi="13.5"
+       inkscape:export-filename="/home/adamc/Projects/annotate/static_content/images/search-icon-pressed.png"
+       id="path3835"
+       d="m 566.27232,98.656251 c -30.77015,0 -55.6875,24.948599 -55.6875,55.718749 0,30.77015 24.91735,55.6875 55.6875,55.6875 30.77015,0 55.71875,-24.91735 55.71875,-55.6875 0,-30.77015 -24.9486,-55.718749 -55.71875,-55.718749 z m -27.03125,19.187499 54.09375,35 -54.09375,38.03125 0,-73.03125 z"
+       style="fill:#ffffff;fill-opacity:1;stroke:none" />
+  </g>
+</svg>

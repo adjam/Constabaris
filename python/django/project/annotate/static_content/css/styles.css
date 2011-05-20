@@ -1,0 +1,322 @@
+@import url("reset.css");
+@import url("forms.css");
+@import url("tei.css");
+@import url("editor-styles.css");
+
+body {
+    background-color: #693;
+    color: #fff;
+    font: 1.2em/1.4em Palatino, "Times New Roman", "Bitstream Vera", serif;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 80%;
+    border: 1px solid #efe;
+    background-color: #fff;
+    color: #000;
+}
+
+#header {
+    border-bottom: 2px solid #000;
+
+}
+
+#header h1 {
+    float: right;
+}
+
+#navheader {
+    clear: both;
+    background-color: #a3d175;
+}
+
+#navheader ul.navigation {
+    list-style: none;
+
+}
+
+ul.navigation li {
+    float: left;
+    vertical-align: middle;
+    padding: .5em 1em;
+    border-right: 1px solid #fff;
+}
+
+ul.navigation a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: #330;
+}
+
+div.searchform {
+    float: right;
+}
+
+#sidebar {
+    float: left;
+    padding: .2em;
+    width: 22%;
+}
+
+#sidebar .title {
+    font-size: 1.2em;
+}
+
+#sidebar .authorname {
+    font-size: 1em;
+}
+
+#main {
+    float: left;
+    width: 73%;
+    padding: 1em;
+
+}
+
+#footer {
+    width: 100%;
+    font-size: .7em;
+    border-top: 1px solid #666;
+    min-height: 4em;
+    clear: both;
+    text-align: center;
+}
+
+a.plink {
+    color: #c33;
+    text-decoration: none;
+    padding-left: .2em;
+    display: none;
+}
+
+.clearblock {
+    clear: both;
+    height: 0px;
+}
+
+div.entry h1 {
+    text-align: right;
+    font-variant: small-caps;
+    border-bottom: 2px solid #000;
+}
+
+.entry .datetime {
+    float: right;
+    font-family: sans-serif;
+    text-align: center;
+    width: 60px;
+    margin-left: .5em;
+    color: #fff;
+
+}
+
+.entry .datetime span {
+    display: block;
+}
+
+.datetime .day-month {
+    background-color: #693;
+    color: #fff;
+    font-weight: bold;
+    margin-top: .5em;
+    padding: 0;
+    -moz-border-radius-topleft: .5em;
+    -moz-border-radius-topright: .5em;
+}
+
+.entry .datetime .day {
+    padding: .2em 0 0 0;
+    margin-bottom: -.2em;
+    font-size: 1.25em;
+}
+
+.entry .datetime .year {
+    font-size: .6em;
+    background-color: #A3D175;
+    -moz-border-radius-bottomleft: .5em;
+    -moz-border-radius-bottomright: .5em;
+}
+
+.entry .datetime .time, .entry .datetime .iso8601 {
+    display: none;
+}
+
+.entry .datetime .month {
+    margin-top: -.5em;
+    font-size: .8em;
+}
+
+.entry .tags, .entry.created, .entry .author {
+    font-size: 60%;
+}
+
+.entry .author {
+    float: right;
+}
+
+#featured-works {
+    border: 1px solid #000;
+    padding: .5em;
+    -moz-border-radius: .5em;
+}
+
+#featured-works h1 {
+    font-variant: small-caps;
+}
+
+.work-info img {
+    float: left;
+    margin-right: 1em;
+    border: 2px solid #fff;
+    border-bottom: 10px solid #fff;
+}
+
+.work-info h3 {
+    background-color: #cca;
+}
+
+.base-info {
+    padding-left: 5em;
+}
+
+ul.work-sections {
+    list-style-type: none;
+    font-size: .8em;
+}
+
+div.abstract {
+    font-size: 75%;
+}
+
+/**
+ * Parts related to the display of comments
+ **/
+
+p.active {
+    background-color: #eff;
+}
+
+.annotation-hook {
+    float: right;
+    min-width: 32px;
+    min-height: 32px;
+    background: url(../images/comment-bubble.png) no-repeat;
+}
+
+.annotation-hook .count {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    color: #0a0;
+}
+
+.annotation-hook.hidden {
+    opacity: .3;
+}
+
+p:hover .annotation-hook.hidden {
+    opacity: .5;
+}
+
+div.annotation-hook:hover {
+    background: url(../images/comment-bubble-active.png) no-repeat;
+}
+
+p div.annotation-hook.hidden:hover {
+    opacity: 1;
+}
+
+#comments {
+    background-image: url(../images/comment-background.png);
+}
+
+/**
+ *  n.b. lack of spaces is important in selectors; these
+ * match elements with both classes
+ **/
+
+.comment {
+    margin: 0 auto;
+    width: 90%;
+    clear: both;
+    background-color: #efefef;
+}
+
+.comment .cbody {
+    margin: .2em;
+    padding: .2em;
+    text-align: left;
+    background-color: #fefefe;
+}
+
+.comment .metadata {
+    clear: right;
+    border-bottom: 2px solid #000;
+    background-color: #eea;
+}
+
+.metadata .headers {
+    float: left;
+}
+
+.metadata .navigation {
+    float: right;
+    padding-right: .5em;
+}
+
+.metadata .headers {
+    font-size: .6em;
+}
+
+
+.metadata .headers h1,h2,h3,h4,h5,h6 {
+    padding: 1px 0 .5em 0;
+    margin: 0;
+}
+
+
+
+.cbody .date {
+    float: right;
+    font-size: .6em;
+}
+
+.comment.author .metadata {
+    background-color: #aea;
+}
+
+.comment.author .cbody {
+    background-color : #eef;
+}
+
+/**
+ * Rules that handle display of footnotes on the same page go here
+ **/
+#noteDisplay {
+    display: none;
+    position: fixed;
+    background-color: #fff;
+    z-index: 15;
+    padding-left: 0;
+    margin-left: 0;
+    bottom : 0;
+    min-height: 20px;
+    border-top: 2px solid #000;
+}
+
+#noteDisplay span.reference {
+    display: none;
+}
+
+span.pb-display {
+
+    color: #c33;
+    display: none;
+    z-index: 15;
+}
+
+
+
+

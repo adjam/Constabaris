@@ -1,0 +1,59 @@
+import logging
+
+# Debug set to True for dev/setup purposes.  Set to False in production.
+Debug = True
+
+# Database location and credentials
+DATABASE_PASSWORD=""
+DATABASE_ENGINE = '' # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+DATABASE_NAME = '' # Or path to database file if using sqlite3.
+DATABASE_USER = ''             # Not used with sqlite3.
+
+DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
+DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
+
+WEB_ROOT = '/' #root for url
+
+# set this only if you have an ingest packager service available.
+#PACKAGER_SERVICE_URL="http://localhost:8080/tei-package/service"
+
+
+# Logging Info
+rootLogger = logging.getLogger('')
+if DEBUG:
+	logging.basicConfig(
+	    level = logging.DEBUG,
+	    format = '%(asctime)s %(levelname)s: %(message)s',
+	)
+else:
+	from logging.handlers import TimedRotatingFileHandler
+	handler = TimedRotatingFileHandler("/logs/django/lcrm/app.log", when="D", interval=1, backupCount=10)
+	rootLogger.addHandler(handler)
+	rootLogger.setLevel(logging.INFO)
+	logging.basicConfig(handler=handler, level=logging.INFO,format='%(asctime)s %(levelname)s: %(message)s')
+
+
+MEDIA_ROOT = '' #root location of your css, js, images, and other static files
+
+# List of directories django can look for includes.  This should include the directory where your section files live
+ALLOWED_INCLUDE_ROOTS = (
+  MEDIA_ROOT+'works/',
+)
+
+# URL that handles the media served from MEDIA_ROOT. Make sure to use a trailing slash if there is a path component (optional in other cases).
+# Examples: "http://media.lawrence.com", "http://example.com/media/"
+MEDIA_URL = ''
+
+# URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a trailing slash.
+# Examples: "http://foo.com/media/", "/media/".
+ADMIN_MEDIA_PREFIX = '/static/django-media/'
+
+# Location of your Solr instance
+HAYSTACK_SOLR_URL=""
+
+
+# django-registration configuration
+ACCOUNT_ACTIVATION_DAYS=7
+EMAIL_HOST='localhost'
+DEFAULT_FROM_EMAIL=""
+EMAIL_PORT=25

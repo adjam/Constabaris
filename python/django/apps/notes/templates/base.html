@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+ <head>
+  <title> {{ page_title }}</title>
+  <link rel="stylesheet"
+	href="/static/css/styles.css" type="text/css" />
+  <script type="text/javascript"
+	src="/static/jquery-1.3.2.min.js"></script>
+  {% block script %}
+  {% endblock %}
+ </head>
+ <body>
+  <div id="wrapper">
+   <div id="header">
+   	This is the header!
+   </div>
+   <div id="sidebar">
+    {% block sidebar %}
+     <h1>Latest Applications</h1>
+     {% if new_apps %}
+     <ul>
+      {% for app in new_apps %}
+       <li>{% if app.home_page %}
+	 <a href="{{app.home_page}}">{{ app.name }}</a>
+ ({{app.note_count|default:"0"}} unapproved notes)
+        {% else %}
+         {{app.name}}
+        {% endif %} <a href="{% url manage-app app.slug %}">Moderate</a></li>
+      {% endfor %}
+     </ul>
+     {% endif %}
+     {% endblock %}
+   </div><!-- sidebar -->
+   <div id="main">
+    {% block main %}
+     <h1>Welcome to Spud</h1>
+     <p>This is for administrators; the average user doesn't need to use this
+	application.</p>
+     <p>There are {{ new_notes|length }} notes in the database what ain't been approved yet.</p>
+    {% endblock %}
+   </div> <!-- main -->
+   <div id="footer">
+   This is the footer!
+   </div>
+  </div>
+ </body>
+</html>

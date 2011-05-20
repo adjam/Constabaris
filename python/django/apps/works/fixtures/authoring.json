@@ -1,0 +1,956 @@
+[
+	{
+	    "pk": 166, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 139, 
+	        "author": 45
+	    }
+	}, 
+	{
+	    "pk": 205, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 169, 
+	        "author": 33
+	    }
+	}, 
+	{
+	    "pk": 214, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 178, 
+	        "author": 60
+	    }
+	}, 
+	{
+	    "pk": 215, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 179, 
+	        "author": 59
+	    }
+	}, 
+	{
+	    "pk": 216, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 180, 
+	        "author": 61
+	    }
+	}, 
+	{
+	    "pk": 217, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 181, 
+	        "author": 62
+	    }
+	}, 
+	{
+	    "pk": 218, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 182, 
+	        "author": 63
+	    }
+	}, 
+	{
+	    "pk": 219, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 183, 
+	        "author": 64
+	    }
+	}, 
+	{
+	    "pk": 221, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 184, 
+	        "author": 66
+	    }
+	}, 
+	{
+	    "pk": 231, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 193, 
+	        "author": 67
+	    }
+	}, 
+	{
+	    "pk": 224, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 186, 
+	        "author": 69
+	    }
+	}, 
+	{
+	    "pk": 207, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 171, 
+	        "author": 58
+	    }
+	}, 
+	{
+	    "pk": 192, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 158, 
+	        "author": 49
+	    }
+	}, 
+	{
+	    "pk": 169, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 141, 
+	        "author": 46
+	    }
+	}, 
+	{
+	    "pk": 170, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 142, 
+	        "author": 47
+	    }
+	}, 
+	{
+	    "pk": 171, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 143, 
+	        "author": 48
+	    }
+	}, 
+	{
+	    "pk": 199, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 164, 
+	        "author": 53
+	    }
+	}, 
+	{
+	    "pk": 178, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 147, 
+	        "author": 51
+	    }
+	}, 
+	{
+	    "pk": 202, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 166, 
+	        "author": 56
+	    }
+	}, 
+	{
+	    "pk": 201, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 165, 
+	        "author": 55
+	    }
+	}, 
+	{
+	    "pk": 198, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 163, 
+	        "author": 52
+	    }
+	}, 
+	{
+	    "pk": 183, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 152, 
+	        "author": 29
+	    }
+	}, 
+	{
+	    "pk": 194, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 159, 
+	        "author": 3
+	    }
+	}, 
+	{
+	    "pk": 225, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 187, 
+	        "author": 70
+	    }
+	}, 
+	{
+	    "pk": 226, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 188, 
+	        "author": 4
+	    }
+	}, 
+	{
+	    "pk": 233, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 194, 
+	        "author": 71
+	    }
+	}, 
+	{
+	    "pk": 259, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 220, 
+	        "author": 80
+	    }
+	}, 
+	{
+	    "pk": 286, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 244, 
+	        "author": 77
+	    }
+	}, 
+	{
+	    "pk": 267, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 227, 
+	        "author": 85
+	    }
+	}, 
+	{
+	    "pk": 268, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 228, 
+	        "author": 80
+	    }
+	}, 
+	{
+	    "pk": 275, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 235, 
+	        "author": 86
+	    }
+	}, 
+	{
+	    "pk": 280, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 238, 
+	        "author": 87
+	    }
+	}, 
+	{
+	    "pk": 284, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 242, 
+	        "author": 88
+	    }
+	}, 
+	{
+	    "pk": 283, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 241, 
+	        "author": 89
+	    }
+	}, 
+	{
+	    "pk": 273, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 233, 
+	        "author": 90
+	    }
+	}, 
+	{
+	    "pk": 274, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 234, 
+	        "author": 91
+	    }
+	}, 
+	{
+	    "pk": 256, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 217, 
+	        "author": 82
+	    }
+	}, 
+	{
+	    "pk": 250, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 211, 
+	        "author": 81
+	    }
+	}, 
+	{
+	    "pk": 228, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 190, 
+	        "author": 72
+	    }
+	}, 
+	{
+	    "pk": 229, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 191, 
+	        "author": 73
+	    }
+	}, 
+	{
+	    "pk": 230, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 192, 
+	        "author": 4
+	    }
+	}, 
+	{
+	    "pk": 243, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 204, 
+	        "author": 74
+	    }
+	}, 
+	{
+	    "pk": 244, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 205, 
+	        "author": 75
+	    }
+	}, 
+	{
+	    "pk": 245, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 206, 
+	        "author": 76
+	    }
+	}, 
+	{
+	    "pk": 252, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 213, 
+	        "author": 77
+	    }
+	}, 
+	{
+	    "pk": 251, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 212, 
+	        "author": 78
+	    }
+	}, 
+	{
+	    "pk": 248, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 209, 
+	        "author": 79
+	    }
+	}, 
+	{
+	    "pk": 253, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 214, 
+	        "author": 80
+	    }
+	}, 
+	{
+	    "pk": 278, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 237, 
+	        "author": 83
+	    }
+	}, 
+	{
+	    "pk": 165, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 138, 
+	        "author": 44
+	    }
+	}, 
+	{
+	    "pk": 157, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 131, 
+	        "author": 12
+	    }
+	}, 
+	{
+	    "pk": 127, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 109, 
+	        "author": 28
+	    }
+	}, 
+	{
+	    "pk": 128, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 110, 
+	        "author": 27
+	    }
+	}, 
+	{
+	    "pk": 159, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 133, 
+	        "author": 11
+	    }
+	}, 
+	{
+	    "pk": 136, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 117, 
+	        "author": 27
+	    }
+	}, 
+	{
+	    "pk": 134, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 115, 
+	        "author": 24
+	    }
+	}, 
+	{
+	    "pk": 131, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 113, 
+	        "author": 33
+	    }
+	}, 
+	{
+	    "pk": 129, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 111, 
+	        "author": 26
+	    }
+	}, 
+	{
+	    "pk": 130, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 112, 
+	        "author": 25
+	    }
+	}, 
+	{
+	    "pk": 133, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 114, 
+	        "author": 10
+	    }
+	}, 
+	{
+	    "pk": 138, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 118, 
+	        "author": 4
+	    }
+	}, 
+	{
+	    "pk": 125, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 108, 
+	        "author": 29
+	    }
+	}, 
+	{
+	    "pk": 158, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 132, 
+	        "author": 1
+	    }
+	}, 
+	{
+	    "pk": 162, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 135, 
+	        "author": 2
+	    }
+	}, 
+	{
+	    "pk": 124, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 107, 
+	        "author": 25
+	    }
+	}, 
+	{
+	    "pk": 168, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 140, 
+	        "author": 16
+	    }
+	}, 
+	{
+	    "pk": 123, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 106, 
+	        "author": 10
+	    }
+	}, 
+	{
+	    "pk": 111, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 99, 
+	        "author": 39
+	    }
+	}, 
+	{
+	    "pk": 60, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 57, 
+	        "author": 9
+	    }
+	}, 
+	{
+	    "pk": 110, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 98, 
+	        "author": 38
+	    }
+	}, 
+	{
+	    "pk": 156, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 130, 
+	        "author": 5
+	    }
+	}, 
+	{
+	    "pk": 152, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 127, 
+	        "author": 35
+	    }
+	}, 
+	{
+	    "pk": 204, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 168, 
+	        "author": 57
+	    }
+	}, 
+	{
+	    "pk": 139, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 119, 
+	        "author": 17
+	    }
+	}, 
+	{
+	    "pk": 150, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 125, 
+	        "author": 32
+	    }
+	}, 
+	{
+	    "pk": 147, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 122, 
+	        "author": 15
+	    }
+	}, 
+	{
+	    "pk": 149, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 124, 
+	        "author": 31
+	    }
+	}, 
+	{
+	    "pk": 148, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 123, 
+	        "author": 14
+	    }
+	}, 
+	{
+	    "pk": 113, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 100, 
+	        "author": 6
+	    }
+	}, 
+	{
+	    "pk": 62, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 59, 
+	        "author": 9
+	    }
+	}, 
+	{
+	    "pk": 145, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 120, 
+	        "author": 8
+	    }
+	}, 
+	{
+	    "pk": 154, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 129, 
+	        "author": 33
+	    }
+	}, 
+	{
+	    "pk": 163, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 136, 
+	        "author": 42
+	    }
+	}, 
+	{
+	    "pk": 160, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 134, 
+	        "author": 41
+	    }
+	}, 
+	{
+	    "pk": 135, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 116, 
+	        "author": 23
+	    }
+	}, 
+	{
+	    "pk": 164, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 137, 
+	        "author": 43
+	    }
+	}, 
+	{
+	    "pk": 151, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 126, 
+	        "author": 13
+	    }
+	}, 
+	{
+	    "pk": 167, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 139, 
+	        "author": 39
+	    }
+	}, 
+	{
+	    "pk": 112, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 99, 
+	        "author": 40
+	    }
+	}, 
+	{
+	    "pk": 114, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 100, 
+	        "author": 7
+	    }
+	}, 
+	{
+	    "pk": 161, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 134, 
+	        "author": 7
+	    }
+	}, 
+	{
+	    "pk": 137, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 117, 
+	        "author": 37
+	    }
+	}, 
+	{
+	    "pk": 200, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 164, 
+	        "author": 54
+	    }
+	}, 
+	{
+	    "pk": 220, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 183, 
+	        "author": 65
+	    }
+	}, 
+	{
+	    "pk": 184, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 152, 
+	        "author": 30
+	    }
+	}, 
+	{
+	    "pk": 140, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 119, 
+	        "author": 18
+	    }
+	}, 
+	{
+	    "pk": 232, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 193, 
+	        "author": 68
+	    }
+	}, 
+	{
+	    "pk": 132, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 113, 
+	        "author": 36
+	    }
+	}, 
+	{
+	    "pk": 279, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 237, 
+	        "author": 84
+	    }
+	}, 
+	{
+	    "pk": 155, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 129, 
+	        "author": 34
+	    }
+	}, 
+	{
+	    "pk": 193, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 158, 
+	        "author": 50
+	    }
+	}, 
+	{
+	    "pk": 126, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 108, 
+	        "author": 30
+	    }
+	}, 
+	{
+	    "pk": 141, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 119, 
+	        "author": 19
+	    }
+	}, 
+	{
+	    "pk": 142, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 119, 
+	        "author": 20
+	    }
+	}, 
+	{
+	    "pk": 143, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 119, 
+	        "author": 21
+	    }
+	}, 
+	{
+	    "pk": 144, 
+	    "model": "works.workauthoring", 
+	    "fields": {
+	        "is_editor": 0, 
+	        "work": 119, 
+	        "author": 22
+	    }
+	}
+]

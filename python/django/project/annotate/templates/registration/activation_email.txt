@@ -1,0 +1,16 @@
+Hello!
+
+You (or somebody sort of claiming to be you) created an account on
+{{ site.name }} at https://{{ site.domain }}{% url works:index %}.  Before you can use
+your account, you'll need to activate it by clicking on the URL below.
+
+https://{{ site.domain }}{% url registration_activate activation_key %}
+
+If you've reconsidered activating your account or you have no idea why you got
+this email, don't worry!  We won't be sending you any future emails.
+
+If you have any questions, feel free to contact us at lcrm@unc.edu
+
+Sincerely,
+
+The LCRM Project Team

@@ -1,0 +1,22 @@
+{% load tagging_tags %}
+<div class="entry">
+    <div class="metadata">
+    <h1>{{ entry.title }}</h1>
+    {% tags_for_object entry as tags %}
+    <span class="tags">Tags: {% for tag in tags %}<a href="{# url works:search #}?object_type=entry&amp;tag={{ tag }}">{{tag}}</a>{% if not forloop.last %}, {% endif %} {% empty %} None{% endfor %}</span>
+    <div class="datetime created">
+        <div class="day-month">
+            <span class="day">{{ date.day }}</span>
+            <span class="month">{{ date|date:"M" }}</span>
+        </div>
+            <span class="year">{{ date.year }}</span>
+            <span class="time">{{  date.hour }}:{{ date.minute }}</span>
+            <span class="iso8601">{{ date.isoformat }}</span>
+    </div>
+    </div>
+    <div class="content">
+     {{ entry.content|safe }}
+    </div>
+    <span class="author">-&#160;<a href="{{ entry.author.get_profile.get_absolute_url }}">{{ entry.creator.get_full_name }}</a></span><span class="clearblock">&#160;</span>
+</div>
+

@@ -1,0 +1,9 @@
+/**
+ * Rules that help embedded HTML editor render more nicely.
+ **/
+ 
+ body.mceContentBody {
+	background-color: #ffe;
+	color: #000;
+	width: 75%;
+}

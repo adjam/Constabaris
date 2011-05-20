@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	
+	<listener>
+		<listener-class>org.apache.commons.fileupload.servlet.FileCleanerCleanup</listener-class>
+	</listener>
+	
+	<listener>
+		<listener-class>edu.unc.lib.web.listeners.UploadContextListener</listener-class>
+	</listener>
+	
+	<filter>
+		<filter-name>SessionFilter</filter-name>
+		<filter-class>edu.unc.lib.web.SessionFilter</filter-class>
+	</filter>
+	
+	
+	<filter-mapping>
+		<filter-name>SessionFilter</filter-name>
+		<url-pattern>/index.jsp</url-pattern>
+		<url-pattern>/ingest/*</url-pattern>
+		<servlet-name>SessionFilesServlet</servlet-name>
+	</filter-mapping>
+	
+	<servlet>
+		<servlet-name>LogoutServlet</servlet-name>
+		<servlet-class>edu.unc.lib.web.servlets.LogoutServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+     
+     <servlet-mapping>
+     	<servlet-name>LogoutServlet</servlet-name>
+     	<url-pattern>/logout/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ManagementServlet</servlet-name>
+		<servlet-class>edu.unc.lib.web.servlets.ManagementServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ManagementServlet</servlet-name>
+		<url-pattern>/manage/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>IngestServlet</servlet-name>
+		<servlet-class>edu.unc.lib.web.servlets.PipelineServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>IngestServlet</servlet-name>
+		<url-pattern>/ingest/*</url-pattern>
+		<url-pattern>/service/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SessionFilesServlet</servlet-name>
+		<servlet-class>edu.unc.lib.web.servlets.SessionFilesServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>SessionFilesServlet</servlet-name>
+		<url-pattern>/session/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>CleanupServlet</servlet-name>
+		<servlet-class>edu.unc.lib.web.servlets.CleanupServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>CleanupServlet</servlet-name>
+		<url-pattern>/cleanup/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ErrorServlet</servlet-name>
+		<servlet-class>edu.unc.lib.web.servlets.ErrorServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ErrorServlet</servlet-name>
+		<url-pattern>/error/*</url-pattern>
+	</servlet-mapping>
+	
+	<error-page>
+		<error-code>500</error-code>
+		<location>/error/</location>
+	</error-page>
+	
+	<env-entry>
+		<env-entry-name>assets/XProc</env-entry-name>
+		<env-entry-type>java.lang.String</env-entry-type>
+		<env-entry-value>/opt/local/tei-package/,http://localhost:8088/lcrm/xpl/ingest.xpl</env-entry-value>
+	</env-entry>
+	
+	
+	
+	
+	
+</web-app>

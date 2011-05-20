@@ -1,0 +1,43 @@
+{% load annotations %}
+{% with comment.content_internal_path as pid %}
+	{% if comment.is_public or perms.moderator %}
+		<!-- apps.notes.templates.comment.html -->
+		<div class="comment{% ifin comment.user authors %} author{% endifin %}{% if pid %} {{pid}}{% endif %}{%if not comment.is_public %} unapproved{% endif %} cid-{{ comment.pk }}">
+			<div class="metadata">
+				<div class="headers">
+					<h1 class="authorname"><a href="{% url user.profile profile_id=comment.user.get_profile.pk %}">{{ comment.user.first_name }}&#160;{{ comment.user.last_name }}</a></h1>
+					{% if comment.title %}
+					<h2 class="title">{{ comment.title }}</h2>
+					{% endif %}
+				</div>
+				<div class="navigation">
+					{% if pid %}
+					<a href="#{{pid}}" title="Navigate back to source paragraph"
+					class="ctop">to ¶</a>
+					{% endif %}
+				</div>
+				<div class="clearblock">&#160;</div>
+			</div>
+			<div class="cbody">
+				<span class="date">{{ comment.submit_date|date}}</span>
+				{{comment.comment|safe}}
+			</div>
+			{% if perms.moderator %}
+			<div class="moderation">
+				<span class="moderator-controls">[moderate]</span>
+				{# present approve and remove links if comment isn't public yet #}
+				{% if not comment.is_public %}
+				<span class="approve-comment">[<a href="{{comment.get_approval_url}}">approve</a>]</span>
+				{% endif %}
+				<span class="remove-comment">[<a rel="delete" href="{{comment.get_absolute_url}}">remove</a>]</span>
+			</div>
+			<div class="moderator-info" id="info-comment-{{ comment.pk }}" style="display: none;">
+				Posted from:&#160;{{ comment.ip_address }}
+				<br />
+				Age: {{ comment.submit_date|timesince }}
+			</div>
+			{% endif %}
+		</div>
+		<!-- /apps.notes.templates.comment.html -->
+	{% endif %} {# comment is public or user is moderator #}
+{% endwith %} {# comment.content_internal_path => pid #}

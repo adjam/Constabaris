@@ -1,0 +1,45 @@
+{% extends "site_base.html" %}
+{% load works %}
+{% load webdesign %}
+
+{% block sidebar %}
+{% endblock %}
+
+{% block body %}
+ <div class="content">
+	<div id="headers">
+		<h1>A Constabaris Instance</h1>
+	    <h2>Bass like butter</h2>
+	</div>  
+	<div id="site-splash">
+    <div class="browse">
+     <h2>Browse by</h2>
+    {% genre_browse %}
+    </div>
+  </div><!-- #site-splash -->
+
+ <div id="featured">
+  <div id="featured-work">
+	 <img src="{{ featured_work.work.get_cover_image }}" alt="Cover art for {{ featured_work.work.title }}"/>
+	 <div class="info">
+	  <h3>{{ featured_work.work.title }}</h3>
+	 	 <p>
+		{{ featured_work.blurb }}
+		<br />
+	   	<a href="{{ featured_work.work.get_absolute_url }}">[read more]</a>
+	   </p>
+	 </div>
+  </div><!-- #featured-work -->
+  <div id="recent">
+   <h2>Recently Added</h2>
+	   <ul>
+    {% for work in recent %}
+     <li{% if forloop.first %} class="first"{%endif %}{% if forloop.last %} class="last"{% endif %}><a href="{{work.get_absolute_url}}" title="{{work.title }} by {{ work.author_display }}">{{work.title}}</a></li>
+    {% endfor %}
+   </ul>
+  </div>
+  
+  </div><!-- #featured -->
+ </div> <!-- #content-home --> 
+  
+{% endblock %}<!-- body -->

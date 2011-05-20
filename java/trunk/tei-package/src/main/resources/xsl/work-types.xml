@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+  <worktypes>
+    <description>An XML encoding of a vocabulary for the Dublin Core type element for scholarly works.
+      See <a href="http://www.ukoln.ac.uk/repositories/digirep/index/Eprints_Type_Vocabulary_Encoding_Scheme">UKOLN Wiki</a> for more info.
+    </description>
+	<worktype uri="http://purl.org/eprint/type/ScholarlyText">
+		<name>Scholarly Text</name>
+    	<description>A scholarly text that is primarily words for reading.  Where the text is one of the more specific types listed here, use the more specific term.
+    		</description>
+    	</worktype>
+    
+    <worktype uri="http://purl.org/eprint/type/Book" default="true">
+      <name>Book</name>
+	  <description>A non-serial publication that is complete in one volume or a designated finite number of volumes.  In physical form, a book is a collection of sheets of paper, parchment or other material bound together along one edge within covers.  Books are often identified with an ISBN.
+	  </description>
+    </worktype>
+    <worktype uri="http://purl.org/eprint/type/BookItem">
+    	<name>Book Item</name>
+      <description>A defined chapter or section of a book, usually with a separate title or number.</description>
+    </worktype>
+
+    <worktype uri="http://purl.org/eprint/type/BookReview">
+      <name>Book Review</name>
+      <description>A review of a book.</description>
+    </worktype>
+    <worktype uri="http://purl.org/eprint/type/ConferenceItem">
+      <name>Conference Item</name>
+      <description>A contribution to a conference, workshop or other event.  Where the contribution is a paper or poster, use Conference Paper or Conference Poster as appropriate.</description>
+    </worktype>
+    <worktype uri="http://purl.org/eprint/type/ConferencePaper">
+      <name>Conference Paper</name>
+      <description>A paper submitted and/or presented at a conference, workshop or other event.</description>
+    </worktype>
+    <worktype uri="http://purl.org/eprint/type/ConferencePoster">
+      <name>Conference Poster</name>
+      <description>A poster submitted and/or presented at a conference, workshop or other event.</description>
+    </worktype>
+    <worktype uri="http://purl.org/eprint/type/JournalItem">
+      <name>Journal Item</name>
+      <description>A contribution to a journal, e.g. an article, editorial, conference report, debate, letter or response.  Where the contribution is an article, use Journal Article.</description>
+    </worktype>
+    <worktype uri="http://purl.org/eprint/type/JournalArticle">
+      <name>Journal Article</name>
+      <description>An article or paper published in a journal.  For book reviews, use Book Review.  For news items use News Item.  For other types of contribution use Journal Item. </description>
+    </worktype>
+    <worktype uri="http://purl.org/eprint/type/NewsItem">
+      <name>News Item</name>
+      <description>A news item.</description>
+    </worktype>
+
+    <worktype uri="http://purl.org/eprint/type/Patent">
+      <name>Patent</name>
+      <description>A patent or patent application.</description>
+    </worktype>
+    <worktype uri="http://purl.org/eprint/type/Report">
+      <name>Report</name>
+      <description>A research, statistical or technical report issued by an institution, agency, government body or other organisation.</description>
+    </worktype>
+    <worktype uri="http://purl.org/eprint/type/SubmittedJournalArticle">
+      <name>Submitted Journal Article</name>
+      <description>The author's original manuscript as submitted to and/or accepted by a journal.  In the terminology recommended by the [<a href="http://www.sherpa.ac.uk/" class="external text" title="http://www.sherpa.ac.uk/" rel="nofollow">Sherpa project</a>], a submission prior to peer review is a preprint; a submission after peer review is a postprint.  Therefore, a Submitted Journal Article can be either a preprint or a postprint.  For the version of the article published by the journal, use Journal Article.</description>
+    </worktype>
+    <worktype uri="http://purl.org/eprint/type/Thesis">
+      <name>Thesis or Dissertation</name>
+      <description>A thesis or dissertation submitted in completion of a course of study at an institution of higher education.</description>
+    </worktype>
+    <worktype uri="http://purl.org/eprint/type/WorkingPaper">
+      <name>Working or Discussion Paper</name>
+      <description>A working or discussion paper circulated publicly or among a group of peers.  Certain disciplines, for example economics, issue working papers in series.  Working or discussion papers may form the basis for a Journal Article or Conference Paper.</description>
+    </worktype>
+</worktypes>

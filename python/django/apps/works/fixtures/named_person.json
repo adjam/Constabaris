@@ -1,0 +1,821 @@
+[
+	{
+	    "pk": 1, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Leslie Brown", 
+	        "user": null, 
+	        "reg_form": "Brown, Leslie"
+	    }
+	}, 
+	{
+	    "pk": 2, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Christina Greene", 
+	        "user": null, 
+	        "reg_form": "Greene, Christina"
+	    }
+	}, 
+	{
+	    "pk": 3, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "David L. Chappell", 
+	        "user": null, 
+	        "reg_form": "Chappell, David L."
+	    }
+	}, 
+	{
+	    "pk": 4, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Timothy J. Minchin", 
+	        "user": null, 
+	        "reg_form": "Minchin, Timothy J."
+	    }
+	}, 
+	{
+	    "pk": 5, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Jennifer Ritterhouse", 
+	        "user": null, 
+	        "reg_form": "Ritterhouse, Jennifer"
+	    }
+	}, 
+	{
+	    "pk": 6, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Douglas D. Ready", 
+	        "user": null, 
+	        "reg_form": "Ready, Douglas D."
+	    }
+	}, 
+	{
+	    "pk": 7, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Megan R. Silander", 
+	        "user": null, 
+	        "reg_form": "Silander, Megan R."
+	    }
+	}, 
+	{
+	    "pk": 8, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Beth Tompkins Bates", 
+	        "user": null, 
+	        "reg_form": "Bates, Beth Tompkins"
+	    }
+	}, 
+	{
+	    "pk": 9, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "UNC Center for Civil Rights", 
+	        "user": null, 
+	        "reg_form": "Rights, UNC Center for Civil"
+	    }
+	}, 
+	{
+	    "pk": 10, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Paul Harvey", 
+	        "user": null, 
+	        "reg_form": "Harvey, Paul"
+	    }
+	}, 
+	{
+	    "pk": 11, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Osha Gray Davidson", 
+	        "user": null, 
+	        "reg_form": "Davidson, Osha Gray"
+	    }
+	}, 
+	{
+	    "pk": 12, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Laurie B. Green", 
+	        "user": null, 
+	        "reg_form": "Green, Laurie B."
+	    }
+	}, 
+	{
+	    "pk": 13, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Jack Dougherty", 
+	        "user": null, 
+	        "reg_form": "Dougherty, Jack"
+	    }
+	}, 
+	{
+	    "pk": 14, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Leon Fink", 
+	        "user": null, 
+	        "reg_form": "Fink, Leon"
+	    }
+	}, 
+	{
+	    "pk": 15, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Kenneth D. Durr", 
+	        "user": null, 
+	        "reg_form": "Durr, Kenneth D."
+	    }
+	}, 
+	{
+	    "pk": 16, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Pamela Grundy", 
+	        "user": null, 
+	        "reg_form": "Grundy, Pamela"
+	    }
+	}, 
+	{
+	    "pk": 17, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Jacquelyn Dowd Hall", 
+	        "user": null, 
+	        "reg_form": "Hall, Jacquelyn Dowd"
+	    }
+	}, 
+	{
+	    "pk": 18, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "James Leloudis", 
+	        "user": null, 
+	        "reg_form": "Leloudis, James"
+	    }
+	}, 
+	{
+	    "pk": 19, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Robert Korstad", 
+	        "user": null, 
+	        "reg_form": "Korstad, Robert"
+	    }
+	}, 
+	{
+	    "pk": 20, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Mary Murphy", 
+	        "user": null, 
+	        "reg_form": "Murphy, Mary"
+	    }
+	}, 
+	{
+	    "pk": 21, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Lu Ann Jones", 
+	        "user": null, 
+	        "reg_form": "Jones, Lu Ann"
+	    }
+	}, 
+	{
+	    "pk": 22, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Christopher B. Daly", 
+	        "user": null, 
+	        "reg_form": "Daly, Christopher B."
+	    }
+	}, 
+	{
+	    "pk": 23, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Daniel Letwin", 
+	        "user": null, 
+	        "reg_form": "Letwin, Daniel"
+	    }
+	}, 
+	{
+	    "pk": 24, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Michael B. Friedland", 
+	        "user": null, 
+	        "reg_form": "Friedland, Michael B."
+	    }
+	}, 
+	{
+	    "pk": 25, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Kevin K. Gaines", 
+	        "user": null, 
+	        "reg_form": "Gaines, Kevin K."
+	    }
+	}, 
+	{
+	    "pk": 26, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Davison M. Douglas", 
+	        "user": null, 
+	        "reg_form": "Douglas, Davison M."
+	    }
+	}, 
+	{
+	    "pk": 27, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "David S. Cecelski", 
+	        "user": null, 
+	        "reg_form": "Cecelski, David S."
+	    }
+	}, 
+	{
+	    "pk": 28, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "James D. Anderson", 
+	        "user": null, 
+	        "reg_form": "Anderson, James D."
+	    }
+	}, 
+	{
+	    "pk": 29, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Susan Burch", 
+	        "user": null, 
+	        "reg_form": "Burch, Susan"
+	    }
+	}, 
+	{
+	    "pk": 30, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Hannah Joyner", 
+	        "user": null, 
+	        "reg_form": "Joyner, Hannah"
+	    }
+	}, 
+	{
+	    "pk": 31, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Robert Rodgers Korstad", 
+	        "user": null, 
+	        "reg_form": "Korstad, Robert Rodgers"
+	    }
+	}, 
+	{
+	    "pk": 32, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Amilcar Shabazz", 
+	        "user": null, 
+	        "reg_form": "Shabazz, Amilcar"
+	    }
+	}, 
+	{
+	    "pk": 33, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "John Charles Boger", 
+	        "user": null, 
+	        "reg_form": "Boger, John Charles"
+	    }
+	}, 
+	{
+	    "pk": 34, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Gary Orfield", 
+	        "user": null, 
+	        "reg_form": "Orfield, Gary"
+	    }
+	}, 
+	{
+	    "pk": 35, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Ronald P. Formisano", 
+	        "user": null, 
+	        "reg_form": "Formisano, Ronald P."
+	    }
+	}, 
+	{
+	    "pk": 36, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Judith Wetch Wegner", 
+	        "user": null, 
+	        "reg_form": "Wegner, Judith Wetch"
+	    }
+	}, 
+	{
+	    "pk": 37, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Timothy B. Tyson", 
+	        "user": null, 
+	        "reg_form": "Tyson, Timothy B."
+	    }
+	}, 
+	{
+	    "pk": 38, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Peter W. Salsich, Jr.", 
+	        "user": null, 
+	        "reg_form": "Peter"
+	    }
+	}, 
+	{
+	    "pk": 39, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Claire Smrekar, Ph.D.", 
+	        "user": null, 
+	        "reg_form": "Smrekar, Claire"
+	    }
+	}, 
+	{
+	    "pk": 40, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Ellen Goldring, Ph.D.", 
+	        "user": null, 
+	        "reg_form": "Goldring, Ellen"
+	    }
+	}, 
+	{
+	    "pk": 41, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Douglas N. Harris", 
+	        "user": null, 
+	        "reg_form": "Harris, Douglas N."
+	    }
+	}, 
+	{
+	    "pk": 42, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Wilhelmina A. Leigh", 
+	        "user": null, 
+	        "reg_form": "Leigh, Wilhelmina A."
+	    }
+	}, 
+	{
+	    "pk": 43, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Charles E. Daye", 
+	        "user": null, 
+	        "reg_form": "Daye, Charles E."
+	    }
+	}, 
+	{
+	    "pk": 44, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Ann Moss Joyner", 
+	        "user": null, 
+	        "reg_form": "Joyner, Ann Moss"
+	    }
+	}, 
+	{
+	    "pk": 45, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Ellen B. Goldring", 
+	        "user": null, 
+	        "reg_form": "Goldring, Ellen B."
+	    }
+	}, 
+	{
+	    "pk": 46, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Robbins L. Gates", 
+	        "user": null, 
+	        "reg_form": "Gates, Robbin L."
+	    }
+	}, 
+	{
+	    "pk": 47, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Mark V. Tushnet", 
+	        "user": null, 
+	        "reg_form": "Tushnet, Mark V."
+	    }
+	}, 
+	{
+	    "pk": 48, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Cindy Hahamovitch", 
+	        "user": null, 
+	        "reg_form": "Hahamovitch, Cindy"
+	    }
+	}, 
+	{
+	    "pk": 49, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Robert R. Korstad", 
+	        "user": null, 
+	        "reg_form": "Korstad, Robert R."
+	    }
+	}, 
+	{
+	    "pk": 50, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "James L. Leloudis", 
+	        "user": null, 
+	        "reg_form": "Leloudis, James L."
+	    }
+	}, 
+	{
+	    "pk": 51, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Katherine Mellen Charron", 
+	        "user": null, 
+	        "reg_form": "Charron, Katherine Mellen"
+	    }
+	}, 
+	{
+	    "pk": 52, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "William L. Taylor", 
+	        "user": null, 
+	        "reg_form": "Taylor, William L."
+	    }
+	}, 
+	{
+	    "pk": 53, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "James S. Liebman", 
+	        "user": null, 
+	        "reg_form": "Liebman, James S."
+	    }
+	}, 
+	{
+	    "pk": 54, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Charles F. Sabel", 
+	        "user": null, 
+	        "reg_form": "Sabel, Charles F."
+	    }
+	}, 
+	{
+	    "pk": 55, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Henry M. Levin", 
+	        "user": null, 
+	        "reg_form": "Levin, Henry M."
+	    }
+	}, 
+	{
+	    "pk": 56, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "James E. Ryan", 
+	        "user": null, 
+	        "reg_form": "Ryan, James E."
+	    }
+	}, 
+	{
+	    "pk": 57, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Erwin Chemerinsky", 
+	        "user": null, 
+	        "reg_form": "Chemerinsky, Erwin"
+	    }
+	}, 
+	{
+	    "pk": 58, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Harry S. Ashmore", 
+	        "user": null, 
+	        "reg_form": "Ashmore, Harry S."
+	    }
+	}, 
+	{
+	    "pk": 59, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Hugh Davis Graham", 
+	        "user": null, 
+	        "reg_form": "Graham, Hugh Davis"
+	    }
+	}, 
+	{
+	    "pk": 60, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Louis R. Harlan", 
+	        "user": null, 
+	        "reg_form": "Harlan, Louis R."
+	    }
+	}, 
+	{
+	    "pk": 61, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Arthur S. Miller", 
+	        "user": null, 
+	        "reg_form": "Miller, Athur S."
+	    }
+	}, 
+	{
+	    "pk": 62, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Theresa A. Hammond", 
+	        "user": null, 
+	        "reg_form": "Hammond, Theresa A."
+	    }
+	}, 
+	{
+	    "pk": 63, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Robert F. Burk", 
+	        "user": null, 
+	        "reg_form": "Burk, Robert F."
+	    }
+	}, 
+	{
+	    "pk": 64, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Horace R. Cayton", 
+	        "user": null, 
+	        "reg_form": "Cayton, Horace, R."
+	    }
+	}, 
+	{
+	    "pk": 65, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "George S. Mitchell", 
+	        "user": null, 
+	        "reg_form": "Mitchell, George S."
+	    }
+	}, 
+	{
+	    "pk": 66, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Mary Poole", 
+	        "user": null, 
+	        "reg_form": "Poole, Mary"
+	    }
+	}, 
+	{
+	    "pk": 67, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Robin M. Williams, Jr.", 
+	        "user": null, 
+	        "reg_form": "Williams, Robin M., Jr."
+	    }
+	}, 
+	{
+	    "pk": 68, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Margaret W. Ryan", 
+	        "user": null, 
+	        "reg_form": "Ryan, Margaret W."
+	    }
+	}, 
+	{
+	    "pk": 69, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Vanessa Siddle Walker", 
+	        "user": null, 
+	        "reg_form": "Walker, Vanessa Siddle"
+	    }
+	}, 
+	{
+	    "pk": 70, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Henry M. McKiven Jr.", 
+	        "user": null, 
+	        "reg_form": "McKiven, Henry, Jr."
+	    }
+	}, 
+	{
+	    "pk": 71, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Heather Andrea Williams", 
+	        "user": null, 
+	        "reg_form": "Williams, Heather Andrea"
+	    }
+	}, 
+	{
+	    "pk": 72, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Daryl Michael Scott", 
+	        "user": null, 
+	        "reg_form": "Scott, Daryl Michael"
+	    }
+	}, 
+	{
+	    "pk": 73, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "William A. Link", 
+	        "user": null, 
+	        "reg_form": "Link, William A."
+	    }
+	}, 
+	{
+	    "pk": 74, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "UNC Center on Poverty, Work and Opportunity", 
+	        "user": null, 
+	        "reg_form": "Opportunity, UNC Center on Poverty, Work and"
+	    }
+	}, 
+	{
+	    "pk": 75, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Elizabeth Higginbotham", 
+	        "user": null, 
+	        "reg_form": "Higginbotham, Elizabeth"
+	    }
+	}, 
+	{
+	    "pk": 76, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "James H. Meriwether", 
+	        "user": null, 
+	        "reg_form": "Meriwether, James H."
+	    }
+	}, 
+	{
+	    "pk": 77, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Brenda Gayle Plummer", 
+	        "user": null, 
+	        "reg_form": "Plummer, Brenda Gayle"
+	    }
+	}, 
+	{
+	    "pk": 78, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "J. Todd Moye", 
+	        "user": null, 
+	        "reg_form": "Moye, J. Todd"
+	    }
+	}, 
+	{
+	    "pk": 79, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Jennifer Mittelstadt", 
+	        "user": null, 
+	        "reg_form": "Mittelstadt, Jennifer"
+	    }
+	}, 
+	{
+	    "pk": 80, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Emilye Crosby", 
+	        "user": null, 
+	        "reg_form": "Crosby, Emilye"
+	    }
+	}, 
+	{
+	    "pk": 81, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Frank Stricker", 
+	        "user": null, 
+	        "reg_form": "Stricker, Frank"
+	    }
+	}, 
+	{
+	    "pk": 82, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Gail Williams O'Brien", 
+	        "user": null, 
+	        "reg_form": "O'Brien, Gail Williams"
+	    }
+	}, 
+	{
+	    "pk": 83, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Bill V. Mullen", 
+	        "user": null, 
+	        "reg_form": "Mullen, Bill V."
+	    }
+	}, 
+	{
+	    "pk": 84, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "James Smethurst", 
+	        "user": null, 
+	        "reg_form": "Smethurst, James"
+	    }
+	}, 
+	{
+	    "pk": 85, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Daniel J. Clark", 
+	        "user": null, 
+	        "reg_form": "Clark, Daniel J."
+	    }
+	}, 
+	{
+	    "pk": 86, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Ronald H. Bayor", 
+	        "user": null, 
+	        "reg_form": "Bayor, Ronald H."
+	    }
+	}, 
+	{
+	    "pk": 87, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Lance G. E. Jones", 
+	        "user": null, 
+	        "reg_form": "Jones, Lance G. E."
+	    }
+	}, 
+	{
+	    "pk": 88, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Stewart Burns", 
+	        "user": null, 
+	        "reg_form": "Burns, Stewart"
+	    }
+	}, 
+	{
+	    "pk": 89, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Komozi Woodard", 
+	        "user": null, 
+	        "reg_form": "Woodard, Komozi"
+	    }
+	}, 
+	{
+	    "pk": 90, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Karen Ferguson", 
+	        "user": null, 
+	        "reg_form": "Ferguson, Karen"
+	    }
+	}, 
+	{
+	    "pk": 91, 
+	    "model": "works.namedperson", 
+	    "fields": {
+	        "display_name": "Matt Garcia", 
+	        "user": null, 
+	        "reg_form": "Garcia, Matt"
+	    }
+	}
+]

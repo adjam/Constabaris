@@ -1,0 +1,38 @@
+{% extends "site_base.html" %}
+{% load works %}
+{% load search %}
+{% block pagetitle %}
+ - Search: {{query}}
+{% endblock %}
+
+{% block headers %}
+ <script type="text/javascript">
+ </script>
+ {% endblock %}
+ 
+{% block body %}
+ <div id="content"> 
+    <h2>Results for : {{ query }}</h2>
+    <ul class="result-list search-results">	
+{% for result in page.object_list %}
+	{% ifchanged result.work %}
+		{% if not forloop.first %}
+			</ul>
+		</li>
+		{% endif %}
+		<li class="work">
+			<a href="{{ result.get_absolute_url }}">{{ result.title }}</a> -- {{ result.author_display }}
+			{% ifnotequal result.work.comment_count 0 %} <div class="comment-count" title="Comments on this work">{{ result.work.comment_count }}</div>{% endifnotequal %}
+		 	<ul>
+	{% else %}
+	<li class="section">
+	  <a {% ifnotequal result.comment_count 0 %}class="has-comments"{% endifnotequal %} href="{{ result.get_absolute_url }}" title="{{result.work.title}} - {{result.title}} ({{result.comment_count}} comments)">{{ result.title }}</a>	  
+	</li>
+	{% endifchanged %}
+{% endfor %}
+</ul>
+</ul>
+    
+    {% paginate_results page request.GET %}
+ </div> <!-- #content -->
+{% endblock %}

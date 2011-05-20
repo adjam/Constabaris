@@ -1,0 +1,37 @@
+<ul id="pagination">
+	{% if previous_pages %}
+	<li class="next-back"><a href="?{{get_params}}&amp;page={{ previous_page }}">« previous</a></li>
+	{% endif %}
+	{% for pg in previous_pages %}
+	<li class="previous">
+		{% if pg == -1 %}
+		&hellip;
+		{% else %}
+		<a href="?{{get_params}}&amp;page={{ pg }}" title="Page {{pg}} of current results">{{ pg }}</a>
+		{% endif %}
+	</li>
+	{% endfor %}
+	<li class="current">
+		<span title="current page ({{ page.number }})">{{ page.number }}</span>
+	</li>
+	{% for pg in next_pages %}
+	<li class="following">
+		{% if pg == -1 %}
+		&hellip;
+		{% else %}
+		<a href="?{{get_params}}&amp;page={{ pg }}" title="Page {{pg}} of current results">{{ pg }}</a>
+		{% endif %}
+	</li>
+	{% endfor %}  
+	{% if next_pages %}
+	<li class="next-back"><a href="?{{get_params}}&amp;page={{ next_page }}">next »</a></li>
+	{% endif %}
+</ul>
+{% if page_skips %}
+  <div id="page-navigator">
+   <form action="{{request.path}}" method="get">
+   <input type="hidden" name="q" value="{{ request.GET.q }}"/>
+   <input type="text" name="page" size="4" />
+   <button type="submit">Jump To Results Page</button>
+  </div>
+{% endif %}

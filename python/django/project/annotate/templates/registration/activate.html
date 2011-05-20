@@ -1,0 +1,33 @@
+{% extends "site_base.html" %}
+{% block pagetitle %}
+ {% if account %}
+     - Account Activated
+ {% else %}
+    - Activation Failed
+ {% endif %}
+{% endblock %}
+
+{% block headers %}
+ {% if account %}
+
+  {% endif %}
+{% endblock %}
+{% block body %}
+ <div id="content">
+{% if account %}
+ <h1>Account Activated</h1>
+ <p>Your account has been activated, and you can now log in, update your profile, and
+ add comments.  Please log in and take the time to visit your profile page where you
+ can tell us a bit more about yourself.
+ </p>
+  {% else %}
+    <h1>Activation Failed</h1>
+    <p>We were unable to activate your account.  You may have reloaded this page (in which case your account is already
+    active), or followed an old link.  You can proceed to the <a href="{% url auth_login %}">login page</a> and log in
+    or attempt to recover a forgotten password.
+    </p>
+    <p>If you have any questions about your account, please <a href="{% url contact %}">contact us</a>.  Thank you!</p>
+
+ {% endif %}
+</div>
+{% endblock %}

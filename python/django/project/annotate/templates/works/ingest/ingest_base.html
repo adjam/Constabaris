@@ -1,0 +1,72 @@
+{% extends "site_base.html" %}
+{% block pagetitle %}
+ <title>Works: Upload</title>
+{% endblock %}
+
+{% block headers %}
+	 <style type="text/css">
+   table {
+     margin: 0 auto;
+     border: 1px solid #000;
+     background-color: #fff;
+     border-spacing: 0;
+     font: .75em Verdana,Helvetica,sans-serif;
+   }
+   
+   tbody tr {
+    border-bottom: 1px solid #000;
+   }
+
+   td.fieldName {
+      padding: .5em 0;
+      text-align: center;
+      vertical-align: top;
+      font-weight: bold;
+      background-color: #cfc;
+      border-right: 2px solid #000;
+   }
+   
+   td.fieldValue {
+      vertical-align: top;
+      padding-left: 1em;
+   }
+
+   
+   li.new {
+      color: #9f9;
+   }
+   
+   li.error {
+	color: #f99;
+   }
+
+   thead th {
+      padding: 1em;
+      background-color: #696;
+      border-bottom: 3px solid #000;
+   }
+
+   tfoot td {
+      border-top: 3px solid #000;
+   }
+ </style>  
+ 	  <script type="text/javascript"
+		 src="{{MEDIA_URL}}js/plugins/search.js"></script>
+		 
+		 
+		 
+		 <script type="text/javascript">
+		 
+		  $(document).ready( function () {
+		   $("#workinfo").css( {position: 'absolute', top : '100px', right : '-100px', width: '25%', border:'2px solid #000', borderRadius: '.5em', backgroundColor: '#eee', padding: '.5em', zIndex: '50'}).hide();
+			$("#id_work").enhanceWorkInfo({resultsTarget : "#workinfo", url : '{% url works:work.info %}'});
+		  });
+		 </script>		 
+{% endblock %}
+{% block body %}
+ <div id="content">
+  {% block content %}
+  {% endblock %}
+ </div><!-- #content -->
+ <div class="clearblock">&nbsp;</div>
+{% endblock %}

@@ -1,0 +1,165 @@
+{% extends "site_base.html" %}
+{% load annotations %}
+
+{% block pagetitle %}
+- Profile for {{ profile.user.get_full_name }}
+{% endblock %}
+
+{% block headers %}
+
+	{% for form in forms %}
+		{{ form.media }}
+	{% endfor %}
+
+	<style type="text/css">
+		td input, textarea {
+			width: 95%;
+			margin: 0 auto;
+		}
+	</style>
+
+	<script type="text/javascript">
+		<!--
+		$(document).ready(
+			function() {
+				$("textarea[maxlength]").each(
+					function() {
+						var ta = $(this);
+						var maxlength = 256;
+						if ( ta.attr('maxlength') ) {
+							maxlength= parseInt(ta.attr('maxlength'));
+						}
+						var lt = ta.after("<span class='maxlen'>Length: <span class='now'>" + ta.val().length + "</span>/" + maxlength +"</span>").parent().find("span.now");
+						var color = ta.css('color');
+						ta.keyup(
+							function(e) {
+								var len = ta.val().length;
+								lt.text(len);
+								if ( len > maxlength ) {
+									lt.parent().css("color","red");
+								} else {
+									lt.parent().css("color", color);
+								}
+							}
+						);
+					}
+				);
+		});
+		// -->
+	</script>
+
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function(){
+			$annotations = $('.annotation')
+			$annotations.each(function(k, v){
+				if(k > 5){
+					$(v).hide()
+				}
+			})
+			if($annotations.length > 5){
+				$('.user-annotations ul').after('<a href="#" id="show-all-comments">Show All Comments')
+				$('#show-all-comments').click(function(e){
+					e.preventDefault();
+					var $annotations = $('.annotation');
+					if($annotations.find(':hidden').length > 0){
+						$('#show-all-comments').text('Show Fewer Comments')
+						// console.log('some comments are hidden')
+					}else{
+						$('#show-all-comments').text('Show All Comments')
+						// console.log('all comments shown')
+					}
+
+					$annotations.each(function(k,v){
+						if(k > 5){
+							$(v).toggle();
+						}
+					});
+				})
+			}
+		})
+		
+	</script>
+{% endblock %}
+	
+	{% block body %}
+	<div id="content">  
+		<h1>{{ profile.user.get_full_name }}</h1>
+
+		{% if show_profile %}  
+		<div class="profile-section user-profile">
+			<div class="profile-section-content">
+				<p>{{ profile.affiliation }}</p>
+				{% if profile.about %}
+					<p>{{ profile.about }}</p>
+				{% endif %}
+				{% if profile.home_page %}
+					<p>More at <a href="{{ profile.home_page }}"><span class="editable-value home_page">{{ profile.home_page }}</span></a></p>
+				{% endif %}
+				<p>Member since {{ profile.user.date_joined|date:"M Y" }}</p>
+			</div>
+			{% if forms %}
+			<a href="#edit_form">Edit Profile</a>
+			{% endif %}
+		</div>
+
+	  	{% get_user_annotations as annotation_list %}
+		<div class="profile-section user-annotations">
+			<h3>Annotations <span class="note">({{annotation_list.count}})</span></h3>
+			{% ifequal annotation_list.count 0 %}
+			<p class="profile-section-content">
+				{{profile.user.first_name}} has not made any annotations yet.
+			</p>
+			{% else %}
+			<ul class="profile-section-content">
+				{% for annotation in annotation_list %}
+					<li class="annotation" lcrm_sectionid="{{annotation.section.id}}">
+						<h4>On <a href="{{annotation.section.get_absolute_url}}#{{annotation.content_internal_path}}"> {{annotation.work.title}} - {{annotation.section.title}}</a><div class="post-date">{{annotation.submit_date}}</div>
+						</h4>
+						<p class='comment-preview'>
+							{{annotation.comment|striptags|safe|truncatewords:20}}
+						</p>
+					</li>
+				{% endfor %}
+			</ul>
+			{% endifequal %}
+		</div> 
+		<!-- .user-profile -->
+		{% endif %} {# show_profile #}
+
+		{% if forms %}
+		<div class="profile-section" id="user-profile-editing">
+			<a name="edit_form"></a>
+			<h3>Edit Profile</h3>
+			<div class="profile-section-content">
+				{% if not profile.is_public %}
+				<p>Your profile is not visible to other users of the site.  This means that anybody attempting to view your profile will only see your name, and not any other information you have provided.</p>
+				{% else %}
+				<p>Your profile is visible to other users of this site.</p>
+				{% endif %}
+				<div id="formContainer">
+					{#  <p style="text-align: right;"><a href="{% url auth_password_reset %}" id="resetPassword">Reset Password</p> #}
+
+					<form action="{{ profile.get_absolute_url }}" method="post" id="profile-form">
+						<ul>
+							{% for form in forms %}
+								{% for fld in form.hidden_fields %}
+									{{fld}}
+								{% endfor %}
+								{{ form.as_ul }}
+							{% endfor %}
+						
+							{% if next %}
+								<input type="hidden" name="next" value="{{ next }}"/>
+							{% endif %}
+							<li>
+								<button type="submit" class="submit" value="Update Profile">
+									<span>Update Profile</span>
+								</button>
+							</li>
+						</ul>
+					</form>
+				</div>
+			{% endif %}
+		</div>
+	</div> <!-- #content -->
+		{% endblock %}

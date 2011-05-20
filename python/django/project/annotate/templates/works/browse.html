@@ -1,0 +1,35 @@
+{% extends "site_base.html" %}
+
+{% load works %}
+{% block pagetitle %}
+	- {{ title }}
+{% endblock %}
+
+{% block body %}
+ <div id="content">
+ <h1>{{ title }}</h1>
+ {% if genre %}
+  <h3>Genre: {{ genre }}</h3>
+ {% endif %}
+ {% if subject %}
+  <h3>Subject: {{ subject }}</h3>
+ {% endif %}
+ {% if keyword %}
+  <h3>Keyword: {{ keyword }}</h3>
+ {% endif %}
+  {% if page.object_list %}
+   <h3>Showing {{ page.start_index }} - {{ page.end_index }} of {{ page.paginator.count }} results</h3>
+    <ul class="result-list browse-results">
+     {% for work in page.object_list %}
+        <li class="work">
+			<a href="{{ work.get_absolute_url }}">{{ work.title }}</a> -- {{ work.author_display }}
+			{% ifnotequal work.comment_count 0 %} <div class="comment-count" title="Comments on this work">{{ work.comment_count }}</div>{% endifnotequal %}
+		</li>
+     {% endfor %}
+    </ul>
+   {% paginate_results page request.GET %}
+   {% else %}
+     <p>There are no works of this type available for viewing.</p>
+   {% endif %}
+</div> <!-- #content -->
+{% endblock %}
