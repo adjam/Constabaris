@@ -1,9 +1,9 @@
 from django import template
 from django.conf import settings
-from apps..notes.conf import settings as notes_settings
+from apps.notes.conf import settings as notes_settings
 from django.utils.encoding import smart_unicode
-from apps..notes.forms import AnnotationForm
-from apps..notes.models import Annotation
+from apps.notes.forms import AnnotationForm
+from apps.notes.models import Annotation
 from django.contrib.comments.templatetags.comments import CommentListNode
 from django.contrib.comments.models import Comment
 from django.contrib.auth.models import User

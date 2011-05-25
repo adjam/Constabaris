@@ -34,12 +34,6 @@ function initTinyMCE() {
     }
 };
 
-function logit(message) {
-    if (window.console) {
-        window.console.log(message);
-    }
-};
-
 /**
  * this was an idea to add in-page navigation between sections on the page; primary idea is to select all of the h(n+1) elements under the top-level h(n) element
  * found in the content div, add IDs to them if needed, and then add the links.  Note this requires that the page template contain certain elements.
@@ -100,13 +94,6 @@ function updateCommentCounts(targetId) {
     }
 }
 
-/*
-function updateCommentCounts(commentContainer) {
-    var $count = jQuery('.comment', commentContainer).size();
-    var updatedElements = jQuery(".commentCount .count").text( $count );
-};
-*/
-
 /**
  * Master commenting function; this is responsible for calling all the other plugins that enable the 
  * commenting feature.
@@ -117,10 +104,10 @@ function updateCommentCounts(commentContainer) {
  * form: jQuery object representing the form used to enter comments.
  *  internal_path_id: ID of the form element used to indicate the ID of the element being commented on.
  **/
-jQuery.fn.commentify = function(options) {
+jQuery.fn.commentifyold = function(options) {
     var defaults = {
         hide_comments: true,
-        comments: jQuery("#comments"),
+        comments: jQuery("#comments-dialog"),
         hook_class: "annotation-hook",
         form: jQuery("form.comment-form"),
         internal_path_id: "id_content_internal_path"
@@ -153,47 +140,6 @@ jQuery.fn.commentify = function(options) {
     var $defaultContents = $currComment.html();
 
     var $theForm = opts['form'];
-
-    /**
-    * Finds all the possible targets of comments in the current page
-    * and prepares them.
-    **/
-    jQuery.fn.prepareCommentTargets = function() {
-        this.each(function() {
-            // note 'this' is now an individual paragraph
-            var paragraph = $(this);
-            var pid = paragraph.attr('id');
-            var myComments = jQuery("." + pid, $comments);
-            var $hook = jQuery("<div class='" + opts['hook_class'] + (myComments.size() == 0 ? ' hidden': '') + "'><span class='count'>" + myComments.size() + "</span></div>");
-            $hook.click(
-            function(evt) {
-                // logit("selected paragaraph with id " + pid);
-                $targetParagraph.val(pid);
-                showForm(paragraph);
-            }).hoverIntent(
-            function() {
-                $(this).css({
-                    cursor: 'pointer'
-                })
-            },
-            function() {
-                $(this).css({
-                    cursor: 'default'
-                })
-            }
-            ).attr('title', 'Click here to comment on this paragraph');
-            paragraph.data('comments', myComments).prepend($hook);
-            return this;
-        });
-
-        return this;
-    };
-
-    /**
-   * find all commentables and load their referred comments as jQuery data
-   **/
-    var commentables = jQuery("p[id]", this).not("blockquote p[id]").not("div.figure p[id]").prepareCommentTargets(opts);
-
 
     if (commentables.size() == 0) {
         // nothing commentable on the page, so
@@ -349,7 +295,7 @@ jQuery.fn.commentify = function(options) {
         },
         resizeStop: resizeDialogContents,
         resize: function(){logit('dialog resize event')},
-        width: 680,
+        width: 900,
         minWidth: 500,
         height: calcDialogHeight(),
         minHeight: 500, 

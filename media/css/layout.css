@@ -538,10 +538,10 @@ p div.annotation-hook.hidden:hover {
     opacity: 1;
 }
 
- .form-jump {
-	float: right;
-	padding: .5em;
-	font-size: 125%;
+.form-jump {
+    float: right;
+    padding: .5em;
+    font-size: 125%;
 }
 
 .comment {
