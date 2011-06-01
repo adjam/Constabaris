@@ -55,7 +55,6 @@
 		  $("#workQuery").workSearch({ resultsTarget : "#queryResults", url : '{% url works:search.inwork work.pk %}'});
 		{% endif %}
 		
-		var commentables = $("p[id]").not("blockquote p[id]").not("div.figure p[id]").prepareCommentTargets();
 		var commentsDialog = $('#comments-dialog').dialog({
 	        width: 900,
 	        minWidth: 500,
@@ -66,10 +65,6 @@
 	        position: 'center',
 	        modal: true,	
 			open: function() {
-	            // $("#comment-form textarea").each(function() {
-	            //     initTinyMCE();
-	            //     tinyMCE.execCommand('mceAddControl', false, $(this).attr('id'));
-	            // });
 				$('#comment-form').annotationForm();
 	            $('body').css('overflow', 'hidden');
 	            $('body').css('overflow-x', 'scroll');
@@ -77,20 +72,32 @@
 	        },
 			beforeClose: function() {
 				$('#comment-form').annotationForm('destroy');
-				// $("#comment-form textarea").each(function() {
-				// 	                tinyMCE.execCommand('mceRemoveControl', false, $(this).attr('id'));
-				// 	            });
+				$('#comment-form').unbind('commentSuccess')
 			}
         })
+
+		var commentables = $("p[id]").not("blockquote p[id]").not("div.figure p[id]").prepareCommentTargets();
 		commentables.click(function(){
 			commentsDialog.dialog('open', this)
+			$('#comment-form').annotationForm('setContentInternalPath', $(this).attr('id'))
+			$('#comment-form').bind('commentSuccess', function(evt){
+				$('.comments').append(evt.newComment)
+				logit('comment successfully added')
+				updateCommentCounts(evt.targetParagraph);
+				$('#comments-dialog').dialog('close')
+			})
 		});
 		$('.commentCount').click(function(evt){
 			evt.preventDefault();
 			commentsDialog.dialog('open');
+			$('#comment-form').annotationForm('setContentInternalPath')
 		})
-				
-		$('#p-1').click();
+		
+		$('#make-comment').click(function(evt){
+			commentFormTop = Math.round($('#comment-form').position().top)
+			logit(commentFormTop)
+            $('#comment-column').animate({scrollTop: commentFormTop}, {duration: 500, complete: function(){ /* set the focus */ }} )
+		})
 		
 	}); 
  </script>
