@@ -34,6 +34,10 @@ function initTinyMCE() {
     }
 };
 
+// function loadEditor(html) {
+//     tinyMCE.activeEditor.setContent(html);
+// }
+
 /**
  * this was an idea to add in-page navigation between sections on the page; primary idea is to select all of the h(n+1) elements under the top-level h(n) element
  * found in the content div, add IDs to them if needed, and then add the links.  Note this requires that the page template contain certain elements.
@@ -47,10 +51,6 @@ jQuery.fn.subnavigation = function(node, options) {
         subList.append("<li>" + jQuery(this).text() + "</li>");
     });
 };
-
-function loadEditor(html) {
-    tinyMCE.activeEditor.setContent(html);
-}
 
 /**
  * Copies the selected element ("previous/next" navigation elment)

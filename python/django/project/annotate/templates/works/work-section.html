@@ -66,10 +66,21 @@
 	        position: 'center',
 	        modal: true,	
 			open: function() {
+	            // $("#comment-form textarea").each(function() {
+	            //     initTinyMCE();
+	            //     tinyMCE.execCommand('mceAddControl', false, $(this).attr('id'));
+	            // });
+				$('#comment-form').annotationForm();
 	            $('body').css('overflow', 'hidden');
 	            $('body').css('overflow-x', 'scroll');
 	            $(window).trigger('resize');
 	        },
+			beforeClose: function() {
+				$('#comment-form').annotationForm('destroy');
+				// $("#comment-form textarea").each(function() {
+				// 	                tinyMCE.execCommand('mceRemoveControl', false, $(this).attr('id'));
+				// 	            });
+			}
         })
 		commentables.click(function(){
 			commentsDialog.dialog('open', this)
@@ -78,6 +89,7 @@
 			evt.preventDefault();
 			commentsDialog.dialog('open');
 		})
+				
 		$('#p-1').click();
 		
 	}); 
@@ -165,11 +177,15 @@
 		
 		#comment-column{
 			width: 45%;
-			box-shadow: inset 2px 0px 5px #aeaeae;		}
-		#comment-column .comments{
+			box-shadow: inset 2px 0px 5px #aeaeae;		
+		}
+		#comment-column .comments, #comment-form-container{
 			padding: 0 20px;
 		}
-		
+		#comment-form fieldset{
+			padding: 0;
+			border: none;
+		}
 		.dialog-footer{
 			height: 30px;
 			line-height: 30px;
@@ -195,7 +211,7 @@
 				
 				{# this really needs to be broken out into a template tag #}
 				{% if section.accepts_comments %}
-				<div id="comment-form" class="comment-form" class="comment-tab-content">
+				<div id="comment-form-container" class="comment-form" class="comment-tab-content">
 					{% if user.is_authenticated %}
 						{% if user.first_name and user.last_name %}
 					{% note_form form section %}

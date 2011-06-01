@@ -1,6 +1,6 @@
 /**
 * Finds all the possible targets of comments in the current page
-* and prepares them.
+            * and prepares them.
 **/
 (function( $ ){
 
@@ -79,12 +79,6 @@
         releaseScrolling: function(){
             $('body').css('overflow', 'auto');
         },
-        setUpForm: function() {
-            jQuery("textarea", $theForm).each(function() {
-                initTinyMCE();
-                tinyMCE.execCommand('mceAddControl', false, $(this).attr('id'));
-            });
-        }
     };
     
     //Figure out how to name this extended dialog differently
@@ -92,4 +86,91 @@
 
 })(jQuery);
 
+(function( $ ){
+    methods = {
+        init: function(){
+            return this.each(function(){
+                $this = $(this)
+                logit($this)
+                $textarea = jQuery('textarea', $this);
+                initTinyMCE();
+                tinyMCE.execCommand('mceAddControl', false, $textarea.attr('id'));
+                $this.handleForm = function (data, textStatus) {
+                    logit('handleForm');
+                    $('#comment-form')[0].reset();
 
+                    if (!data.approved) {
+                        jQuery.jGrowl("Your comment has been received, but it's waiting for administrator approval before it shows up on the site", { header: 'Thank You', sticky: true});
+                        return;
+                    }
+                    jQuery.jGrowl("Thanks for your comment.", {
+                        header: 'Comment Received',
+                        life: 7500
+                    });
+
+                    var newComment = jQuery(data.rendered);
+                    if (data.target != "") {
+                        newComment.addClass(data.target);
+                    }
+
+                    var commentDiv = jQuery("#all-comments").append(newComment);
+                    if (data.target != "") {
+                        $currComment.append(newComment.clone());
+                        var pCounter = jQuery("#" + data.target + " span.count");
+                        pCounter.text(parseInt(pCounter.text()) + 1);
+
+                    }
+                    updateCommentCounts(data.target ? ("#" + data.target) : null);
+
+                }
+
+                $this.handleError = function (xhr, textStatus, errorThrown) {
+                    logit('handleError')
+                    jQuery.jGrowl(textStatus, {
+                        header: "Comment Submission Failed"
+                    });
+                    return false;
+                }
+
+                $this.submit(function(evt){
+                    // need to have tinyMCE populate the actual form field
+                    tinyMCE.triggerSave();
+                    var postVars = $(this).serialize();
+                    jQuery.jGrowl("Submitting comment ...", {
+                        'header': "Please Wait"
+                    });
+                    var theURL = $(this).attr('action');
+                    //$("input[type=submit]", this).attr("disabled", "disabled");
+                    jQuery.ajax({
+                        url: theURL,
+                        type: 'POST',
+                        data: postVars,
+                        success: $this.handleForm,
+                        error: $this.handleError,
+                        dataType: 'json'
+                    });
+                    evt.preventDefault();
+                })
+            })
+        },
+        destroy: function(){
+            $textarea = jQuery('textarea', $this);
+            console.log($textarea)
+            tinyMCE.execCommand('mceRemoveControl', false, $textarea.attr('id'));
+        },
+    }
+    
+
+    jQuery.fn.annotationForm = function(method) {
+        if ( methods[method] ) {
+          return methods[ method ].apply( this, Array.prototype.slice.call( arguments, 1 ));
+        } else if ( typeof method === 'object' || ! method ) {
+          return methods.init.apply( this, arguments );
+        } else {
+          $.error( 'Method ' +  method + ' does not exist on jQuery.tooltip' );
+        }
+                
+    };
+    
+
+})(jQuery);
