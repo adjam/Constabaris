@@ -79,7 +79,7 @@
 		var commentables = $("p[id]").not("blockquote p[id]").not("div.figure p[id]").prepareCommentTargets();
 		commentables.click(function(){
 			commentsDialog.dialog('open', this)
-			$('#comment-form').annotationForm('setContentInternalPath', $(this).attr('id'))
+		 	$('#comment-form').annotationForm('setTargetParagraph', this);
 			$('#comment-form').bind('commentSuccess', function(evt){
 				$('.comments').append(evt.newComment)
 				logit('comment successfully added')
@@ -87,18 +87,26 @@
 				$('#comments-dialog').dialog('close')
 			})
 		});
+		
 		$('.commentCount').click(function(evt){
 			evt.preventDefault();
 			commentsDialog.dialog('open');
-			$('#comment-form').annotationForm('setContentInternalPath')
+			$('#comment-form').annotationForm('setTargetParagraph')
 		})
-		
 		$('#make-comment').click(function(evt){
-			commentFormTop = Math.round($('#comment-form').position().top)
-			logit(commentFormTop)
-            $('#comment-column').animate({scrollTop: commentFormTop}, {duration: 500, complete: function(){ /* set the focus */ }} )
+			commentFormTop = Math.round($('#comment-form').position().top + $('#comment-column').scrollTop())
+            $('#comment-column').animate({scrollTop: commentFormTop}, {duration: 500, complete: function(){$('#comment-form').annotationForm('reset');$('#comment-form').annotationForm('focus');} })
 		})
-		
+		$('#previous-paragraph').click(function(evt){
+			evt.preventDefault()
+			newTargetParagraph = commentsDialog.dialog('previousParagraph')
+		 	$('#comment-form').annotationForm('setTargetParagraph', newTargetParagraph);
+		})
+		$('#next-paragraph').click(function(evt){
+			evt.preventDefault()
+			newTargetParagraph = commentsDialog.dialog('nextParagraph')
+		 	$('#comment-form').annotationForm('setTargetParagraph', newTargetParagraph);
+		})
 	}); 
  </script>
  {% endspaceless %}
@@ -235,9 +243,9 @@
 			</div>
 		</div>
 		<div class="dialog-footer">
-			<a href="">&lt; Previous &para;</a>
-			<a href="">All Comments</a>
-			<a href="">Next &para; &gt;</a>
+			<a id="previous-paragraph" href="">&lt; Previous &para;</a>
+			<a id="all-comments" href="">All Comments</a>
+			<a  id="next-paragraph" href="">Next &para; &gt;</a>
 			<button id="make-comment">Make a Comment</button>
 		</div>
 	</div>

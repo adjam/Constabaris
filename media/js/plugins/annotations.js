@@ -32,18 +32,16 @@
 (function( $ ){
     dialogExt = {
         commentColWidth: $('#commentsColumn').width(),
+        targetParagraph: null,
         _original_init: $.ui.dialog.prototype._init, 
         _init: function(){
             this._original_init()
-            logit('hello motherfucka!')
         },
         _original_open: $.ui.dialog.prototype.open,
         open: function(targetParagraph){
             //TODO: on open prevent scrolling
             if(targetParagraph){
-                $('#source-paragraph').show()
-                this.displaySource(targetParagraph);
-                this.filterComments(targetParagraph);
+                this.setTargetParagraph(targetParagraph);
             }else{
                 this.showAllComments();
             }
@@ -62,6 +60,7 @@
             $('.'+$(targetParagraph).attr('id')).show();
         },
         displaySource: function(targetParagraph){
+            $('#source-paragraph').show()
             $targetClone = $(targetParagraph).clone()
             $('.annotation-hook', $targetClone).remove()
             $targetContent = $targetClone.html();
@@ -81,8 +80,29 @@
         releaseScrolling: function(){
             $('body').css('overflow', 'auto');
         },
+        setTargetParagraph: function(targetParagraph){
+            this.$targetParagraph = $(targetParagraph)
+            this.filterComments(this.$targetParagraph);
+            this.displaySource(this.$targetParagraph);
+        },
+        previousParagraph: function(){
+            logit('previousParagraph')
+            previousParagraph = this.$targetParagraph.prevAll('p').first();
+            if(previousParagraph.length > 0){
+                this.setTargetParagraph(previousParagraph)
+            }
+            return this.$targetParagraph;
+        },
+        nextParagraph: function(){
+            logit('nextParagraph')
+            nextParagraph = this.$targetParagraph.nextAll('p').first();
+            if(nextParagraph.length > 0){
+                this.setTargetParagraph(nextParagraph)
+            }
+            return this.$targetParagraph;
+        }
     };
-    
+    $("p[id]").not("blockquote p[id]").not("div.figure p[id]")
     //Figure out how to name this extended dialog differently
     $.extend($.ui.dialog.prototype, dialogExt)
 
@@ -124,12 +144,18 @@
             tinyMCE.execCommand('mceRemoveControl', false, $textarea.attr('id'));
             $this.unbind('submit')
         },
-        setContentInternalPath: function(contentInternalPath){
-            if(contentInternalPath){
-                $('#id_content_internal_path').val(contentInternalPath)
+        setTargetParagraph: function(targetParagraph){
+            if(targetParagraph){
+                $('#id_content_internal_path').val($(targetParagraph).attr('id'))
             }else{
                 $('#id_content_internal_path').val('')
             }
+        },
+        focus: function(){
+			tinyMCE.execInstanceCommand("id_comment", "mceFocus"); 
+        },
+        reset: function(){
+            tinyMCE.execInstanceCommand("id_comment",'mceSetContent', false, ''); 
         }
     }
         
