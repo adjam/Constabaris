@@ -537,11 +537,49 @@ div.annotation-hook:hover {
 p div.annotation-hook.hidden:hover {
     opacity: 1;
 }
+.dialog-body, .dialog-footer{
+		overflow: hidden;
+		width: 100%;
+}
+#source-paragraph, #comment-column{
+	float: left;
+	overflow: auto;
+	height: 400px;
+}
 
-.form-jump {
-    float: right;
-    padding: .5em;
-    font-size: 125%;
+#source-paragraph{
+	width: 55%;
+}
+
+#source-paragraph .source{
+	padding: 0 20px;
+}
+
+#comment-column{
+	width: 100%;
+}
+
+#comment-column{
+	width: 45%;
+	box-shadow: inset 2px 0px 5px #aeaeae;		
+}
+
+#comment-column .comments, #comment-form-container{
+	padding: 0 20px;
+}
+#comment-form fieldset{
+	padding: 0;
+	border: none;
+}
+.dialog-footer{
+	height: 30px;
+	line-height: 30px;
+	border-width: 0 1px 1px 1px;
+	text-align: center;
+	border-top: 1px solid #aaa;
+}
+.ui-dialog, .ui-dialog .ui-dialog-content{
+	padding: 0;
 }
 
 .comment {

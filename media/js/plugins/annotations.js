@@ -33,7 +33,19 @@
     dialogExt = {
         commentColWidth: $('#commentsColumn').width(),
         targetParagraph: null,
-        _original_init: $.ui.dialog.prototype._init, 
+        getTargetParagraph: function(){
+            return this.$targetParagraph;
+        },
+        setTargetParagraph: function(targetParagraph){
+            this.$targetParagraph = $(targetParagraph)
+            this.filterComments(this.$targetParagraph);
+            this.displaySource(this.$targetParagraph);
+        },
+        _filtered: false,
+        filtered: function(){
+            return this._filtered;
+        },
+        _original_init: $.ui.dialog.prototype._init,
         _init: function(){
             this._original_init()
         },
@@ -58,8 +70,10 @@
             $('#comment-column').css({width: this.commentColWidth})
             $('.comment').hide();
             $('.'+$(targetParagraph).attr('id')).show();
+            this._filtered = true
         },
         displaySource: function(targetParagraph){
+            logit('displaySource')
             $('#source-paragraph').show()
             $targetClone = $(targetParagraph).clone()
             $('.annotation-hook', $targetClone).remove()
@@ -71,6 +85,7 @@
             $('.comment').show();
             $('#source-paragraph').hide();
             $('#comment-column').css({width: '100%'})
+            this._filtered = false;
         },
         freezeScrolling: function() {
             $('body').css('overflow', 'hidden');
@@ -79,11 +94,6 @@
         },
         releaseScrolling: function(){
             $('body').css('overflow', 'auto');
-        },
-        setTargetParagraph: function(targetParagraph){
-            this.$targetParagraph = $(targetParagraph)
-            this.filterComments(this.$targetParagraph);
-            this.displaySource(this.$targetParagraph);
         },
         previousParagraph: function(){
             logit('previousParagraph')

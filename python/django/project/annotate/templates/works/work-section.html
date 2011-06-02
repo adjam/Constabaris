@@ -18,6 +18,9 @@
 
 {% if perms.moderator %}
 <script src="{{MEDIA_URL}}js/plugins/moderation.js" type="text/javascript"></script>
+<script type="text/javascript" charset="utf-8">
+	   $("div#comments").moderation();
+</script>
 {% endif %}
  <script type="text/javascript">
 	$(document).ready( function() {
@@ -28,33 +31,18 @@
 		  and paragraph links on hover are created.
 		**/
 		$("div.body span.reference").footnotes();
-		// $("div.body").commentify();
 		$("#post-annotation").button();
-		// $(document).paragraphLinks();
-		// 
-		$("#sidebar .workinfo").click( function() {
-			window.location = '{{ work.get_absolute_url }}';
-		});
-		$("#sidebar .workinfo").attr('title', 'Go back to main page for "{{ work.title }}"');
+		$(document).paragraphLinks();
 
+		$("#sidebar .workinfo").click( function() {window.location = '{{ work.get_absolute_url }}';});
+		$("#sidebar .workinfo").attr('title', 'Go back to main page for "{{ work.title }}"');
 		$("#sidebar .section-nav").navigationBar();
-		
 		$("#body .container").containChildren();
 		   
+		// Set up navigation
 		$(document).subnavigation($(".body"));
-		{% if perms.moderator %}
-		   $("div#comments").moderation();
-		{% endif %}
-		
-		{% if request.user.is_superuser %}
-		      var toolsDialog = jQuery(".atools").dialog({title : 'Admin Tools', autoOpen: false});
-		      jQuery("#adminToolsOpener").click( function(evt) {
-		        evt.preventDefault();
-		        toolsDialog.dialog('open');
-		      }).css({ position: 'fixed', bottom : '.2em', right : '.2em', zIndex : 1500}).button();
-		  $("#workQuery").workSearch({ resultsTarget : "#queryResults", url : '{% url works:search.inwork work.pk %}'});
-		{% endif %}
-		
+
+		// Set up the dialog; Also sets up comment form on open
 		var commentsDialog = $('#comments-dialog').dialog({
 	        width: 900,
 	        minWidth: 500,
@@ -76,6 +64,7 @@
 			}
         })
 
+		// Set up the paragraph comment handles
 		var commentables = $("p[id]").not("blockquote p[id]").not("div.figure p[id]").prepareCommentTargets();
 		commentables.click(function(){
 			commentsDialog.dialog('open', this)
@@ -87,7 +76,8 @@
 				$('#comments-dialog').dialog('close')
 			})
 		});
-		
+
+		// Set up event handlers that tie everything together.
 		$('.commentCount').click(function(evt){
 			evt.preventDefault();
 			commentsDialog.dialog('open');
@@ -107,6 +97,29 @@
 			newTargetParagraph = commentsDialog.dialog('nextParagraph')
 		 	$('#comment-form').annotationForm('setTargetParagraph', newTargetParagraph);
 		})
+		$('#all-comments').click(function(evt){
+			// Move this into the dialog class
+			evt.preventDefault();
+			logit(commentsDialog.dialog('getTargetParagraph'))
+			if(commentsDialog.dialog('filtered')){
+				commentsDialog.dialog('showAllComments');
+				$(this).text('Back to Paragraph Annotations');
+			}else{
+				commentsDialog.dialog('setTargetParagraph', commentsDialog.dialog('getTargetParagraph'));
+				$(this).text('Show All Annotations');
+			}
+		})
+
+		
+		{% if request.user.is_superuser %}
+		      var toolsDialog = jQuery(".atools").dialog({title : 'Admin Tools', autoOpen: false});
+		      jQuery("#adminToolsOpener").click( function(evt) {
+		        evt.preventDefault();
+		        toolsDialog.dialog('open');
+		      }).css({ position: 'fixed', bottom : '.2em', right : '.2em', zIndex : 1500}).button();
+		  $("#workQuery").workSearch({ resultsTarget : "#queryResults", url : '{% url works:search.inwork work.pk %}'});
+		{% endif %}
+		
 	}); 
  </script>
  {% endspaceless %}
@@ -170,48 +183,6 @@
   {% with work.authors.all as authors %}
   {% if section.shows_comments %}
   {% get_comment_list for section as comment_list %}
-	<style type="text/css" media="screen">
-	   .dialog-body, .dialog-footer{
-			overflow: hidden;
-			width: 100%;
-/*			border: 1px solid;*/
-		}
-		#source-paragraph, #comment-column{
-			float: left;
-			overflow: auto;
-			height: 400px;
-		}
-		
-		#source-paragraph{
-			width: 55%;
-		}
-		
-		#source-paragraph .source{
-			padding: 0 20px;
-		}
-		
-		#comment-column{
-			width: 45%;
-			box-shadow: inset 2px 0px 5px #aeaeae;		
-		}
-		#comment-column .comments, #comment-form-container{
-			padding: 0 20px;
-		}
-		#comment-form fieldset{
-			padding: 0;
-			border: none;
-		}
-		.dialog-footer{
-			height: 30px;
-			line-height: 30px;
-			border-width: 0 1px 1px 1px;
-			text-align: center;
-			border-top: 1px solid #aaa;
-		}
-		.ui-dialog, .ui-dialog .ui-dialog-content{
-			padding: 0;
-		}
-	</style>
 	<div id="comments-dialog">
 		<div class="dialog-body">
 			<div id="source-paragraph">
@@ -244,7 +215,7 @@
 		</div>
 		<div class="dialog-footer">
 			<a id="previous-paragraph" href="">&lt; Previous &para;</a>
-			<a id="all-comments" href="">All Comments</a>
+			<a id="all-comments" href="">Show All Comments</a>
 			<a  id="next-paragraph" href="">Next &para; &gt;</a>
 			<button id="make-comment">Make a Comment</button>
 		</div>
