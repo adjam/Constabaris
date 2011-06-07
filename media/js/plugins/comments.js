@@ -80,8 +80,14 @@ function updateCommentCounts(targetId) {
     var $allCount = jQuery(".comments .comment").size();
     var $parCount = $('.comments .'+targetId).size();
 
-    jQuery(".commentCount .count").text($allCount);
-    jQuery('#'+targetId + " .count").text($parCount);
+    $(".sectionCount .count").text($allCount);
+    $('#'+targetId + " .count").text($parCount);
+
+    if($parCount > 0){
+        $('p#'+targetId+" .annotation-hook").removeClass('hidden')
+    }else{
+        $('p#'+targetId+" .annotation-hook").addClass('hidden')
+    }
 
     if($allCount > 0){
         $(".work-sections .section.current a").addClass('has-comments');

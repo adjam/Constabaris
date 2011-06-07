@@ -30,6 +30,7 @@
 		  comments are morphed into bubbles,
 		  and paragraph links on hover are created.
 		**/
+		updateCommentCounts();
 		$("div.body span.reference").footnotes();
 		$("#post-annotation").button();
 		$(document).paragraphLinks();
@@ -43,13 +44,14 @@
 		$(document).subnavigation($(".body"));
 
 		// Set up the dialog; Also sets up comment form on open
-		var commentsDialog = $('#comments-dialog').dialog({
+		var commentables = $("p[id]").not("blockquote p[id]").not("div.figure p[id]").prepareCommentTargets();
+		var commentsDialog = $('#comments-dialog').annotationDialog({
 	        width: 900,
 	        minWidth: 500,
 	        height: 500,
 	        minHeight: 500, 
 	        autoOpen: false,
-	        title: 'Comments',
+	        title: 'Annotations',
 	        position: 'center',
 	        modal: true,	
 			open: function() {
@@ -57,59 +59,38 @@
 	            $('body').css('overflow', 'hidden');
 	            $('body').css('overflow-x', 'scroll');
 	            $(window).trigger('resize');
+			 	$('#comment-form').annotationForm('setTargetParagraph', this);
+				$('#comment-form').bind('commentSuccess', function(evt){
+					$('.comments').append(evt.newComment)
+					updateCommentCounts(evt.targetParagraph);
+					$('#comments-dialog').dialog('close')
+				})
 	        },
 			beforeClose: function() {
-				$('#comment-form').annotationForm('destroy');
 				$('#comment-form').unbind('commentSuccess')
+				$('#comment-form').annotationForm('destroy');
 			}
         })
+		$('#comments-dialog').bind('targetChange', function(evt){
+			$('#comment-form').annotationForm('setTargetParagraph', evt.targetParagraph);
+		})
+
 
 		// Set up the paragraph comment handles
-		var commentables = $("p[id]").not("blockquote p[id]").not("div.figure p[id]").prepareCommentTargets();
 		commentables.click(function(){
 			commentsDialog.dialog('open', this)
-		 	$('#comment-form').annotationForm('setTargetParagraph', this);
-			$('#comment-form').bind('commentSuccess', function(evt){
-				$('.comments').append(evt.newComment)
-				logit('comment successfully added')
-				updateCommentCounts(evt.targetParagraph);
-				$('#comments-dialog').dialog('close')
-			})
 		});
 
 		// Set up event handlers that tie everything together.
 		$('.commentCount').click(function(evt){
 			evt.preventDefault();
-			commentsDialog.dialog('open');
+			commentsDialog.annotationDialog('open');
 			$('#comment-form').annotationForm('setTargetParagraph')
 		})
-		$('#make-comment').click(function(evt){
-			commentFormTop = Math.round($('#comment-form').position().top + $('#comment-column').scrollTop())
-            $('#comment-column').animate({scrollTop: commentFormTop}, {duration: 500, complete: function(){$('#comment-form').annotationForm('reset');$('#comment-form').annotationForm('focus');} })
-		})
-		$('#previous-paragraph').click(function(evt){
-			evt.preventDefault()
-			newTargetParagraph = commentsDialog.dialog('previousParagraph')
-		 	$('#comment-form').annotationForm('setTargetParagraph', newTargetParagraph);
-		})
-		$('#next-paragraph').click(function(evt){
-			evt.preventDefault()
-			newTargetParagraph = commentsDialog.dialog('nextParagraph')
-		 	$('#comment-form').annotationForm('setTargetParagraph', newTargetParagraph);
-		})
-		$('#all-comments').click(function(evt){
-			// Move this into the dialog class
-			evt.preventDefault();
-			logit(commentsDialog.dialog('getTargetParagraph'))
-			if(commentsDialog.dialog('filtered')){
-				commentsDialog.dialog('showAllComments');
-				$(this).text('Back to Paragraph Annotations');
-			}else{
-				commentsDialog.dialog('setTargetParagraph', commentsDialog.dialog('getTargetParagraph'));
-				$(this).text('Show All Annotations');
-			}
-		})
 
+		$('.comment .navigation .ctop').click(function(evt){
+			commentsDialog.annotationDialog('close');
+		})
 		
 		{% if request.user.is_superuser %}
 		      var toolsDialog = jQuery(".atools").dialog({title : 'Admin Tools', autoOpen: false});
@@ -174,7 +155,7 @@
  </div><!-- /.atools -->
  {% endif %}
  <div class="commentDisplay">
-  <a class="commentCount" rel="displayComments" href="#comments">Comments (<span class="count">0</span>)</a>
+  <a class="commentCount sectionCount" rel="displayComments" href="#comments">Comments (<span class="count">0</span>)</a>
  </div>
   
  {% with section.get_filename as section_content %}
@@ -214,9 +195,11 @@
 			</div>
 		</div>
 		<div class="dialog-footer">
-			<a id="previous-paragraph" href="">&lt; Previous &para;</a>
-			<a id="all-comments" href="">Show All Comments</a>
-			<a  id="next-paragraph" href="">Next &para; &gt;</a>
+			<ul id="paragraph-nav">
+				<li><a id="previous-paragraph" href="">&lt; Previous &para;</a><li>
+				<li><a id="all-comments" href="">Show All Comments</a></li>
+				<li><a id="next-paragraph" href="">Next &para; &gt;</a></li>
+			</ul>
 			<button id="make-comment">Make a Comment</button>
 		</div>
 	</div>

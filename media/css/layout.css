@@ -578,22 +578,62 @@ p div.annotation-hook.hidden:hover {
 	text-align: center;
 	border-top: 1px solid #aaa;
 }
+
+.dialog-footer ul#paragraph-nav{
+    float: left;
+    width: 55%;
+    
+}
+
+.dialog-footer ul#paragraph-nav li{
+    float: left;
+    width: 33%;
+}
+
 .ui-dialog, .ui-dialog .ui-dialog-content{
 	padding: 0;
 }
 
 .comment {
-    margin: 0 auto 1em;
+    margin: 15px auto;
     width: 100%;
     clear: both;
-    background-color: #efefef;
+    padding: 0 0 15px 0;
+    border-bottom: solid 1px #eee;
+    font-family:sans-serif
+}
+
+.comment .authorname{
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 5px 0;
+    padding: 0;
+}
+
+.comment .authorname .date{
+    font-size: 12px;
 }
 
 .comment .cbody {
-    margin: .2em;
-    padding: 5px 10px;
     text-align: left;
+    margin: 5px 0;
 }
+
+.comment .cbody p{
+    margin: 0;
+    padding: 0 0 2px;
+}
+
+.comment .navigation{
+    float: left;
+}
+
+.comment .moderation{
+    text-align: right;
+}
+
+
+
 /** End Comments Layout **/
 
 /** work/section **/

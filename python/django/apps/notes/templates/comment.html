@@ -3,24 +3,21 @@
 	{% if comment.is_public or perms.moderator %}
 		<!-- apps.notes.templates.comment.html -->
 		<div class="comment{% ifin comment.user authors %} author{% endifin %}{% if pid %} {{pid}}{% endif %}{%if not comment.is_public %} unapproved{% endif %} cid-{{ comment.pk }}">
-			<div class="metadata">
-				<div class="headers">
-					<h1 class="authorname"><a href="{% url user.profile profile_id=comment.user.get_profile.pk %}">{{ comment.user.first_name }}&#160;{{ comment.user.last_name }}</a></h1>
-					{% if comment.title %}
-					<h2 class="title">{{ comment.title }}</h2>
-					{% endif %}
-				</div>
-				<div class="navigation">
-					{% if pid %}
-					<a href="#{{pid}}" title="Navigate back to source paragraph"
-					class="ctop">to ¶</a>
-					{% endif %}
-				</div>
-				<div class="clearblock">&#160;</div>
+			<div class="headers">
+				<h4 class="authorname"><a href="{% url user.profile profile_id=comment.user.get_profile.pk %}">{{ comment.user.first_name }}&#160;{{ comment.user.last_name }}</a> - <span class="date">{{ comment.submit_date|date}}</span>
+				</h4>
+				{% if comment.title %}
+				<h2 class="title">{{ comment.title }}</h2>
+				{% endif %}
 			</div>
 			<div class="cbody">
-				<span class="date">{{ comment.submit_date|date}}</span>
 				{{comment.comment|safe}}
+			</div>
+			<div class="navigation">
+				{% if pid %}
+				<a href="#{{pid}}" title="Navigate back to source paragraph"
+				class="ctop">to ¶</a>
+				{% endif %}
 			</div>
 			{% if perms.moderator %}
 			<div class="moderation">
