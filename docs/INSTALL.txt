@@ -43,6 +43,8 @@ Place provided .war file in $TOMCAT_HOME/webapps. Tomcat will auto-deploy.
 
 For more information see TEI Packager App in the docs.
 
+Once you've installed the TEI Packager App you can test it by ingesting one of the tei examples in the tei_examples directory.  To ingest visit <yoursite>/works/ingest/ and select one of the zip files to upload. The ingest flow will walk you through the process.
+
 Solr
 
 Create a core and add the files under the Solr directory to the conf directory for your core.  See the docs for configuring Haystack.
