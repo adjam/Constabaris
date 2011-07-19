@@ -16,7 +16,10 @@ import django.contrib.auth.models as authmodels
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes import generic
 from django.db import connection
-
+from django.core.urlresolvers import reverse
+from django.contrib.sites.models import Site 
+from django.contrib.flatpages.models import FlatPage
+import re
 
 from cdla.images.utils import get_thumbnail
 
@@ -95,16 +98,6 @@ class License(models.Model):
     def __unicode__(self):
         return self.name
 
-#class Format(models.Model):
-    #"""
-    #A format for a work, e.g. multi-section vs. single section vs. no-section
-    #"""
-    #label = models.CharField(max_length=128,unique=True)
-    #description = models.TextField()
-
-    #def __unicode__(self):
-        #return self.label
-
 class Genre(models.Model):
     """
     A classification of the work that it falls under in virtue of its
@@ -124,6 +117,111 @@ class Genre(models.Model):
 
     def __unicode__(self):
         return self.label
+
+class Collection(models.Model):
+    name = models.CharField(max_length=128,unique=True,help_text="A user friendly name")
+    description = models.TextField(blank=True,help_text="A blurb for the index page")
+    slug = models.SlugField(max_length=255,unique=True)
+
+    def save(self, *args, **kwargs):
+        log.debug('works.models.Collection.save()')
+        if not self.id:
+            log.debug('--saving a new collection')
+            from django.contrib.sites.models import Site
+            site = Site.objects.get(id=1)
+            #if it's a new collection set up the flatpage stubs and the media directory
+            about = FlatPage.objects.create(url=self.url_base+'/about/', title=self.name+" - About")
+            about.sites.add(1)
+            about.save()
+            intro = FlatPage.objects.create(url=self.url_base+'/introduction/', title=self.name+" - Introduction")
+            intro.sites.add(1)
+            intro.save()
+            staff = FlatPage.objects.create(url=self.url_base+'/about/staff/', title=self.name+" - About - Staff")
+            staff.sites.add(1)
+            staff.save()
+
+            try:
+                os.makedirs(self.media_url)
+            except OSError as (errno, strerror):
+                if errno == 17:
+                    pass
+                else:
+                    raise
+        else:
+            # Update collection name would need to update the url of the pages
+            last_saved = Collection.objects.get(id=self.id)
+            if self.slug != last_saved.slug:
+                log.debug('slug has changed******')
+                for fp in FlatPage.objects.filter(url__startswith='/collections/'+last_saved.slug):
+                    log.debug('changing flatpage urls ******')
+                    new_url = re.sub(last_saved.slug, self.slug, fp.url)
+                    fp.url = new_url
+                    fp.save()
+
+                try:
+                    log.debug('renamed the media directory')
+                    os.rename(os.path.join(settings.MEDIA_ROOT, "collections", str(last_saved.slug)), self.media_url)
+                    log.debug('renamed the media directory')
+                except OSError as (errno, strerror):
+                    log.debug('OSError found')
+                    if errno == 2:
+                        log.debug('OSError == 2')
+                        if os.path.exists(self.media_url):
+                            log.debug(self.media+" already exists")
+                            pass
+                        else:
+                            os.makedirs(self.media_url)
+                    else:
+                        raise
+        
+        super(Collection, self).save(*args, **kwargs)
+        # Delete would delete the default flatpages, or all flatpages
+        
+    def delete(self, *args, **kwargs):
+        log.debug('works.models.Collection.delete')
+        # delete flatpages
+        FlatPage.objects.filter(url__startswith=self.url_base).delete()
+
+        # delete media directory
+        log.debug(self.media_url)
+        try:
+            os.removedirs(self.media_url)
+        except OSError as (errno, strerror):
+            if errno == 2:
+                pass
+            else:
+                raise
+
+        # set collection_id for all works in collection to null
+        Work.objects.filter(collection=self.id).update(collection="")
+        super(Collection, self).delete(*args, **kwargs)
+
+    @models.permalink
+    def get_absolute_url(self):
+        return ('collections:collection_by_slug', (), {'slug': self.slug})
+    
+    def _get_works(self):
+        return Work.objects.filter(collection=self.id).order_by('title')
+    works_list = property(_get_works)
+    
+    def _get_media_url(self):
+        return os.path.join(settings.MEDIA_ROOT, "collections", str(self.slug) )
+    media_url = property(_get_media_url)
+    
+    def _get_url_base(self):
+        return '/collections/'+self.slug
+    url_base = property(_get_url_base)
+            
+    def _get_collection_pages(self):
+        return FlatPage.objects.filter(url__startswith="/collections/"+self.slug)
+    flatpages = property(_get_collection_pages)
+
+    def get_page(self, page_name):
+        return self.url_base+'/'+page_name
+
+    def __unicode__(self):
+        return self.name
+    
 
 class Work(models.Model):
     """
@@ -156,12 +254,14 @@ class Work(models.Model):
     last_modified=models.DateTimeField(editable=False,auto_now=True,auto_now_add=True)
     rights = models.TextField(blank=True,help_text="Information about the holder of the copyright")
     page_count = models.IntegerField(default=-1)
+    collection = models.ForeignKey(Collection, blank=True,null=True)
+    site = models.ForeignKey(Site, blank=True, null=True, default="1")
     
-    def save(self):
+    def save(self, *args, **kwargs):
         if not self.id:
             self.created = datetime.datetime.now()
         self.last_modified = datetime.datetime.now()
-        super(Work,self).save()
+        super(Work,self).save(*args, **kwargs)
         
     def _label(self):
         return u"%s [%d]" % ( self.title[:30], self.pk )
@@ -215,7 +315,7 @@ class Work(models.Model):
     @models.permalink
     def get_absolute_url(self):
         return ('works:byslug', (), {'slug': self.slug})
-
+        
     def delete(self):
         content_dir = self.get_content_directory()
         log.info("Delete called on work [%d]" % self.id)
@@ -348,6 +448,14 @@ class Section(models.Model):
     def get_filename(self):
         return os.path.join(self.work.get_content_directory(),self.filename)
 
+    def get_media_url(self):
+        try :
+            log.debug(self.work.media_url)
+            return urlparse.urljoin(self.work.media_url, "%s" % (self.filename))
+        except Exception, e:
+            log.warn("Encountered error trying to create media_url: %r" % e)
+    media_url = property(get_media_url)
+    
     def has_page_numbers(self):
         return self.start_page > 0 and self.end_page > 0
 

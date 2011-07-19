@@ -1,0 +1,19 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+
+<p>Select tag to apply:</p>
+
+<form action="" method="post">
+
+    {{ collection_form }}
+
+    <p>Put these works in the selected collection:</p>
+
+    <ul>{{ works|unordered_list }}</ul>
+
+    <input type="hidden" name="action" value="bulk_add_to_collection" />
+    <input type="submit" name="apply" value="Set collection" />
+</form>
+
+{% endblock %}

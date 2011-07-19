@@ -18,6 +18,7 @@ urlpatterns = patterns('',
     url(r'^$', redirect_to, { 'permanent' : True, 'url' : 'works/' }),
     url(r'^notes/', include('apps.notes.urls'),),
     url(r'^works/', include('apps.works.urls', app_name="works", namespace="works")),
+    url(r'^collections/', include('apps.works.collection_urls', namespace="collections")),
     url(r'^tinymce/', include('tinymce.urls')),
     url(r'^accounts/profile/(?P<profile_id>\d+)?/?$', 'apps.works.views.profile', name="user.profile"),
     url(r'^accounts/register/complete/?',direct_to_template, {'template': 'registration/registration_complete.html'}, name="registration_complete"),
@@ -27,6 +28,7 @@ urlpatterns = patterns('',
     url(r'^search/advanced/', 'apps.works.views.advanced_search', name="advanced-search"),
     url(r'^search/', WorkSearchView(), name="search"),
     # include('haystack.urls', app_name="search", namespace="search")),
+    url(r'api/', include('apps.api.urls', namespace="api")),
 
     # Uncomment the admin/doc line below and add 'django.contrib.admindocs'
     # to INSTALLED_APPS to enable admin documentation:

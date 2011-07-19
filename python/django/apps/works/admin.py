@@ -6,6 +6,8 @@ import models
 import tagging
 import django.db.models as dm
 from django import forms
+from django.http import HttpResponseRedirect
+from django.shortcuts import render_to_response
 
 from django.contrib.auth.models import User
 from django.contrib.auth.admin import UserAdmin
@@ -37,12 +39,32 @@ class FeaturedWorkAdmin(admin.ModelAdmin):
         django_models.CharField: { 'widget' : forms.Textarea }
     }
 
+class CollectionAdmin(admin.ModelAdmin):
+    prepopulated_fields = { "slug" : ("name",) }
+    actions=['really_delete_selected']
+    
+    def get_actions(self, request):
+        actions = super(CollectionAdmin, self).get_actions(request)
+        del actions['delete_selected']
+        return actions
+    
+    def really_delete_selected(self, request, queryset):
+        for obj in queryset:
+            obj.delete()
         
+        if queryset.count() == 1:
+            message_bit = "1 collection was"
+        else:
+            message_bit = "%s collections were" % queryset.count()
+        
+        self.message_user(request, "%s successfully deleted")
+    really_delete_selected.short_description = "Delete selected collections"
+            
 class WorkAdmin(admin.ModelAdmin):
     prepopulated_fields = { "slug" : ("title",) }
-    actions = ['bulk_delete', 'bulk_available']
+    actions = ['bulk_delete', 'bulk_available', 'bulk_add_to_collection']
     filter_horizontal = ('subjects',)
-    list_display = ('id', 'title', 'genre','author_display','isbn', 'available',)
+    list_display = ('id', 'title', 'collection', 'genre','author_display','isbn', 'available',)
     list_display_links = ('title',)
     readonly_fields = ('id',)
     
@@ -79,7 +101,35 @@ class WorkAdmin(admin.ModelAdmin):
             except Exception, ex:
                 print ex
     bulk_delete.short_description = "Delete selected works"
+    
+    class AddCollectionForm(forms.Form):
+        from models import Collection
+        _selected_action = forms.CharField(widget=forms.MultipleHiddenInput)
+        collection = forms.ModelChoiceField(Collection.objects)
 
+    def bulk_add_to_collection(self, request, queryset):
+        form = None
+        
+        if 'apply' in request.POST:
+            form = self.AddCollectionForm(request.POST)
+            
+            if form.is_valid():
+                collection = form.cleaned_data['collection']
+                
+                queryset.update(collection=collection)
+
+                plural = ''
+                if queryset.count() != 1:
+                    plural = 's'
+                
+                self.message_user(request, "Successfully added collection %s to %d work%s" % (collection, queryset.count(), plural))
+                return HttpResponseRedirect(request.get_full_path())
+                
+        if not form:
+            form = self.AddCollectionForm(initial={'_selected_action': request.POST.getlist(admin.ACTION_CHECKBOX_NAME)})
+        
+        return render_to_response('admin/add_collection.html', {'works':queryset, 'collection_form': form,})
+    bulk_add_to_collection.short_description = "Add selected works to a collection"
 
 class SectionAdmin(admin.ModelAdmin):
     list_filter = ('work',)
@@ -207,4 +257,5 @@ admin.site.register(models.NamedPerson)
 admin.site.register(models.WorkAuthoring)
 admin.site.register(models.FeaturedWork, FeaturedWorkAdmin)
 admin.site.register(models.License)
+admin.site.register(models.Collection, CollectionAdmin)
 

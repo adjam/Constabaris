@@ -94,6 +94,7 @@ INSTALLED_APPS = (
     'haystack',
     'tinymce',
     'registration',
+    'piston',
     'notes',
     'works',
 )

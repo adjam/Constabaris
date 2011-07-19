@@ -30,6 +30,8 @@ from haystack.query import SearchQuerySet
 from haystack.views import SearchView
 
 from utils import UploadHandler, PackageMaker, find_upload, get_citation, SidebarBuilder
+from django.contrib.flatpages.views import flatpage
+
 
 import ingest as ingesttools
 
@@ -348,3 +350,37 @@ def search_in_work(request, work_id):
     import simplejson as json
     
     return HttpResponse(json.dumps(rv), content_type="application/json")
+
+
+def collection_index(request):
+    collections = models.Collection.objects.all()
+    return render("collections/index.html", RequestContext(request, {'collections': collections}))
+    
+def collection_by_id(request, id="id", template="collections/collection.html"):
+    collection = get_object_or_404(models.Collection, id=id)
+    return render(template,RequestContext(request,{'collection' : collection }))
+    
+def collection_by_slug(request, slug="collection_slug", template="collections/collection.html"):
+    log.debug('views.collection_by_slug')
+    log.debug('slug: '+slug)
+    collection = get_object_or_404(models.Collection, slug=slug)
+    return render(template, RequestContext(request, {'collection' : collection }))
+
+def collection_browse(request, slug="slug", browse_by="browse_by", template="collections/collection_browse.html"):
+    log.debug('views.collection_browse')
+    log.debug('slug: '+slug)
+    log.debug('browse_by: '+browse_by)
+    collection = get_object_or_404(models.Collection, slug=slug)
+    return render(template, RequestContext(request, {'collection':collection}))
+
+def collection_introduction(request, slug="slug"):
+    collection = get_object_or_404(models.Collection, slug=slug)
+    return flatpage(request, collection.url_base+'/introduction/')
+    
+def collection_about(request, slug="slug"):
+    collection = get_object_or_404(models.Collection, slug=slug)
+    return flatpage(request, collection.url_base+'/about/')
+    
+def collection_about_staff(request, slug="slug"):
+    collection = get_object_or_404(models.Collection, slug=slug)
+    return flatpage(request, collection.url_base+'/about/staff/')

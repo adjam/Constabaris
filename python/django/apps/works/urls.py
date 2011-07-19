@@ -23,4 +23,5 @@ urlpatterns = patterns('',
     url(r"^info/(?P<id>\d+)?/?", views.workinfo, name="work.info"),
     url(r"^searchinside/(?P<work_id>\d+)/?", views.search_in_work, name="search.inwork"),
     url(r"^errorsaplenty", views.error_out, name="cause_error"),
+    
 )

@@ -907,9 +907,33 @@ p div.annotation-hook.hidden:hover {
         overflow: auto;
     }
 
-/** end work/section **/    
+/* end work/section **/    
 
-/** Admin/Debug Components **/
+/** Collection Styles */
+    .alpha-anchors li{
+        display: inline;
+        text-transform: uppercase;
+    }
+    .alpha-anchors li:after{
+        content: ' |';
+    }
+    
+    .collection-works-list{
+        padding: default;
+    }
+    .collection-works-list li.work{
+        margin-left: 1.5em;
+        margin-bottom: 1em;
+        padding-left: 1em;
+        list-style: disc;
+    }
+    
+    .collection-works-list .author-display{
+        font-weight: bold;
+    }
+/* end Collection Styles **/
+
+/** Admin/Debug Components */
 .dev-data{
     position:fixed;
     z-index: 1001;
@@ -919,4 +943,4 @@ p div.annotation-hook.hidden:hover {
     padding: .5em;
     background: #eee;
 }
-
+/* End Admin/Debug Components **/
