@@ -183,6 +183,7 @@ def browse(request,template="works/browse.html"):
     subject = request.GET.get('subject','')
     keyword = request.GET.get('keyword', '')
     genre = request.GET.get('genre','')
+    collection = request.GET.get('collection','')
     ctx = {}
 
     filters = dict(available=True)
@@ -192,6 +193,9 @@ def browse(request,template="works/browse.html"):
     if genre:
         filters.update(dict(genre__label=genre))
         ctx['genre'] = genre
+    if collection:
+        filters.update(dict(collection__name=collection))
+        ctx['collection'] = collection
     results = models.Work.objects.filter(**filters).order_by('title','subtitle')            
     if keyword:
         tag = Tag.objects.get(name=keyword)

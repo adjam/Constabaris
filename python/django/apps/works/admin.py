@@ -116,7 +116,9 @@ class WorkAdmin(admin.ModelAdmin):
             if form.is_valid():
                 collection = form.cleaned_data['collection']
                 
-                queryset.update(collection=collection)
+                for work in queryset:
+                    work.collection = collection
+                    work.save()
 
                 plural = ''
                 if queryset.count() != 1:

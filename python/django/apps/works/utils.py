@@ -399,15 +399,30 @@ def get_section_source(section):
 
 #import pysolr
 class SidebarBuilder(object):
+    facets = {}
     def __init__(self):
         try:
-            sqs = SearchQuerySet().filter(django_ct='works.work').facet('genre')
-            counts = sqs.facet_counts()['fields']['genre']
-            self.facets = [ x for x in counts if x[0] != 'Section']
+            genre_facets = self._get_facet_group('genre')
+            if len(genre_facets) > 0:
+                self.facets['genre'] = genre_facets
+
+            collection_facets = self._get_facet_group('collection')
+            if len(collection_facets) > 0:
+                self.facets['collection'] = collection_facets
+                
+            log.debug(self.facets)
         except Exception, e:
             log.warn("Solr apparently unavailable:%r" % e)
             self.facets = [('browsing currently unavailable', 0,)]
             
+    def _get_facet_group(self, facet_field):
+        search_query_set = SearchQuerySet().filter(django_ct='works.work').facet(facet_field)
+        
+        facets = []
+        for x in search_query_set.facet_counts()['fields'][facet_field]:
+            facets.append({'name': x[0], 'count': x[1]})
+            
+        return facets        
 
     def get_facets(self):
         return self.facets

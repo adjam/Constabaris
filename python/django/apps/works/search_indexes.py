@@ -28,7 +28,7 @@ class WorkIndex(indexes.RealTimeSearchIndex):
     id = indexes.CharField()
     url = indexes.CharField()
     parentId = indexes.CharField(null=True)
-    collection = indexes.CharField(default='lcrm')
+    collection = indexes.CharField(model_attr='collection__name')
     genre = indexes.CharField(model_attr='genre__label')
     title = indexes.CharField(model_attr='title')
     titleSort = indexes.CharField()
@@ -58,7 +58,9 @@ class WorkIndex(indexes.RealTimeSearchIndex):
         return 'last_modified'
     
     def update_object(self,instance,**kwargs):
+        log.debug('updating the search index')
         if not instance.available:
+            log.debug('instance not available')
             self.remove_object(instance)
         else:
             log.debug("Updating '%s'" % self.prepare_id(instance) )

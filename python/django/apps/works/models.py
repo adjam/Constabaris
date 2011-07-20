@@ -120,7 +120,8 @@ class Genre(models.Model):
 
 class Collection(models.Model):
     name = models.CharField(max_length=128,unique=True,help_text="A user friendly name")
-    description = models.TextField(blank=True,help_text="A blurb for the index page")
+    description = models.TextField(blank=True,help_text="A full description for the collection landing page")
+    blurb = models.TextField(blank=True, default='A collection of resources', help_text="A blurb for a collection list page")
     slug = models.SlugField(max_length=255,unique=True)
 
     def save(self, *args, **kwargs):

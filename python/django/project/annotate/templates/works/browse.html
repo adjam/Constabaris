@@ -17,6 +17,9 @@
  {% if keyword %}
   <h3>Keyword: {{ keyword }}</h3>
  {% endif %}
+ {% if collection %}
+  <h3>Collection: {{ collection }}</h3>
+ {% endif %}
   {% if page.object_list %}
    <h3>Showing {{ page.start_index }} - {{ page.end_index }} of {{ page.paginator.count }} results</h3>
     <ul class="result-list browse-results">

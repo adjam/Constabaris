@@ -180,10 +180,7 @@ def section_navigation(context):
 def genre_browse():
     if cache.get('sidebar-browse') is None:
         sq = SidebarBuilder()
-        rv = []
-        for genre, count in sq.get_facets():
-            rv.append({'name' : genre, 'count' : count})
-        cache.set('sidebar-browse',rv, 500)
+        cache.set('sidebar-browse',sq.get_facets(), 500)
     print type(cache.get('sidebar-browse'))
     return { 'browseables' : cache.get('sidebar-browse') }
 
