@@ -181,10 +181,19 @@ def genre_browse():
     if cache.get('sidebar-browse') is None:
         sq = SidebarBuilder()
         cache.set('sidebar-browse',sq.get_facets(), 500)
-    print type(cache.get('sidebar-browse'))
+    # print type(cache.get('sidebar-browse'))
     return { 'browseables' : cache.get('sidebar-browse') }
 
 register.inclusion_tag('tags/browse-genre.html')(genre_browse)
+
+def collection_browse():
+    # if cache.get('collection-browse') is None:
+    #     sq = SidebarBuilder()
+    #     cache.set('collection-browse', sq.get_collections(), 500)
+    # return {'collections':cache.get('collection-browse')}
+    sq = SidebarBuilder()
+    return {'collections': sq.get_collections()}
+register.inclusion_tag('tags/browse-collection.html')(collection_browse)
 
 class PaginateResultsNode(Node):
     def __init__(self,pagetoken, gettoken):

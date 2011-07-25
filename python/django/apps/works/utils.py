@@ -27,6 +27,7 @@ from conf import settings
 from haystack.query import SearchQuerySet
 
 import epub
+from django.conf import settings
 
 log = logging.getLogger('works.utils')
 
@@ -402,28 +403,30 @@ class SidebarBuilder(object):
     facets = {}
     def __init__(self):
         try:
-            genre_facets = self._get_facet_group('genre')
-            if len(genre_facets) > 0:
-                self.facets['genre'] = genre_facets
-
-            collection_facets = self._get_facet_group('collection')
-            if len(collection_facets) > 0:
-                self.facets['collection'] = collection_facets
-                
-            log.debug(self.facets)
+            for facet in settings.BROWSE_BY_FACETS:
+                log.debug(facet)
+                facet_list = self._get_facet_group(facet)
+                if len(facet_list) > 0:
+                    self.facets[facet] = facet_list
         except Exception, e:
             log.warn("Solr apparently unavailable:%r" % e)
             self.facets = [('browsing currently unavailable', 0,)]
             
     def _get_facet_group(self, facet_field):
         search_query_set = SearchQuerySet().filter(django_ct='works.work').facet(facet_field)
-        
         facets = []
         for x in search_query_set.facet_counts()['fields'][facet_field]:
             facets.append({'name': x[0], 'count': x[1]})
             
         return facets        
 
-    def get_facets(self):
-        return self.facets
+    def get_collections(self):
+        from models import Collection
+        collections = []
+        search_query_set = SearchQuerySet().filter(django_ct='works.work').facet('collection')
+        for x in search_query_set.facet_counts()['fields']['collection']:
+            collections.append({'collection': Collection.objects.get(name=x[0]), 'count': x[1]})
+        return collections
 
+    def get_facets(self):
+        return self.facets        

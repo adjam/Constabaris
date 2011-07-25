@@ -1,11 +1,5 @@
-<!-- <ul class="browselist">
-    <li style="border: none; font-weight: bold;">Browse: </li>
-	{% for facet in browseables %}
-    <li{% if forloop.last %} class="last"{%endif%}><a href="{% url works:browse %}?genre={{facet.name}}" title="View {{facet.name }}s ({{facet.count}} titles)">{{ facet.name }}s</a><span class="facet-count"> ({{facet.count}})</span></li>
-    {% endfor %}
-</ul> -->
 <dl>
-{% for facet, vals in browseables.iteritems %}
+	{% for facet, vals in browseables.iteritems %}
 	<dt>
 		{{facet}}s
 	</dt>
@@ -16,5 +10,5 @@
 		    {% endfor %}
 		</ul>
 	</dd>
-{% endfor %}
+	{% endfor %}
 <dl>

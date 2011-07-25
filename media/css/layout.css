@@ -13,7 +13,7 @@ body{
     border-width: 1px 1px 0 1px;
 }
 
-/** Base Styles **/
+/** Base Styles */
 #content h1 { 
     padding-bottom:6px; 
     font-weight:normal; 
@@ -33,9 +33,20 @@ padding:0;
 width:11px;
 }
 
+ul.bulleted-list, ul.bulleted {
+	padding:0 0 1.5em 1em;
+	list-style: disc;
+}
+
+.bulleted li{
+    list-style: disc;
+    margin: 1.5em 0;
+}
 
 
-/** Header Layout **/
+/* End Base Styles **/
+
+/** Header Layout */
 #header {
     position: relative;
     z-index: 100;
@@ -119,7 +130,7 @@ width:11px;
     margin-right: 1em;    
 }
 
-/** Primary Navigation **/
+/** Primary Navigation */
 #navigation{
     margin-top: 10px;
     overflow: hidden;
@@ -151,11 +162,11 @@ width:11px;
 #navigation li a:hover, #navigation li a:active { 
 	background:	#ccc; 
 }
-/* end Primary Navigation */
+/* end Primary Navigation **/
 
-/** End Header **/
+/* End Header **/
 
-/** Body Layout **/
+/** Body Layout */
 #body{
 }
 
@@ -173,7 +184,7 @@ h1{
     padding: 51px 25px 0 25px ;
 }
 
-/** Sidebar **/
+/** Sidebar */
 #sidebar{
     float: left;
 	width: 195px;
@@ -194,6 +205,10 @@ h1{
     font-weight:bold; 
 }
 
+#sidebar dd{
+    margin-left: 1em;
+}
+
 #sidebar a {
     text-decoration: none;
 }
@@ -209,11 +224,11 @@ h1{
     width: 100%;
 }
 
-/** End Sidebar **/
+/* End Sidebar **/
 
-/* End Body Layout */
+/* End Body Layout **/
 
-/** Footer Layout **/
+/** Footer Layout */
 #footer {
 	clear:both;
 	font-size:1em;
