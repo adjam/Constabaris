@@ -1,5 +1,8 @@
+{% if collection_count > 0 %}
+<h2>Collections</h2>
 <ul class="browselist">
 	{% for c in collections %}
 	<li><a href="{{c.collection.get_absolute_url}}">{{c.collection.name}}</a> ({{c.count}})</li>
     {% endfor %}
 </ul>
+{% endif %}

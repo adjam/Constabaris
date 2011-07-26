@@ -357,8 +357,11 @@ def search_in_work(request, work_id):
 
 
 def collection_index(request):
-    collections = models.Collection.objects.all()
-    return render("collections/index.html", RequestContext(request, {'collections': collections}))
+    try:
+        collections = models.Collection.objects.all()
+    except DoesNotExist:
+        collections = []
+    return render("collections/index.html", RequestContext(request, {'collections': collections, 'collections_count':len(collections)}))
     
 def collection_by_id(request, id="id", template="collections/collection.html"):
     collection = get_object_or_404(models.Collection, id=id)

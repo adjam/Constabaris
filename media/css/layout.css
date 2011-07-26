@@ -295,6 +295,10 @@ a.plink {
     padding-left: .2em;
     visibility: hidden;
 }
+
+#footer .browse dt{
+    display: none;
+}
 /** end Footer layout **/
 
 /** End General Layout **/

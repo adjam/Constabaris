@@ -423,9 +423,12 @@ class SidebarBuilder(object):
     def get_collections(self):
         from models import Collection
         collections = []
-        search_query_set = SearchQuerySet().filter(django_ct='works.work').facet('collection')
-        for x in search_query_set.facet_counts()['fields']['collection']:
-            collections.append({'collection': Collection.objects.get(name=x[0]), 'count': x[1]})
+        try:
+            search_query_set = SearchQuerySet().filter(django_ct='works.work').facet('collection')
+            for x in search_query_set.facet_counts()['fields']['collection']:
+                collections.append({'collection': Collection.objects.get(name=x[0]), 'count': x[1]})
+        except:
+            pass
         return collections
 
     def get_facets(self):

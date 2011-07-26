@@ -3,11 +3,15 @@
 	{% block content %}
 	<div id="content">
 		<h1>Collections</h1>
+		{% if collections_count > 0 %}
 		<ul class="bulleted">
 			{% for collection in collections %}
 			<li><a href="{{collection.get_absolute_url}}">{{collection.name}}</a> - {{collection.blurb}}</li>
 			{% endfor %}
 		</ul>
+		{% else %}
+		<p>There aren't any collections yet.</p>
+		{% endif %}
 	</div> <!-- #content-->
 	{% endblock %}
 {% endblock %}
