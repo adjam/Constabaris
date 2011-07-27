@@ -187,13 +187,10 @@ def genre_browse():
 register.inclusion_tag('tags/browse-genre.html')(genre_browse)
 
 def collection_browse():
-    # if cache.get('collection-browse') is None:
-    #     sq = SidebarBuilder()
-    #     cache.set('collection-browse', sq.get_collections(), 500)
-    # return {'collections':cache.get('collection-browse')}
-    sq = SidebarBuilder()
-    collections = sq.get_collections()
-    return {'collections': collections, 'collection_count': len(collections)}
+    if cache.get('collection-browse') is None:
+        sq = SidebarBuilder()
+        cache.set('collection-browse', sq.get_collections(), 500)
+    return {'collections':cache.get('collection-browse'), 'collection_count':len(cache.get('collection-browse'))}
 register.inclusion_tag('tags/browse-collection.html')(collection_browse)
 
 class PaginateResultsNode(Node):

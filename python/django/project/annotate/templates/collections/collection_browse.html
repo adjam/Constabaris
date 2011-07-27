@@ -29,7 +29,7 @@
 		<li><a href="#z">z</a></li>
 	</ul>
 	<ul class="collection-works-list">
-		{% for work in collection.works_list %}
+		{% for work in works %}
 		<li class="work">
 			<div class="author-display">{{work.author_display}}</div>
 			<div class="title"><a href="{{work.get_absolute_url}}">{{work.title}}</a></div>

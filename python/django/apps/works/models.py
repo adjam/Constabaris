@@ -214,6 +214,7 @@ class Collection(models.Model):
     url_base = property(_get_url_base)
             
     def _get_collection_pages(self):
+        log.debug('self.slug: '+self.slug)
         return FlatPage.objects.filter(url__startswith="/collections/"+self.slug)
     flatpages = property(_get_collection_pages)
 
