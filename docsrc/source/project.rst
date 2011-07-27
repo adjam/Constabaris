@@ -52,6 +52,10 @@ integrates TinyMCE rich editor into Django apps.  Frankly, I'm not all
 that happy with this idea; PunyMCE might have been a better choice, or
 something that integrates more smoothly with JQuery.
 
+`django-piston' <https://bitbucket.org/jespern/django-piston/wiki/Home>`_ --
+Adds support for a restful API based on models.  The API currently only supports
+Works and Sections.  Addition of Collections and other models should be fairly trivial.
+
 Third Party Python Modules
 ---------------------------
 

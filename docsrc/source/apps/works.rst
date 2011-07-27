@@ -21,6 +21,9 @@ content directory.  Any given Section may be individually marked as
 open access or restricted access depending on the value of its
 `access_controlled` attribute.
 
+``Works`` can be added one or more ``collections`` to allow for arbitrary
+grouping of resources.  ``Collections`` have a name, description, blurb, and slug.
+
 Other important model classes are mentioned in passing in the
 :doc:`../metadata` document.
 

@@ -28,7 +28,7 @@ from haystack.query import SearchQuerySet
 
 import epub
 from django.conf import settings
-
+from django.core.exceptions import ObjectDoesNotExist
 log = logging.getLogger('works.utils')
 
 __doc__ = """
@@ -423,12 +423,12 @@ class SidebarBuilder(object):
     def get_collections(self):
         from models import Collection
         collections = []
-        try:
-            search_query_set = SearchQuerySet().filter(django_ct='works.work').facet('collection')
-            for x in search_query_set.facet_counts()['fields']['collection']:
+        search_query_set = SearchQuerySet().filter(django_ct='works.work').facet('collection')
+        for x in search_query_set.facet_counts()['fields']['collection']:
+            try:
                 collections.append({'collection': Collection.objects.get(name=x[0]), 'count': x[1]})
-        except:
-            pass
+            except ObjectDoesNotExist:
+                log.debug(x[0]+' collection does not exist')
         return collections
 
     def get_facets(self):

@@ -193,8 +193,7 @@ def collection_browse():
     # return {'collections':cache.get('collection-browse')}
     sq = SidebarBuilder()
     collections = sq.get_collections()
-    if len(collections) > 0:
-        return {'collections': collections, 'collection_count': len(collections)}
+    return {'collections': collections, 'collection_count': len(collections)}
 register.inclusion_tag('tags/browse-collection.html')(collection_browse)
 
 class PaginateResultsNode(Node):
