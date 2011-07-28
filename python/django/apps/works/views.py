@@ -375,7 +375,7 @@ def collection_by_slug(request, slug="collection_slug", template="collections/co
 
 def collection_browse(request, slug="slug", browse_by="browse_by", template="collections/collection_browse.html"):
     collection = get_object_or_404(models.Collection, slug=slug)
-    works = models.Work.objects.filter(collection=collection)
+    works = collection.get_works(browse_by)
     return render(template, RequestContext(request, {'collection':collection, 'works':works}))
 
 def collection_introduction(request, slug="slug"):

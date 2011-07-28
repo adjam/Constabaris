@@ -155,7 +155,7 @@ class Collection(models.Model):
                 log.debug('slug has changed******')
                 for fp in FlatPage.objects.filter(url__startswith='/collections/'+last_saved.slug):
                     log.debug('changing flatpage urls ******')
-                    new_url = re.sub(last_saved.slug, self.slug, fp.url)
+                    new_url = re.sub('/collections/'+last_saved.slug, '/collections/'+self.slug, fp.url)
                     fp.url = new_url
                     fp.save()
 
@@ -201,9 +201,10 @@ class Collection(models.Model):
     def get_absolute_url(self):
         return ('collections:collection_by_slug', (), {'slug': self.slug})
     
-    def _get_works(self):
-        return Work.objects.filter(collection=self.id).order_by('title')
-    works_list = property(_get_works)
+    def get_works(self, order_by='title'):
+        works = Work.objects.filter(collection=self.id).order_by(order_by)
+        return works
+    works_list = property(get_works)
     
     def _get_media_url(self):
         return os.path.join(settings.MEDIA_ROOT, "collections", str(self.slug) )
